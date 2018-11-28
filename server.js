@@ -8,7 +8,7 @@ const app = express();
 app.engine('html', require('ejs').renderFile);
 
 // Start Express https server on port
-const webServer = http.createServer(app).listen(port);
+const webServer = http.createServer(app);
 
 app.set('view engine', 'html');
 app.set('views', 'dist');
