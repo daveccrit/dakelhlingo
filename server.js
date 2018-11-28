@@ -20,5 +20,5 @@ app.get('/*', (req, res) => {
 });
 
 webServer.listen(port, () => {
-  console.log(`Listening on: https://localhost:${port}`);
+  console.log(`Listening on: http://localhost:${port}`);
 });
