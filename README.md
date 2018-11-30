@@ -42,6 +42,8 @@ A web application for learning indigenous languages of Canada.
    - list local branch
  - git branch   -all
    - list all branches
+ - git add
+   - stages modified file 
  - git town kill  **branch_name**
    - delete branch locally and on repo
  - git clone  **repo url location**
