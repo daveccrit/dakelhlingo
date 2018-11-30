@@ -2,11 +2,11 @@
 A web application for learning indigenous languages of Canada.
  
   # Basic setup of a new computer
- - install git from `https://git-scm.com/downloads`
- - install node.js from `https://nodejs.org/en/`
+ - install git from https://git-scm.com/downloads
+ - install node.js from https://nodejs.org/en/
    - dont change anything in the setup of node js
  - go to chrome and search git
- - install git town from `http://www.git-town.com/install.html`
+ - install git town from http://www.git-town.com/install.html
    - go to **system enviroment variables**
    - go to **path variable**
    - then hit **edit**
@@ -21,7 +21,7 @@ A web application for learning indigenous languages of Canada.
    - git clone "link that was copied"
    - npm update
    - npm start
- - install vsc (visual studio code) from `https://code.visualstudio.com/`
+ - install vsc (visual studio code) from https://code.visualstudio.com/
  - in dev folder create a new folder called tools  
 
 
