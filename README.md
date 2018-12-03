@@ -22,6 +22,8 @@ A web application for learning indigenous languages of Canada.
  - go to command prompt do 
    - **cd /**
    - cd **dev**
+   - open browser and goto https://github.com/daveccrit/dakelhlingo
+   - click **clone or download** button and copy link
    - git clone "link that was copied"
    - npm update
    - npm start
