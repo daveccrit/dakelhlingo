@@ -1,6 +1,64 @@
-# Dakelhlingo
+# Dakelhlingo Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+## Basic setup of a new computer
+
+- Create **dev** folder on **C: drive**
+- Install git from https://git-scm.com/downloads
+  - Configure Username in git: `git config --global user.name "`**Your Name Here**`"`
+  - Configure Email in git: `git config --global user.email` **youremail@example.com**
+  - Configure LF and CR options in git: `git config --global core.autocrlf input`
+- Install node.js from https://nodejs.org/en/
+  - dont change anything in the setup of node js
+- Install 64bit git-town for Windows from http://www.git-town.com/install.html
+  - create new folder in **c:\dev** called **tools**
+  - download git-town amd64 for windows and copy/save to **c:\dev\tools**
+  - rename git-town file to be git-town.exe
+  - go to **system enviroment variables**
+  - go to **path variable**
+  - then hit **edit**
+  - hit **new**
+  - hit **browse**
+  - go to **c drive**
+  - go to **dev**
+  - go to **tools**
+- In Command Prompt:
+  - `cd \`
+  - `cd dev`
+  - open browser and goto https://github.com/daveccrit/dakelhlingo
+  - click **clone or download** button and copy link
+  - `git clone "`**link that was copied**`"`
+  - `npm update`
+  - `npm start`
+- Install VSC (**V**isual **S**tudio **C**ode) from https://code.visualstudio.com/
+
+## Git Commands
+
+- `git status`
+  - show changes
+- `git checkout`
+  - erase all file changes
+- `git town sync`
+  - sync's with repo, pulls changes from repo and pushes committed change up
+- `git commit -m "`**commit message here**`" .`
+  - commits changes
+- `git town hack` **branch_name**
+  - create branch from master
+- `git checkout` **branch_name**
+  - change your local working branch
+- `git branch`
+  - list local branch
+- `git branch --all`
+  - list all branches
+- `git add` **filename**
+  - stages specific modified file
+- `git add .`
+  - stages all files
+- `git town kill` **branch_name**
+  - delete branch locally and on repo
+- `git clone` **repo url location**
+  - clones repo to your local machine
+- `npm install`
+  - install project dependencies
 
 ## Development server
 
