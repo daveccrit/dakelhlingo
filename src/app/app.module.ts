@@ -11,9 +11,15 @@ import {
   MatListModule,
   MatIconModule
 } from '@angular/material';
+import { LessonsComponent } from './lessons/lessons.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LessonCategoriesComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    LessonCategoriesComponent,
+    LessonsComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
