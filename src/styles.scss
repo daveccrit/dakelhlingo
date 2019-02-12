@@ -1,5 +1,121 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$dakelhlingo-primary: mat-palette($mat-indigo);
+$dakelhlingo-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$dakelhlingo-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$dakelhlingo-theme: mat-light-theme(
+  $dakelhlingo-primary,
+  $dakelhlingo-accent,
+  $dakelhlingo-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($dakelhlingo-theme);
+
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.main-app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    160deg,
+    rgba(132, 75, 141, 1),
+    rgba(70, 99, 101, 1)
+  );
+
+  & > *:not(router-outlet) {
+    padding: 18px;
+    width: 100%;
+    max-width: 728px;
+    height: calc(100% - 40px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mat-nav-list.mat-list-base {
+    flex: 1 1 auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 0;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .mat-nav-list.mat-list-base .mat-list-item,
+  .mat-nav-list.mat-list-base .mat-list-option {
+    height: unset;
+  }
+
+  .mat-nav-list.mat-list-base .mat-list-item .mat-list-item-content,
+  .mat-nav-list.mat-list-base .mat-list-option .mat-list-item-content {
+    align-items: flex-start;
+    padding: 10px 16px;
+  }
+}
+
+.mat-list-item.language-text,
+button.language-text .mat-button-wrapper {
+  display: flex;
+  align-items: center;
+
+  .language-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+  }
+}
+
+button .mat-icon,
+.mat-list-item-content .mat-icon {
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.dakelh-text {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: normal;
+}
+
+.english-text {
+  font-size: 0.825rem;
+  line-height: 1rem;
+  font-weight: normal;
+}
+
+h3 {
+  color: #ffffff;
+  font-weight: normal;
 }
