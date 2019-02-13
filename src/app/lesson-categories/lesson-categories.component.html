@@ -1,7 +1,7 @@
 <button
   mat-raised-button
   class="back-button language-text"
-  routerLink="/home"
+  (click)="goBack()"
   color="secondary"
 >
   <mat-icon>arrow_back</mat-icon>
@@ -16,7 +16,7 @@
     mat-list-item
     class="language-text"
     *ngFor="let category of categories"
-    routerLink="/lessons"
+    [routerLink]="['/lessons', category.id]"
     routerLinkActive="active"
   >
     <mat-icon>{{ category.icon }}</mat-icon>
