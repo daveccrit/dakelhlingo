@@ -1,5 +1,23 @@
 <img src="assets/images/dakelh-logo.png" width="50%" />
-<button
+
+<mat-nav-list class="home-nav-list">
+  <a
+    mat-list-item
+    class="language-text"
+    *ngFor="let navItem of navItems"
+    [routerLink]="navItem.route"
+    routerLinkActive="active"
+    [ngClass]="navItem.className"
+  >
+    <mat-icon>{{ navItem.icon }}</mat-icon>
+    <div class="language-text-container">
+      <div class="dakelh-text">{{ navItem.routeDakelh }}</div>
+      <div class="english-text">{{ navItem.routeEnglish }}</div>
+    </div>
+  </a>
+</mat-nav-list>
+
+<!-- <button
   mat-raised-button
   class="lessons-button language-text"
   color="primary"
@@ -18,4 +36,4 @@
     <div class="dakelh-text">Sla’in neh</div>
     <div class="english-text">Help me</div>
   </div>
-</button>
+</button> -->
