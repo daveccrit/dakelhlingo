@@ -27,6 +27,7 @@
   - open browser and goto https://github.com/daveccrit/dakelhlingo
   - click **clone or download** button and copy link
   - `git clone "`**link that was copied**`"`
+  - `cd dakelhlingo`
   - `npm update`
   - `npm start`
 - Install VSC (**V**isual **S**tudio **C**ode) from https://code.visualstudio.com/
