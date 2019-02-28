@@ -18,10 +18,8 @@ export class LessonComponent implements OnInit {
   }
 
   getLessons(): void {
-    const catId = +this.route.snapshot.paramMap.get('catid');
-    const lessonId = +this.route.snapshot.paramMap.get('lessonid');
-    this.catId = catId;
-    this.lessonId = lessonId;
+    this.catId = +this.route.snapshot.paramMap.get('catid');
+    this.lessonId = +this.route.snapshot.paramMap.get('lessonid');
     // this.lessonCategory = this.categories.find(
     //   category => category.id === catId
     // );
