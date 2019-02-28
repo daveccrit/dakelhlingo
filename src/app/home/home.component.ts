@@ -1,37 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
-type navItemType = Array<{
-  icon: string;
-  route: string;
-  routeDakelh: string;
-  routeEnglish: string;
-  className?: string;
-}>;
-
-const navItemsDb: navItemType = [
-  {
-    icon: 'library_books',
-    route: '/lesson-categories',
-    routeDakelh: "Sgani hodutizeh' awk'anus zun",
-    routeEnglish: 'I want to learn my language',
-    className: 'primary'
-  },
-  {
-    icon: 'help',
-    route: '/lesson',
-    routeDakelh: "Sla'in neh",
-    routeEnglish: 'Help me'
-  }
-];
+import { AppMenuItem } from '../shared/interfaces/app.interface';
+import { AppDataComponent } from '../shared/app-data.component';
+import { GlobalData } from '../shared/app-data';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  navItems = navItemsDb;
-  constructor() {}
+export class HomeComponent extends AppDataComponent implements OnInit {
+  navItems: Array<AppMenuItem> = [];
 
-  ngOnInit() {}
+  constructor(globalData: GlobalData) {
+    super(globalData);
+  }
+
+  ngOnInit() {
+    this.navItems.push(this.globalData['app']['learning-menu-item']);
+    this.navItems.push(this.globalData['app']['help-menu-item']);
+  }
 }

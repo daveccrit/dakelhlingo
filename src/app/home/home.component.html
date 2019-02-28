@@ -9,10 +9,6 @@
     routerLinkActive="active"
     [ngClass]="navItem.className"
   >
-    <mat-icon>{{ navItem.icon }}</mat-icon>
-    <div class="language-text-container">
-      <div class="dakelh-text">{{ navItem.routeDakelh }}</div>
-      <div class="english-text">{{ navItem.routeEnglish }}</div>
-    </div>
+    <app-menu-list-item [menuItem]="navItem"></app-menu-list-item>
   </a>
 </mat-nav-list>

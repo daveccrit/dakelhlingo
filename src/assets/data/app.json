@@ -1,18 +1,34 @@
 {
-  "help-menu": {
+  "help-menu-item": {
+    "icon": "help",
+    "route": "/lesson",
     "dakelh": "Sla'in neh",
-    "english": "Help me"
+    "english": "Help me",
+    "audio": ["help_me.m4a"],
+    "className": "secondary"
   },
   "learning-menu-item": {
+    "icon": "library_books",
+    "route": "/lesson-categories",
     "dakelh": "Sgani hodutizeh' awk'anus zun",
-    "english": "I want to learn my language"
+    "english": "I want to learn my language",
+    "audio": ["i_want_to_learn_my_language.m4a"],
+    "className": "primary"
   },
   "back-button": {
+    "icon": "arrow_back",
+    "route": "",
     "dakelh": "",
-    "english": ""
+    "english": "back",
+    "audio": [],
+    "className": "secondary"
   },
   "ok-button": {
+    "icon": "",
+    "route": "",
     "dakelh": "",
-    "english": ""
+    "english": "ok",
+    "audio": [],
+    "className": "secondary"
   }
 }

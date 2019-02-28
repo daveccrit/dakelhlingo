@@ -1,4 +1,4 @@
-<div class="main-app" [ngClass]="lessonLevel">
+<div class="main-app" [ngClass]="lessonLevel" *ngIf="appReady">
   <router-outlet></router-outlet>
   <mat-radio-group [(ngModel)]="lessonLevel">
     <mat-radio-button [value]="''">Beginner</mat-radio-button>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "dakelh": "Ndidot'en",
+    "english": "What does it look like?",
+    "icon": "color_lens",
+    "audio": ["what_does_it_look_like.m4a"]
+  },
+  {
+    "id": 2,
+    "dakelh": "Ntsoya oozulh",
+    "english": "What time is it?",
+    "icon": "access_time",
+    "audio": ["what_time_is_it.m4a"]
+  },
+  {
+    "id": 3,
+    "dakelh": "Yusk'ut ooza'",
+    "english": "Time of year",
+    "icon": "date_range",
+    "audio": ["time_of_year.m4a"]
+  },
+  {
+    "id": 4,
+    "dakelh": "Khuna-i",
+    "english": "That which lives - large fur animals",
+    "icon": "pets",
+    "audio": ["that_which_lives-large_fur_animals.m4a"]
+  }
+]

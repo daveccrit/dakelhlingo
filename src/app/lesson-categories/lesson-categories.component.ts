@@ -1,51 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-
-type lessonCategoryType = Array<{
-  id: number;
-  icon: string;
-  textDakelh: string;
-  textEnglish: string;
-  isComplete?: boolean;
-}>;
-
-const categoriesDb: lessonCategoryType = [
-  {
-    id: 1,
-    icon: 'color_lens',
-    textDakelh: 'Ndidot\'en',
-    textEnglish: 'What does it look like?'
-  },
-  {
-    id: 2,
-    icon: 'access_time',
-    textDakelh: 'Ntsoya oozulh ',
-    textEnglish: 'What time is it?'
-  },
-  {
-    id: 3,
-    icon: 'date_range',
-    textDakelh: 'Yusk\'ut ooza\'',
-    textEnglish: 'Time of year'
-  },
-  {
-    id: 4,
-    icon: 'pets',
-    textDakelh: 'Khuna-i ',
-    textEnglish: 'That which lives (large fur animals)'
-  }
-];
+import { AppDataComponent } from '../shared/app-data.component';
+import { GlobalData } from '../shared/app-data';
+import { LessonCategory } from '../shared/interfaces/app.interface';
 
 @Component({
   selector: 'app-lesson-categories',
   templateUrl: './lesson-categories.component.html',
   styleUrls: ['./lesson-categories.component.scss']
 })
-export class LessonCategoriesComponent implements OnInit {
-  categories = categoriesDb;
-  constructor(private location: Location) {}
+export class LessonCategoriesComponent extends AppDataComponent
+  implements OnInit {
+  categories: Array<LessonCategory>;
+  pageReady = false;
 
-  ngOnInit() {}
+  constructor(private location: Location, globalData: GlobalData) {
+    super(globalData);
+  }
+
+  ngOnInit() {
+    this.categories = this.getLessonCategories();
+    this.pageReady = true;
+  }
 
   goBack(): void {
     this.location.back();

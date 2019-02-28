@@ -11,7 +11,7 @@
   </div>
 </button>
 <h3>Choose a lesson category</h3>
-<mat-nav-list>
+<mat-nav-list class="menu-list" *ngIf="pageReady">
   <a
     mat-list-item
     class="language-text"
@@ -19,10 +19,6 @@
     [routerLink]="['/lessons', category.id]"
     routerLinkActive="active"
   >
-    <mat-icon>{{ category.icon }}</mat-icon>
-    <div class="language-text-container">
-      <div class="dakelh-text">{{ category.textDakelh }}</div>
-      <div class="english-text">{{ category.textEnglish }}</div>
-    </div>
+    <app-menu-list-item [menuItem]="category"></app-menu-list-item>
   </a>
 </mat-nav-list>

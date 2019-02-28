@@ -11,18 +11,10 @@
   </div>
 </button>
 <h3>{{ lessonCategory.textDakelh }} Lessons</h3>
-<mat-nav-list>
-  <a
-    mat-list-item
-    class="language-text"
-    *ngFor="let category of categories"
-    [routerLink]="['/lesson', lessonCategory.id, category.id]"
-    routerLinkActive="active"
-  >
-    <mat-icon>{{ category.icon }}</mat-icon>
-    <div class="language-text-container">
-      <div class="dakelh-text">{{ category.textDakelh }}</div>
-      <div class="english-text">{{ category.textEnglish }}</div>
-    </div>
+<mat-nav-list class="menu-list">
+  <a mat-list-item class="language-text" *ngFor="let lesson of lessons">
+    <!-- [routerLink]="['/lesson', lessonCategory.id, category.id]"
+    routerLinkActive="active" -->
+    <app-menu-list-item [menuItem]="lesson"></app-menu-list-item>
   </a>
 </mat-nav-list>

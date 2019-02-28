@@ -2,8 +2,289 @@
   {
     "dakelh": "ulhyul",
     "english": "white",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
     "images": [],
     "videos": [],
-    "pronunciations": []
+    "audio": ["white.m4a"]
+  },
+  {
+    "dakelh": "nigwus dot'en",
+    "english": "looks like soapberries",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["looks_like_soapberries.m4a"]
+  },
+  {
+    "dakelh": "dulk'un",
+    "english": "red",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["red.m4a"]
+  },
+  {
+    "dakelh": "kwun dot'en",
+    "english": "looks like fire",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["looks_like_fire.m4a"]
+  },
+  {
+    "dakelh": "yun dot'en",
+    "english": "looks like the earth",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["looks_like_the_earth.m4a"]
+  },
+  {
+    "dakelh": "dultl'uz",
+    "english": "green",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["green.m4a"]
+  },
+  {
+    "dakelh": "duldzan",
+    "english": "blue",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["blue.m4a"]
+  },
+  {
+    "dakelh": "dulgi",
+    "english": "grey",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["grey.m4a"]
+  },
+  {
+    "dakelh": "dulhgus",
+    "english": "black",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["black.m4a"]
+  },
+  {
+    "dakelh": "dultso",
+    "english": "yellow",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["yellow.m4a"]
+  },
+  {
+    "dakelh": "mai dot'en",
+    "english": "looks like berries",
+    "category": "Ndidot'en",
+    "icon": "color_lens",
+    "images": [],
+    "videos": [],
+    "audio": ["looks_like_berries.m4a"]
+  },
+  {
+    "dakelh": "dzetniz",
+    "english": "noon",
+    "category": "Ntsoya oozulh",
+    "icon": "access_time",
+    "images": [],
+    "videos": [],
+    "audio": ["noon.m4a"]
+  },
+  {
+    "dakelh": "ulhdzis",
+    "english": "night",
+    "category": "Ntsoya oozulh",
+    "icon": "access_time",
+    "images": [],
+    "videos": [],
+    "audio": ["night.m4a"]
+  },
+  {
+    "dakelh": "bundada'",
+    "english": "morning",
+    "category": "Ntsoya oozulh",
+    "icon": "access_time",
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Sacho ooza'",
+    "english": "January",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["january.m4a"]
+  },
+  {
+    "dakelh": "Chuzsul ooza'",
+    "english": "February",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["february.m4a"]
+  },
+  {
+    "dakelh": "Chuzcho ooza'",
+    "english": "March",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["march.m4a"]
+  },
+  {
+    "dakelh": "Shin ooza'",
+    "english": "April",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["april.m4a"]
+  },
+  {
+    "dakelh": "Dugoos ooza'",
+    "english": "May",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["may.m4a"]
+  },
+  {
+    "dakelh": "Dang ooza'",
+    "english": "June",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["june.m4a"]
+  },
+  {
+    "dakelh": "Talo ooza'",
+    "english": "July",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["july.m4a"]
+  },
+  {
+    "dakelh": "Gesul ooza'",
+    "english": "August",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["august.m4a"]
+  },
+  {
+    "dakelh": "Bit ooza'",
+    "english": "September",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["september.m4a"]
+  },
+  {
+    "dakelh": "Lhoh ooza'",
+    "english": "October",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["october.m4a"]
+  },
+  {
+    "dakelh": "Banghan nuts'ukih",
+    "english": "November",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["november.m4a"]
+  },
+  {
+    "dakelh": "Sacho din'ai",
+    "english": "December",
+    "category": "Yusk'ut ooza'",
+    "icon": "date_range",
+    "images": [],
+    "videos": [],
+    "audio": ["december.m4a"]
+  },
+  {
+    "dakelh": "Duni",
+    "english": "moose",
+    "category": "Khuna-i",
+    "icon": "pets",
+    "images": [],
+    "videos": [],
+    "audio": ["moose.m4a"]
+  },
+  {
+    "dakelh": "Wasi",
+    "english": "lynx",
+    "category": "Khuna-i",
+    "icon": "pets",
+    "images": [],
+    "videos": [],
+    "audio": ["lynx.m4a"]
+  },
+  {
+    "dakelh": "Whudzih",
+    "english": "cariboo",
+    "category": "Khuna-i",
+    "icon": "pets",
+    "images": [],
+    "videos": [],
+    "audio": ["cariboo.m4a"]
+  },
+  {
+    "dakelh": "Booscho",
+    "english": "cougar",
+    "category": "Khuna-i",
+    "icon": "pets",
+    "images": [],
+    "videos": [],
+    "audio": ["cougar.m4a"]
+  },
+  {
+    "dakelh": "Lhi",
+    "english": "dog",
+    "category": "Khuna-i",
+    "icon": "pets",
+    "images": [],
+    "videos": [],
+    "audio": ["dog.m4a"]
+  },
+  {
+    "dakelh": "Sus",
+    "english": "black bear",
+    "category": "Khuna-i",
+    "icon": "pets",
+    "images": [],
+    "videos": [],
+    "audio": ["black_bear.m4a"]
   }
 ]

@@ -15,6 +15,9 @@ import {
 } from '@angular/material';
 import { LessonsComponent } from './lessons/lessons.component';
 import { LessonComponent } from './lesson/lesson.component';
+import { GlobalData } from './shared/app-data';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuListItemComponent } from './shared/menu-list-item/menu-list-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { LessonComponent } from './lesson/lesson.component';
     HomeComponent,
     LessonCategoriesComponent,
     LessonsComponent,
-    LessonComponent
+    LessonComponent,
+    MenuListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,10 @@ import { LessonComponent } from './lesson/lesson.component';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GlobalData],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
