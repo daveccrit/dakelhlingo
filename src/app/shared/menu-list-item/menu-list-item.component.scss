@@ -6,6 +6,10 @@
 
 .menu-item-icon {
   flex: 0 0 auto;
+
+  &.completed {
+    color: rgb(0, 133, 0);
+  }
 }
 
 .language-text-container {

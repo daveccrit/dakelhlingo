@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   appDataReady = false;
   languageWordDataReady = false;
   lessonCategoriesDataReady = false;
+  lessonsDataReady = false;
   appReady = false;
 
   constructor(
@@ -39,9 +40,19 @@ export class AppComponent implements OnInit {
     }
 
     if (!this.globalData.lessonCategories) {
-      this.getDataService.getData('dakelh-word-categories').subscribe(data => {
-        this.globalData.lessonCategories = data;
-        this.lessonCategoriesDataReady = true;
+      this.getDataService
+        .getData('dakelh-lesson-categories')
+        .subscribe(data => {
+          this.globalData.lessonCategories = data;
+          this.lessonCategoriesDataReady = true;
+          this.checkAppReady();
+        });
+    }
+
+    if (!this.globalData.languageLessons) {
+      this.getDataService.getData('dakelh-lessons').subscribe(data => {
+        this.globalData.languageLessons = data;
+        this.lessonsDataReady = true;
         this.checkAppReady();
       });
     }
@@ -50,6 +61,7 @@ export class AppComponent implements OnInit {
   checkAppReady() {
     if (
       this.lessonCategoriesDataReady &&
+      this.lessonsDataReady &&
       this.languageWordDataReady &&
       this.appDataReady
     ) {

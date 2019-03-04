@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { AppDataComponent } from '../shared/app-data.component';
 import { GlobalData } from '../shared/app-data';
-import { LessonCategory, Word } from '../shared/interfaces/app.interface';
+import { LessonCategory, Lesson } from '../shared/interfaces/app.interface';
 
 interface LessonCategoryType {
   id: number;
@@ -20,7 +20,7 @@ interface LessonCategoryType {
 })
 export class LessonsComponent extends AppDataComponent implements OnInit {
   lessonCategory: LessonCategory;
-  lessons: Array<Word>;
+  lessons: Array<Lesson>;
   pageReady = false;
 
   constructor(
@@ -34,7 +34,7 @@ export class LessonsComponent extends AppDataComponent implements OnInit {
   ngOnInit(): void {
     const categoryId = +this.route.snapshot.paramMap.get('catid');
     this.lessonCategory = this.getLessonCategory(categoryId);
-    this.lessons = this.getWords(this.lessonCategory);
+    this.lessons = this.getLessons(this.lessonCategory.id);
     this.pageReady = true;
   }
 

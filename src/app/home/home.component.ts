@@ -18,5 +18,6 @@ export class HomeComponent extends AppDataComponent implements OnInit {
   ngOnInit() {
     this.navItems.push(this.globalData['app']['learning-menu-item']);
     this.navItems.push(this.globalData['app']['help-menu-item']);
+    this.navItems.push(this.globalData['app']['settings-menu-item']);
   }
 }

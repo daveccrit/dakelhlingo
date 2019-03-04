@@ -15,10 +15,13 @@
   <a
     mat-list-item
     class="language-text"
-    *ngFor="let lesson of lessons; let i = index"
-    [routerLink]="['/lesson', lessonCategory.id, i]"
+    *ngFor="let lesson of lessons"
+    [routerLink]="['/lesson', lessonCategory.id, lesson.id]"
     routerLinkActive="active"
   >
-    <app-menu-list-item [menuItem]="lesson"></app-menu-list-item>
+    <app-menu-list-item
+      [menuItem]="lesson"
+      [completed]="lesson.completed"
+    ></app-menu-list-item>
   </a>
 </mat-nav-list>

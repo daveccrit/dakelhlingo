@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  HostBinding
+} from '@angular/core';
 import { LessonCategory, AppMenuItem, Word } from '../interfaces/app.interface';
 
 @Component({
@@ -9,6 +16,8 @@ import { LessonCategory, AppMenuItem, Word } from '../interfaces/app.interface';
 export class MenuListItemComponent implements OnInit {
   @ViewChild('audio') audioElement: ElementRef;
   @Input() menuItem: LessonCategory | Word | AppMenuItem;
+  @Input() completed: boolean;
+  @HostBinding('class.completed') completedClass = this.completed;
 
   constructor() {}
 

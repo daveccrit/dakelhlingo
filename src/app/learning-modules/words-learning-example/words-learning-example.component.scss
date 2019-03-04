@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 4px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.words-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #ffffff;
+  padding: 5px;
+  justify-content: space-between;
+  min-width: 100px;
+
+  .language-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 5px;
+    justify-content: space-between;
+
+    & > button {
+      margin-top: 20px;
+    }
+  }
+}

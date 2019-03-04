@@ -1,7 +1,7 @@
 {
   "help-menu-item": {
     "icon": "help",
-    "route": "/lesson",
+    "route": "/help",
     "dakelh": "Sla'in neh",
     "english": "Help me",
     "audio": ["help_me.m4a"],
@@ -14,6 +14,14 @@
     "english": "I want to learn my language",
     "audio": ["i_want_to_learn_my_language.m4a"],
     "className": "primary"
+  },
+  "settings-menu-item": {
+    "icon": "settings",
+    "route": "/settings",
+    "dakelh": "Settings",
+    "english": "Settings",
+    "audio": [],
+    "className": "secondary"
   },
   "back-button": {
     "icon": "arrow_back",

@@ -1,0 +1,9 @@
+<div class="words-container">
+  <div class="language-text-container" *ngFor="let wordData of wordsData">
+    <div class="dakelh-text">{{ wordData.dakelh }}</div>
+    <div class="english-text">{{ wordData.english }}</div>
+  </div>
+  <button mat-raised-button (click)="completedModule()" color="primary">
+    ok
+  </button>
+</div>
