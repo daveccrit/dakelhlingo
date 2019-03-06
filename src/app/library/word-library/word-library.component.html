@@ -1,0 +1,38 @@
+<button
+  mat-raised-button
+  class="back-button language-text"
+  (click)="goBack()"
+  color="secondary"
+>
+  <mat-icon>arrow_back</mat-icon>
+  <div class="language-text-container">
+    <div class="dakelh-text">Go Back</div>
+    <div class="english-text">Go Back</div>
+  </div>
+</button>
+<h3>Dakelh Words</h3>
+<mat-form-field class="category-form-field">
+  <input
+    matInput
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="categoryFilter"
+  />
+  <button
+    mat-button
+    *ngIf="categoryFilter"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="categoryFilter = ''"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<div *ngIf="words.length === 0">No Results</div>
+<mat-nav-list class="menu-list" *ngIf="words.length >= 1 && words.length < 20">
+  <a mat-list-item class="language-text" *ngFor="let word of words">
+    <app-menu-list-item [menuItem]="word"></app-menu-list-item>
+  </a>
+</mat-nav-list>
+<div *ngIf="words.length > 20">Too Many Results</div>

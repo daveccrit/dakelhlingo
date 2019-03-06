@@ -52,6 +52,16 @@ export class AppDataComponent {
     );
   }
 
+  getWordsBySearch(filterText: string): Array<Word> {
+    return this.globalData.languageWords.filter(
+      value =>
+        value.lessonCategory.toLowerCase().indexOf(filterText.toLowerCase()) >=
+          0 ||
+        value.dakelh.toLowerCase().indexOf(filterText.toLowerCase()) >= 0 ||
+        value.english.toLowerCase().indexOf(filterText.toLowerCase()) >= 0
+    );
+  }
+
   getWordByLanguage(languageWord: string): Word {
     return this.globalData.languageWords.find(
       value => value.dakelh.toLowerCase() === languageWord.toLowerCase()

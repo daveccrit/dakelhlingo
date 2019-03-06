@@ -11,7 +11,8 @@ import {
   MatButtonModule,
   MatListModule,
   MatIconModule,
-  MatRadioModule
+  MatRadioModule,
+  MatInputModule
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LessonsComponent } from './lessons/lessons.component';
@@ -25,6 +26,9 @@ import { HelpComponent } from './help/help.component';
 import { WordsLearningExampleComponent } from './learning-modules/words-learning-example/words-learning-example.component';
 import { DragDropExampleComponent } from './learning-modules/drag-drop-example/drag-drop-example.component';
 import { AppDataComponent } from './shared/app-data.component';
+import { LibraryComponent } from './library/library.component';
+import { VideoLibraryComponent } from './library/video-library/video-library.component';
+import { WordLibraryComponent } from './library/word-library/word-library.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,10 @@ import { AppDataComponent } from './shared/app-data.component';
     SettingsComponent,
     HelpComponent,
     WordsLearningExampleComponent,
-    DragDropExampleComponent
+    DragDropExampleComponent,
+    LibraryComponent,
+    VideoLibraryComponent,
+    WordLibraryComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +56,7 @@ import { AppDataComponent } from './shared/app-data.component';
     FormsModule,
     MatButtonModule,
     MatIconModule,
+    MatInputModule,
     MatListModule,
     MatRadioModule,
     HttpClientModule

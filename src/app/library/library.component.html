@@ -1,5 +1,16 @@
-<img src="assets/images/app/dakelh-logo.png" width="50%" />
-
+<button
+  mat-raised-button
+  class="back-button language-text"
+  (click)="goBack()"
+  color="secondary"
+>
+  <mat-icon>arrow_back</mat-icon>
+  <div class="language-text-container">
+    <div class="dakelh-text">Go Back</div>
+    <div class="english-text">Go Back</div>
+  </div>
+</button>
+<h3>My Language Menu</h3>
 <mat-nav-list class="home-nav-list" *ngIf="pageReady">
   <a
     mat-list-item

@@ -10,6 +10,7 @@ import { GlobalData } from '../shared/app-data';
 })
 export class HomeComponent extends AppDataComponent implements OnInit {
   navItems: Array<AppMenuItem> = [];
+  pageReady = false;
 
   constructor(globalData: GlobalData) {
     super(globalData);
@@ -17,7 +18,9 @@ export class HomeComponent extends AppDataComponent implements OnInit {
 
   ngOnInit() {
     this.navItems.push(this.globalData['app']['learning-menu-item']);
+    this.navItems.push(this.globalData['app']['library-menu-item']);
     this.navItems.push(this.globalData['app']['help-menu-item']);
     this.navItems.push(this.globalData['app']['settings-menu-item']);
+    this.pageReady = true;
   }
 }

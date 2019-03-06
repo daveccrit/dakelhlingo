@@ -25,17 +25,27 @@
     position: relative;
     border-radius: 6px;
     overflow: hidden;
-    padding: 2px;
-    border: 1px solid #0000ff;
+    border: 1px solid #939393;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+
+    & * {
+      pointer-events: none;
+    }
 
     & > img {
       max-width: 100%;
     }
   }
 
-  .is-dragging .drag-over {
+  .is-dragging.drag-over {
     border: 2px solid #0000ff;
-    margin: -2px;
+    margin: -1px;
+
+    & * {
+      opacity: 0.9;
+    }
   }
 
   .language-text-container {
@@ -43,6 +53,9 @@
     flex-direction: column;
     align-items: stretch;
     margin: 20px 0;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
 
     .drag-item {
       display: flex;
