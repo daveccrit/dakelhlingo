@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Word } from 'src/app/shared/interfaces/app.interface';
-import { AppDataComponent } from 'src/app/shared/app-data.component';
+import { AppDataService } from 'src/app/shared/app-data.service';
 import { GlobalData } from 'src/app/shared/app-data';
 
 @Component({
@@ -8,9 +8,9 @@ import { GlobalData } from 'src/app/shared/app-data';
   templateUrl: './words-learning-example.component.html',
   styleUrls: ['./words-learning-example.component.scss']
 })
-export class WordsLearningExampleComponent extends AppDataComponent
-  implements OnInit {
+export class WordsLearningExampleComponent implements OnInit {
   wordsData: Array<Word>;
+  appDataService: AppDataService;
 
   _languageWords: Array<string>;
 
@@ -26,7 +26,7 @@ export class WordsLearningExampleComponent extends AppDataComponent
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
   constructor(globalData: GlobalData) {
-    super(globalData);
+    this.appDataService = new AppDataService(globalData);
   }
 
   ngOnInit() {
@@ -37,7 +37,7 @@ export class WordsLearningExampleComponent extends AppDataComponent
     this.wordsData = [];
 
     this.languageWords.forEach(word => {
-      this.wordsData.push(this.getWordByLanguage(word));
+      this.wordsData.push(this.appDataService.getWordByLanguage(word));
     });
   }
 

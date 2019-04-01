@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { GlobalData } from 'src/app/shared/app-data';
-import { AppDataComponent } from 'src/app/shared/app-data.component';
+import { AppDataService } from 'src/app/shared/app-data.service';
 import { Word, LessonCategory } from 'src/app/shared/interfaces/app.interface';
 
 @Component({
@@ -9,8 +9,9 @@ import { Word, LessonCategory } from 'src/app/shared/interfaces/app.interface';
   templateUrl: './word-library.component.html',
   styleUrls: ['./word-library.component.scss']
 })
-export class WordLibraryComponent extends AppDataComponent implements OnInit {
+export class WordLibraryComponent implements OnInit {
   words: Array<Word> = [];
+  appDataService: AppDataService;
 
   _categoryFilter = '';
   get categoryFilter(): string {
@@ -22,7 +23,7 @@ export class WordLibraryComponent extends AppDataComponent implements OnInit {
   }
 
   constructor(private location: Location, globalData: GlobalData) {
-    super(globalData);
+    this.appDataService = new AppDataService(globalData);
   }
 
   ngOnInit() {
@@ -30,7 +31,7 @@ export class WordLibraryComponent extends AppDataComponent implements OnInit {
   }
 
   getWords() {
-    this.words = this.getWordsBySearch(this.categoryFilter);
+    this.words = this.appDataService.getWordsBySearch(this.categoryFilter);
   }
 
   goBack(): void {

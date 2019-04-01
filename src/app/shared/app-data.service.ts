@@ -11,7 +11,7 @@ import {
   selector: 'app-data',
   template: ``
 })
-export class AppDataComponent {
+export class AppDataService {
   constructor(public globalData: GlobalData) {}
 
   getLessonCategories(): Array<LessonCategory> {

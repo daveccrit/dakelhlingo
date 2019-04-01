@@ -25,7 +25,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { HelpComponent } from './help/help.component';
 import { WordsLearningExampleComponent } from './learning-modules/words-learning-example/words-learning-example.component';
 import { DragDropExampleComponent } from './learning-modules/drag-drop-example/drag-drop-example.component';
-import { AppDataComponent } from './shared/app-data.component';
+import { AppDataService } from './shared/app-data.service';
 import { LibraryComponent } from './library/library.component';
 import { VideoLibraryComponent } from './library/video-library/video-library.component';
 import { WordLibraryComponent } from './library/word-library/word-library.component';
@@ -33,7 +33,7 @@ import { WordLibraryComponent } from './library/word-library/word-library.compon
 @NgModule({
   declarations: [
     AppComponent,
-    AppDataComponent,
+    AppDataService,
     HomeComponent,
     LessonCategoriesComponent,
     LessonsComponent,
@@ -61,7 +61,7 @@ import { WordLibraryComponent } from './library/word-library/word-library.compon
     MatRadioModule,
     HttpClientModule
   ],
-  entryComponents: [AppDataComponent],
+  entryComponents: [AppDataService],
   providers: [GlobalData],
   bootstrap: [AppComponent]
 })

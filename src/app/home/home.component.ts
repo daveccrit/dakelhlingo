@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppMenuItem } from '../shared/interfaces/app.interface';
-import { AppDataComponent } from '../shared/app-data.component';
+import { AppDataService } from '../shared/app-data.service';
 import { GlobalData } from '../shared/app-data';
 
 @Component({
@@ -8,19 +8,26 @@ import { GlobalData } from '../shared/app-data';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent extends AppDataComponent implements OnInit {
+export class HomeComponent implements OnInit {
   navItems: Array<AppMenuItem> = [];
   pageReady = false;
+  appDataService: AppDataService;
 
   constructor(globalData: GlobalData) {
-    super(globalData);
+    this.appDataService = new AppDataService(globalData);
   }
 
   ngOnInit() {
-    this.navItems.push(this.globalData['app']['learning-menu-item']);
-    this.navItems.push(this.globalData['app']['library-menu-item']);
-    this.navItems.push(this.globalData['app']['help-menu-item']);
-    this.navItems.push(this.globalData['app']['settings-menu-item']);
+    this.navItems.push(
+      this.appDataService.globalData['app']['learning-menu-item']
+    );
+    this.navItems.push(
+      this.appDataService.globalData['app']['library-menu-item']
+    );
+    this.navItems.push(this.appDataService.globalData['app']['help-menu-item']);
+    this.navItems.push(
+      this.appDataService.globalData['app']['settings-menu-item']
+    );
     this.pageReady = true;
   }
 }

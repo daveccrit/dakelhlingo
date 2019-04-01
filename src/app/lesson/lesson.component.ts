@@ -6,7 +6,7 @@ import {
   Lesson,
   LearningModuleWord
 } from '../shared/interfaces/app.interface';
-import { AppDataComponent } from '../shared/app-data.component';
+import { AppDataService } from '../shared/app-data.service';
 import { GlobalData } from '../shared/app-data';
 
 @Component({
@@ -14,27 +14,28 @@ import { GlobalData } from '../shared/app-data';
   templateUrl: './lesson.component.html',
   styleUrls: ['./lesson.component.scss']
 })
-export class LessonComponent extends AppDataComponent implements OnInit {
+export class LessonComponent implements OnInit {
   lessonId: number;
   lessonCategory: LessonCategory;
   lesson: Lesson;
   learningModuleData: LearningModuleWord;
   currentModuleNum = 0;
   pageReady = false;
+  appDataService: AppDataService;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     globalData: GlobalData
   ) {
-    super(globalData);
+    this.appDataService = new AppDataService(globalData);
   }
 
   ngOnInit(): void {
     this.lessonId = +this.route.snapshot.paramMap.get('lessonid');
     const categoryId = +this.route.snapshot.paramMap.get('catid');
-    this.lessonCategory = this.getLessonCategory(categoryId);
-    this.lesson = this.getLesson(this.lessonId);
+    this.lessonCategory = this.appDataService.getLessonCategory(categoryId);
+    this.lesson = this.appDataService.getLesson(this.lessonId);
     this.pageReady = true;
   }
 
@@ -46,7 +47,7 @@ export class LessonComponent extends AppDataComponent implements OnInit {
     if (this.currentModuleNum < this.lesson.learningModules.length - 1) {
       this.currentModuleNum++;
     } else {
-      this.setLessonComplete(this.lessonId);
+      this.appDataService.setLessonComplete(this.lessonId);
       this.goBack();
     }
   }

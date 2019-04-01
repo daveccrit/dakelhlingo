@@ -7,7 +7,7 @@ import {
   HostBinding
 } from '@angular/core';
 import { GlobalData } from 'src/app/shared/app-data';
-import { AppDataComponent } from 'src/app/shared/app-data.component';
+import { AppDataService } from 'src/app/shared/app-data.service';
 import { Word, LessonCategory } from 'src/app/shared/interfaces/app.interface';
 
 @Component({
@@ -15,12 +15,12 @@ import { Word, LessonCategory } from 'src/app/shared/interfaces/app.interface';
   templateUrl: './drag-drop-example.component.html',
   styleUrls: ['./drag-drop-example.component.scss']
 })
-export class DragDropExampleComponent extends AppDataComponent
-  implements OnInit {
+export class DragDropExampleComponent implements OnInit {
   lessonCategory: LessonCategory;
   wordData: Word;
   words: Array<Word> = [];
   isDragging = false;
+  appDataService: AppDataService;
 
   _languageWord: string;
 
@@ -36,7 +36,7 @@ export class DragDropExampleComponent extends AppDataComponent
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
   constructor(globalData: GlobalData) {
-    super(globalData);
+    this.appDataService = new AppDataService(globalData);
   }
 
   ngOnInit() {
@@ -45,18 +45,22 @@ export class DragDropExampleComponent extends AppDataComponent
 
   initModule() {
     const wordsArray: Array<Word> = [];
-    this.wordData = this.getWordByLanguage(this._languageWord);
+    this.wordData = this.appDataService.getWordByLanguage(this._languageWord);
     wordsArray.push(this.wordData);
 
-    this.lessonCategory = this.getLessonCategory(
+    this.lessonCategory = this.appDataService.getLessonCategory(
       this.wordData.lessonCategoryId
     );
 
     let randomWordData = this.wordData;
 
     while (randomWordData === this.wordData) {
-      const newRandomWord = this.getRandomWord(this.lessonCategory);
-      wordsArray.push(newRandomWord);
+      const newRandomWord = this.appDataService.getRandomWord(
+        this.lessonCategory
+      );
+      if (this.wordData !== newRandomWord) {
+        wordsArray.push(newRandomWord);
+      }
       randomWordData = newRandomWord;
     }
 
