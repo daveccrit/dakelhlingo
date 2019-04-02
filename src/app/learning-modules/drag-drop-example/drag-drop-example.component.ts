@@ -1,14 +1,7 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  HostBinding
-} from '@angular/core';
-import { GlobalData } from 'src/app/shared/app-data';
-import { AppDataService } from 'src/app/shared/app-data.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Word, LessonCategory } from 'src/app/shared/interfaces/app.interface';
+import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
+import { LessonService } from 'src/app/shared/services/lesson.service';
 
 @Component({
   selector: 'app-drag-drop-example',
@@ -20,7 +13,6 @@ export class DragDropExampleComponent implements OnInit {
   wordData: Word;
   words: Array<Word> = [];
   isDragging = false;
-  appDataService: AppDataService;
 
   _languageWord: string;
 
@@ -35,9 +27,10 @@ export class DragDropExampleComponent implements OnInit {
 
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(globalData: GlobalData) {
-    this.appDataService = new AppDataService(globalData);
-  }
+  constructor(
+    private wordsDictionaryService: WordsDictionaryService,
+    private lessonService: LessonService
+  ) {}
 
   ngOnInit() {
     this.initModule();
@@ -45,17 +38,19 @@ export class DragDropExampleComponent implements OnInit {
 
   initModule() {
     const wordsArray: Array<Word> = [];
-    this.wordData = this.appDataService.getWordByLanguage(this._languageWord);
+    this.wordData = this.wordsDictionaryService.getWordByLanguage(
+      this._languageWord
+    );
     wordsArray.push(this.wordData);
 
-    this.lessonCategory = this.appDataService.getLessonCategory(
+    this.lessonCategory = this.lessonService.getLessonCategory(
       this.wordData.lessonCategoryId
     );
 
     let randomWordData = this.wordData;
 
     while (randomWordData === this.wordData) {
-      const newRandomWord = this.appDataService.getRandomWord(
+      const newRandomWord = this.wordsDictionaryService.getRandomWord(
         this.lessonCategory
       );
       if (this.wordData !== newRandomWord) {

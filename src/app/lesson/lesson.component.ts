@@ -6,8 +6,7 @@ import {
   Lesson,
   LearningModuleWord
 } from '../shared/interfaces/app.interface';
-import { AppDataService } from '../shared/app-data.service';
-import { GlobalData } from '../shared/app-data';
+import { LessonService } from '../shared/services/lesson.service';
 
 @Component({
   selector: 'app-lesson',
@@ -21,21 +20,18 @@ export class LessonComponent implements OnInit {
   learningModuleData: LearningModuleWord;
   currentModuleNum = 0;
   pageReady = false;
-  appDataService: AppDataService;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    globalData: GlobalData
-  ) {
-    this.appDataService = new AppDataService(globalData);
-  }
+    private lessonService: LessonService
+  ) {}
 
   ngOnInit(): void {
     this.lessonId = +this.route.snapshot.paramMap.get('lessonid');
     const categoryId = +this.route.snapshot.paramMap.get('catid');
-    this.lessonCategory = this.appDataService.getLessonCategory(categoryId);
-    this.lesson = this.appDataService.getLesson(this.lessonId);
+    this.lessonCategory = this.lessonService.getLessonCategory(categoryId);
+    this.lesson = this.lessonService.getLesson(this.lessonId);
     this.pageReady = true;
   }
 
@@ -47,7 +43,7 @@ export class LessonComponent implements OnInit {
     if (this.currentModuleNum < this.lesson.learningModules.length - 1) {
       this.currentModuleNum++;
     } else {
-      this.appDataService.setLessonComplete(this.lessonId);
+      this.lessonService.setLessonComplete(this.lessonId);
       this.goBack();
     }
   }

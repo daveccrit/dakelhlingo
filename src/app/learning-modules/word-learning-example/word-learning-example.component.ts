@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { GlobalData } from 'src/app/shared/app-data';
-import { AppDataService } from 'src/app/shared/app-data.service';
 import { Word } from 'src/app/shared/interfaces/app.interface';
+import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
 
 @Component({
   selector: 'app-word-learning-example',
@@ -10,7 +9,6 @@ import { Word } from 'src/app/shared/interfaces/app.interface';
 })
 export class WordLearningExampleComponent implements OnInit {
   wordData: Word;
-  appDataService: AppDataService;
 
   _languageWord: string;
 
@@ -25,16 +23,16 @@ export class WordLearningExampleComponent implements OnInit {
 
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(globalData: GlobalData) {
-    this.appDataService = new AppDataService(globalData);
-  }
+  constructor(private wordsDictionaryService: WordsDictionaryService) {}
 
   ngOnInit() {
     this.getWordData();
   }
 
   getWordData() {
-    this.wordData = this.appDataService.getWordByLanguage(this._languageWord);
+    this.wordData = this.wordsDictionaryService.getWordByLanguage(
+      this._languageWord
+    );
   }
 
   completedModule() {

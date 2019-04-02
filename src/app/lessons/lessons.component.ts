@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { AppDataService } from '../shared/app-data.service';
-import { GlobalData } from '../shared/app-data';
 import { LessonCategory, Lesson } from '../shared/interfaces/app.interface';
+import { LessonService } from '../shared/services/lesson.service';
 
 interface LessonCategoryType {
   id: number;
@@ -22,20 +21,17 @@ export class LessonsComponent implements OnInit {
   lessonCategory: LessonCategory;
   lessons: Array<Lesson>;
   pageReady = false;
-  appDataService: AppDataService;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    globalData: GlobalData
-  ) {
-    this.appDataService = new AppDataService(globalData);
-  }
+    private lessonService: LessonService
+  ) {}
 
   ngOnInit(): void {
     const categoryId = +this.route.snapshot.paramMap.get('catid');
-    this.lessonCategory = this.appDataService.getLessonCategory(categoryId);
-    this.lessons = this.appDataService.getLessons(this.lessonCategory.id);
+    this.lessonCategory = this.lessonService.getLessonCategory(categoryId);
+    this.lessons = this.lessonService.getLessons(this.lessonCategory.id);
     this.pageReady = true;
   }
 

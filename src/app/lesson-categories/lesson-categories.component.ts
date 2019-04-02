@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { AppDataService } from '../shared/app-data.service';
-import { GlobalData } from '../shared/app-data';
 import { LessonCategory } from '../shared/interfaces/app.interface';
+import { LessonService } from '../shared/services/lesson.service';
 
 @Component({
   selector: 'app-lesson-categories',
@@ -12,14 +11,14 @@ import { LessonCategory } from '../shared/interfaces/app.interface';
 export class LessonCategoriesComponent implements OnInit {
   categories: Array<LessonCategory>;
   pageReady = false;
-  appDataService: AppDataService;
 
-  constructor(private location: Location, globalData: GlobalData) {
-    this.appDataService = new AppDataService(globalData);
-  }
+  constructor(
+    private location: Location,
+    private lessonService: LessonService
+  ) {}
 
   ngOnInit() {
-    this.categories = this.appDataService.getLessonCategories();
+    this.categories = this.lessonService.getLessonCategories();
     this.pageReady = true;
   }
 
