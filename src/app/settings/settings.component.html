@@ -11,8 +11,12 @@
   </div>
 </button>
 
-<mat-radio-group [(ngModel)]="lessonLevel" (change)="changeLessonLevel()">
-  <mat-radio-button [value]="''">Beginner</mat-radio-button>
-  <mat-radio-button [value]="'level1'">Intermediate</mat-radio-button>
-  <mat-radio-button [value]="'level2'">Expert</mat-radio-button>
-</mat-radio-group>
+<div class="settings-container">
+  <h3>Application Settings</h3>
+  <mat-radio-group [(ngModel)]="userLevel">
+    <label>User Level</label>
+    <mat-radio-button [value]="''">Beginner</mat-radio-button>
+    <mat-radio-button [value]="'level1'">Intermediate</mat-radio-button>
+    <mat-radio-button [value]="'level2'">Expert</mat-radio-button>
+  </mat-radio-group>
+</div>

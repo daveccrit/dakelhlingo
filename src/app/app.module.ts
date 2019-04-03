@@ -30,6 +30,7 @@ import { WordLibraryComponent } from './library/word-library/word-library.compon
 import { LessonService } from './shared/services/lesson.service';
 import { WordsDictionaryService } from './shared/services/words-dictionary.service';
 import { MenuDataService } from './shared/services/menu-data.service';
+import { SettingsService } from './shared/services/settings.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,12 @@ import { MenuDataService } from './shared/services/menu-data.service';
     MatRadioModule,
     HttpClientModule
   ],
-  providers: [LessonService, MenuDataService, WordsDictionaryService],
+  providers: [
+    LessonService,
+    MenuDataService,
+    WordsDictionaryService,
+    SettingsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
