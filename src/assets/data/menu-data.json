@@ -1,0 +1,66 @@
+{
+  "learning-menu-item": {
+    "icon": "school",
+    "route": "/lesson-categories",
+    "dakelh": "Sgani hodutizeh' awk'anus zun",
+    "english": "I want to learn my language",
+    "audio": ["i_want_to_learn_my_language.m4a"],
+    "className": "primary"
+  },
+  "library-menu-item": {
+    "icon": "library_books",
+    "route": "/library",
+    "dakelh": "Library",
+    "english": "Library",
+    "audio": [],
+    "className": "secondary"
+  },
+  "help-menu-item": {
+    "icon": "help",
+    "route": "/help",
+    "dakelh": "Sla'in neh",
+    "english": "Help me",
+    "audio": ["help_me.m4a"],
+    "className": "secondary"
+  },
+  "settings-menu-item": {
+    "icon": "settings",
+    "route": "/settings",
+    "dakelh": "Settings",
+    "english": "Settings",
+    "audio": [],
+    "className": "secondary"
+  },
+  "words-menu-item": {
+    "icon": "local_library",
+    "route": "/library/words",
+    "dakelh": "Sgani",
+    "english": "My language",
+    "audio": [],
+    "className": "secondary"
+  },
+  "videos-menu-item": {
+    "icon": "video_library",
+    "route": "/library/videos",
+    "dakelh": "Videos",
+    "english": "Videos",
+    "audio": [],
+    "className": "secondary"
+  },
+  "back-button": {
+    "icon": "arrow_back",
+    "route": "",
+    "dakelh": "",
+    "english": "back",
+    "audio": [],
+    "className": "secondary"
+  },
+  "ok-button": {
+    "icon": "",
+    "route": "",
+    "dakelh": "",
+    "english": "ok",
+    "audio": [],
+    "className": "secondary"
+  }
+}

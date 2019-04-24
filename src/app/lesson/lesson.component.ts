@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import {
+  LessonCategory,
+  Lesson,
+  LearningModuleWord
+} from '../shared/interfaces/app.interface';
+import { LessonService } from '../shared/services/lesson.service';
 
 @Component({
   selector: 'app-lesson',
@@ -8,24 +14,37 @@ import { Location } from '@angular/common';
   styleUrls: ['./lesson.component.scss']
 })
 export class LessonComponent implements OnInit {
-  catId: number;
   lessonId: number;
+  lessonCategory: LessonCategory;
+  lesson: Lesson;
+  learningModuleData: LearningModuleWord;
+  currentModuleNum = 0;
+  pageReady = false;
 
-  constructor(private route: ActivatedRoute, private location: Location) {}
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private lessonService: LessonService
+  ) {}
 
   ngOnInit(): void {
-    this.getLessons();
-  }
-
-  getLessons(): void {
-    this.catId = +this.route.snapshot.paramMap.get('catid');
     this.lessonId = +this.route.snapshot.paramMap.get('lessonid');
-    // this.lessonCategory = this.categories.find(
-    //   category => category.id === catId
-    // );
+    const categoryId = +this.route.snapshot.paramMap.get('catid');
+    this.lessonCategory = this.lessonService.getLessonCategory(categoryId);
+    this.lesson = this.lessonService.getLesson(this.lessonId);
+    this.pageReady = true;
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  completedLearningModule() {
+    if (this.currentModuleNum < this.lesson.learningModules.length - 1) {
+      this.currentModuleNum++;
+    } else {
+      this.lessonService.setLessonComplete(this.lessonId);
+      this.goBack();
+    }
   }
 }

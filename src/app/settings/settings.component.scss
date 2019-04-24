@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-container {
+  margin-top: 40px;
+}
+
+.mat-radio-group {
+  height: 20px;
+  max-height: 20px;
+  padding: 3px 18px;
+  border: none;
+}
+.mat-radio-group .mat-radio-button {
+  margin: 0 5px;
+}

@@ -1,59 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataService } from './shared/services/get-data.service';
-import { GlobalData } from './shared/app-data';
+import { SettingsService } from './shared/services/settings.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [GlobalData]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  lessonLevel = '';
-
-  appDataReady = false;
-  languageWordDataReady = false;
-  lessonCategoriesDataReady = false;
+  userLevel = '';
   appReady = false;
 
-  constructor(
-    private getDataService: GetDataService,
-    private globalData: GlobalData
-  ) {}
+  constructor(private settingsService: SettingsService) {
+    this.userLevel = this.settingsService.app.userLevel;
+    this.settingsService.settingChange.subscribe(setting => {
+      if (setting === 'userLevel') {
+        this.userLevel = this.settingsService.app.userLevel;
+      }
+    });
+  }
 
   ngOnInit() {
-    if (!this.globalData.app) {
-      this.getDataService.getData('app').subscribe(data => {
-        this.globalData.app = data;
-        this.appDataReady = true;
-        this.checkAppReady();
-      });
-    }
-
-    if (!this.globalData.languageWords) {
-      this.getDataService.getData('dakelh-words').subscribe(data => {
-        this.globalData.languageWords = data;
-        this.languageWordDataReady = true;
-        this.checkAppReady();
-      });
-    }
-
-    if (!this.globalData.lessonCategories) {
-      this.getDataService.getData('dakelh-word-categories').subscribe(data => {
-        this.globalData.lessonCategories = data;
-        this.lessonCategoriesDataReady = true;
-        this.checkAppReady();
-      });
-    }
+    this.checkAppReady();
   }
 
   checkAppReady() {
-    if (
-      this.lessonCategoriesDataReady &&
-      this.languageWordDataReady &&
-      this.appDataReady
-    ) {
-      this.appReady = true;
-    }
+    this.appReady = true;
   }
 }

@@ -1,4 +1,6 @@
-<mat-icon class="menu-item-icon">{{ menuItem.icon }}</mat-icon>
+<mat-icon class="menu-item-icon" [ngClass]="{ completed: completed }">{{
+  completed ? 'check_circle' : menuItem.icon
+}}</mat-icon>
 <div class="language-text-container">
   <div class="dakelh-text">{{ menuItem.dakelh }}</div>
   <div class="english-text">{{ menuItem.english }}</div>
@@ -12,7 +14,7 @@
   >play_circle_outline</mat-icon
 >
 <audio
-  *ngIf="menuItem.audio.length > 0"
   #audio
+  *ngIf="menuItem.audio.length > 0"
   [src]="'assets/audio/pronunciation/' + menuItem.audio[0]"
 ></audio>

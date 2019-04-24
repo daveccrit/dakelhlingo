@@ -1,0 +1,74 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 4px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.words-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 5px;
+  justify-content: space-between;
+  min-width: 100px;
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #939393;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+
+    & * {
+      pointer-events: none;
+    }
+
+    & > img {
+      max-width: 100%;
+    }
+  }
+
+  .is-dragging.drag-over {
+    border: 2px solid #0000ff;
+    margin: -1px;
+
+    & * {
+      opacity: 0.9;
+    }
+  }
+
+  .language-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 20px 0;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+
+    .drag-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #000000;
+      cursor: pointer;
+      background-color: #ffffff;
+
+      .dakelh-text {
+        padding: 10px;
+      }
+    }
+  }
+}

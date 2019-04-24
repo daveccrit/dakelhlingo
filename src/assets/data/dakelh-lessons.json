@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "lessonCategoryId": 1,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "ulhyul"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "ulhyul"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "nigwus dot'en"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "nigwus dot'en"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "dulk'un"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "dulk'un"
+      },
+      {
+        "learningModule": "multiple-word-example",
+        "languageWords": ["ulhyul", "nigwus dot'en", "dulk'un"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "lessonCategoryId": 1,
+    "dakelh": "Lesson 2",
+    "english": "Lesson 2",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "kwun dot'en"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "kwun dot'en"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "yun dot'en"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "yun dot'en"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "dultl'uz"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "dultl'uz"
+      },
+      {
+        "learningModule": "multiple-word-example",
+        "languageWords": ["kwun dot'en", "yun dot'en", "dultl'uz"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "lessonCategoryId": 1,
+    "dakelh": "Lesson 3",
+    "english": "Lesson 3",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "ulhyul"
+      }
+    ]
+  }
+]

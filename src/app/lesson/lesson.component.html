@@ -10,4 +10,34 @@
     <div class="english-text">Go Back</div>
   </div>
 </button>
-<p>lesson works! {{ catId }} / {{ lessonId }}</p>
+<div class="learning-module-container" *ngIf="pageReady">
+  <app-word-learning-example
+    *ngIf="
+      pageReady &&
+      this.lesson.learningModules[currentModuleNum].learningModule ===
+        'single-word-example'
+    "
+    [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
+    (completed)="completedLearningModule()"
+  ></app-word-learning-example>
+  <app-words-learning-example
+    *ngIf="
+      pageReady &&
+      this.lesson.learningModules[currentModuleNum].learningModule ===
+        'multiple-word-example'
+    "
+    [languageWords]="
+      this.lesson.learningModules[currentModuleNum].languageWords
+    "
+    (completed)="completedLearningModule()"
+  ></app-words-learning-example>
+  <app-drag-drop-example
+    *ngIf="
+      pageReady &&
+      this.lesson.learningModules[currentModuleNum].learningModule ===
+        'drag-drop-example'
+    "
+    [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
+    (completed)="completedLearningModule()"
+  ></app-drag-drop-example>
+</div>
