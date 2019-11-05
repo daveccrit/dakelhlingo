@@ -1,9 +1,23 @@
-<div class="words-container">
-  <div class="language-text-container" *ngFor="let wordData of wordsData">
-    <div class="dakelh-text">{{ wordData.dakelh }}</div>
-    <div class="english-text">{{ wordData.english }}</div>
+<div class="page-container">
+  <div class="words-container">
+    <div class="text-container"
+         *ngFor="let wordData of wordsData; let i = index">
+
+      <div class="language-text-container">
+        <div class="dakelh-text">{{ wordData.dakelh }}</div>
+        <div class="english-text">{{ wordData.english }}</div>
+      </div>
+
+      <mat-icon class="play-button"
+                (click)="onClick(i)"
+                *ngIf="wordData.audio.length > 0">play_circle_outline</mat-icon>
+
+    </div>
   </div>
-  <button mat-raised-button (click)="completedModule()" color="primary">
+  <button mat-raised-button
+          (click)="completedModule()"
+          color="primary">
     ok
   </button>
+  <audio #audio></audio>
 </div>

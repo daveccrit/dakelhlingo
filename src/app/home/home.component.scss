@@ -4,8 +4,51 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 
 .mat-nav-list.home-nav-list {
   flex: 0 0 auto;
+  z-index: 9999;
+}
+
+.canoe {
+  width: 364px;
+  animation: canoe1Animation 20s linear forwards;
+  position: absolute;
+  left: -365px;
+  bottom: -67px;
+  z-index: 9000;
+
+  img {
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* animations */
+@keyframes canoe1Animation {
+  0% {
+    left: -365px;
+    bottom: -67px;
+    width: 364px;
+  }
+  50% {
+    left: 192px;
+    bottom: 76px;
+    width: 282px;
+  }
+  55% {
+    left: 279px;
+    bottom: 98px;
+    width: 270px;
+  }
+
+  100% {
+    left: 750px;
+    bottom: 220px;
+    width: 200px;
+  }
 }

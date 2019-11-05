@@ -10,6 +10,7 @@ import { MenuDataService } from '../shared/services/menu-data.service';
 export class HomeComponent implements OnInit {
   navItems: Array<AppMenuItem> = [];
   pageReady = false;
+  showCanoe = false;
 
   constructor(private menuDataService: MenuDataService) {}
 
@@ -19,5 +20,15 @@ export class HomeComponent implements OnInit {
     this.navItems.push(this.menuDataService.menuItems['help-menu-item']);
     this.navItems.push(this.menuDataService.menuItems['settings-menu-item']);
     this.pageReady = true;
+  }
+
+  clickEvent() {
+    console.log('Start Canoe');
+    if (this.showCanoe === false) {
+      this.showCanoe = true;
+      setTimeout(() => {
+        this.showCanoe = false;
+      }, 21000);
+    }
   }
 }

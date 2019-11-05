@@ -1,14 +1,21 @@
-<img src="assets/images/app/dakelh-logo.png" width="50%" />
+<img src="assets/images/app/dakelh-logo.png"
+     width="50%"
+     (click)="clickEvent()"
+     [ngStyle]="{'cursor': showCanoe ? 'default' : 'pointer'}" />
 
-<mat-nav-list class="home-nav-list" *ngIf="pageReady">
-  <a
-    mat-list-item
-    class="language-text"
-    *ngFor="let navItem of navItems"
-    [routerLink]="navItem.route"
-    routerLinkActive="active"
-    [ngClass]="navItem.className"
-  >
+<div class="canoe"
+     *ngIf="showCanoe">
+  <img src="assets/images/app/vintage-maine-indian-birch-bark-canoe.png" />
+</div>
+
+<mat-nav-list class="home-nav-list"
+              *ngIf="pageReady">
+  <a mat-list-item
+     class="language-text"
+     *ngFor="let navItem of navItems"
+     [routerLink]="navItem.route"
+     routerLinkActive="active"
+     [ngClass]="navItem.className">
     <app-menu-list-item [menuItem]="navItem"></app-menu-list-item>
   </a>
 </mat-nav-list>

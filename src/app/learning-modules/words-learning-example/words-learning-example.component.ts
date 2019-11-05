@@ -1,4 +1,12 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import {
+  ElementRef,
+  Component,
+  OnInit,
+  EventEmitter,
+  Output,
+  Input,
+  ViewChild
+} from '@angular/core';
 import { Word } from 'src/app/shared/interfaces/app.interface';
 import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
 
@@ -8,6 +16,8 @@ import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary
   styleUrls: ['./words-learning-example.component.scss']
 })
 export class WordsLearningExampleComponent implements OnInit {
+  @ViewChild('audio') audioElement: ElementRef;
+
   wordsData: Array<Word>;
 
   _languageWords: Array<string>;
@@ -39,5 +49,17 @@ export class WordsLearningExampleComponent implements OnInit {
 
   completedModule() {
     this.completed.emit(true);
+  }
+
+  onClick(audioIndex: number) {
+    if (this.wordsData[audioIndex].audio.length > 0) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.audioElement.nativeElement.onloadeddata = () => {
+        this.audioElement.nativeElement.play();
+      };
+      this.audioElement.nativeElement.src =
+        'assets/audio/pronunciation/' + this.wordsData[audioIndex].audio[0];
+    }
   }
 }

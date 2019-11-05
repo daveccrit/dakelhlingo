@@ -15,7 +15,6 @@ import {
   MatInputModule
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { LessonsComponent } from './lessons/lessons.component';
 import { LessonComponent } from './lesson/lesson.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuListItemComponent } from './shared/menu-list-item/menu-list-item.component';
@@ -31,13 +30,14 @@ import { LessonService } from './shared/services/lesson.service';
 import { WordsDictionaryService } from './shared/services/words-dictionary.service';
 import { MenuDataService } from './shared/services/menu-data.service';
 import { SettingsService } from './shared/services/settings.service';
+import { LessonListComponent } from './lesson-list/lesson-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LessonCategoriesComponent,
-    LessonsComponent,
+    LessonListComponent,
     LessonComponent,
     MenuListItemComponent,
     WordLearningExampleComponent,
