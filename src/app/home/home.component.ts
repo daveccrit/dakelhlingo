@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppMenuItem } from '../shared/interfaces/app.interface';
 import { MenuDataService } from '../shared/services/menu-data.service';
 
@@ -7,10 +7,11 @@ import { MenuDataService } from '../shared/services/menu-data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   navItems: Array<AppMenuItem> = [];
   pageReady = false;
   showCanoe = false;
+  canoeTimeout = setTimeout(() => {}, 0);
 
   constructor(private menuDataService: MenuDataService) {}
 
@@ -22,11 +23,15 @@ export class HomeComponent implements OnInit {
     this.pageReady = true;
   }
 
+  ngOnDestroy(): void {
+    clearTimeout(this.canoeTimeout);
+    this.showCanoe = false;
+  }
+
   clickEvent() {
-    console.log('Start Canoe');
     if (this.showCanoe === false) {
       this.showCanoe = true;
-      setTimeout(() => {
+      this.canoeTimeout = setTimeout(() => {
         this.showCanoe = false;
       }, 21000);
     }
