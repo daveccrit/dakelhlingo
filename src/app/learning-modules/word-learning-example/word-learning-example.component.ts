@@ -16,7 +16,7 @@ import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary
   styleUrls: ['./word-learning-example.component.scss']
 })
 export class WordLearningExampleComponent implements OnInit {
-  @ViewChild('audio') audioElement: ElementRef;
+  @ViewChild('audio', { static: false }) audioElement: ElementRef;
 
   wordData: Word;
 

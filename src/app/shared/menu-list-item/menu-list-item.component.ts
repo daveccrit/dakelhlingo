@@ -14,7 +14,7 @@ import { LessonCategory, AppMenuItem, Word } from '../interfaces/app.interface';
   styleUrls: ['./menu-list-item.component.scss']
 })
 export class MenuListItemComponent implements OnInit {
-  @ViewChild('audio') audioElement: ElementRef;
+  @ViewChild('audio', { static: false }) audioElement: ElementRef;
   @Input() menuItem: LessonCategory | Word | AppMenuItem;
   @Input() completed: boolean;
   @HostBinding('class.completed') completedClass = this.completed;
