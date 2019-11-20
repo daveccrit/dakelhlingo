@@ -7,7 +7,7 @@
   <div class="arrow-container">
     <mat-icon class="up-arrow">arrow_upward</mat-icon>
   </div>
-  <div class="language-text-container">
+  <div class="drag-container">
     <div class="drag-item"
          cdkDrag
          cdkDragLockAxis="y"
@@ -15,7 +15,14 @@
          (cdkDragStarted)="onDragStart($event)"
          (cdkDragMoved)="onDragMove($event)"
          (cdkDragEnded)="onDragEnd($event)">
-      <div class="dakelh-text">{{ wordData.dakelh }}</div>
+
+      <div class="language-text-container">
+        <div class="dakelh-text">{{ wordData.dakelh }}</div>
+      </div>
+
+      <mat-icon class="play-button"
+                (click)="playWordAudio()"
+                *ngIf="wordData.audio.length > 0">play_circle_outline</mat-icon>
     </div>
   </div>
   <div class="arrow-container">
@@ -27,11 +34,4 @@
     <img [src]="'assets/images/dakelh-words/' + this.words[1].images[0]" />
   </div>
 </div>
-
-<!-- <div class="image-container"
-     (drop)="onDrop($event, words[1].dakelh)"
-     (dragover)="onDragOver($event)"
-     (dragleave)="onDragLeave($event)"
-     [ngClass]="{ 'is-dragging': isDragging }">
-  <img [src]="'assets/images/dakelh-words/' + words[1].images[0]" />
-</div> -->
+<audio #audio></audio>

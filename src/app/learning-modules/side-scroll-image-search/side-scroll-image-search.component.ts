@@ -18,7 +18,7 @@ import { Word, WordCategory } from 'src/app/shared/interfaces/app.interface';
 })
 export class SideScrollImageSearchComponent implements AfterViewInit {
   @ViewChild('audio', { static: false }) audioElement: ElementRef;
-  @ViewChild('carouselComponent', { static: true })
+  @ViewChild('carouselComponent', { static: false })
   carouselComponent: ElementRef;
 
   wordData: Word;
@@ -44,7 +44,7 @@ export class SideScrollImageSearchComponent implements AfterViewInit {
     setTimeout(() => {
       this.itemSize = (this.carouselComponent
         .nativeElement as HTMLElement).offsetWidth;
-    });
+    }, 100);
   }
 
   onResize() {

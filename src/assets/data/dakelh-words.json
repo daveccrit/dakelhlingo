@@ -7,7 +7,7 @@
     "icon": "color_lens",
     "images": ["white.png"],
     "videos": [],
-    "audio": ["white.m4a"]
+    "audio": ["white.mp3"]
   },
   {
     "dakelh": "nigwus dot'en",
@@ -17,7 +17,7 @@
     "icon": "color_lens",
     "images": ["looks_like_soapberries.png"],
     "videos": [],
-    "audio": ["looks_like_soapberries.m4a"]
+    "audio": ["looks_like_soapberries.mp3"]
   },
   {
     "dakelh": "dulk'un",
@@ -27,7 +27,7 @@
     "icon": "color_lens",
     "images": ["red.png"],
     "videos": [],
-    "audio": ["red.m4a"]
+    "audio": ["red.mp3"]
   },
   {
     "dakelh": "kwun dot'en",
@@ -37,7 +37,7 @@
     "icon": "color_lens",
     "images": ["looks_like_fire.png"],
     "videos": [],
-    "audio": ["looks_like_fire.m4a"]
+    "audio": ["looks_like_fire.mp3"]
   },
   {
     "dakelh": "yun dot'en",
@@ -47,7 +47,7 @@
     "icon": "color_lens",
     "images": ["looks_like_the_earth.png"],
     "videos": [],
-    "audio": ["looks_like_the_earth.m4a"]
+    "audio": ["looks_like_the_earth.mp3"]
   },
   {
     "dakelh": "dultl'uz",
@@ -57,7 +57,7 @@
     "icon": "color_lens",
     "images": ["green.png"],
     "videos": [],
-    "audio": ["green.m4a"]
+    "audio": ["green.mp3"]
   },
   {
     "dakelh": "duldzan",
@@ -67,7 +67,7 @@
     "icon": "color_lens",
     "images": ["blue.png"],
     "videos": [],
-    "audio": ["blue.m4a"]
+    "audio": ["blue.mp3"]
   },
   {
     "dakelh": "dulgi",
@@ -77,7 +77,7 @@
     "icon": "color_lens",
     "images": ["grey.png"],
     "videos": [],
-    "audio": ["grey.m4a"]
+    "audio": ["grey.mp3"]
   },
   {
     "dakelh": "dulhgus",
@@ -87,7 +87,7 @@
     "icon": "color_lens",
     "images": ["black.png"],
     "videos": [],
-    "audio": ["black.m4a"]
+    "audio": ["black.mp3"]
   },
   {
     "dakelh": "dultso",
@@ -97,7 +97,7 @@
     "icon": "color_lens",
     "images": ["yellow.png"],
     "videos": [],
-    "audio": ["yellow.m4a"]
+    "audio": ["yellow.mp3"]
   },
   {
     "dakelh": "mai dot'en",
@@ -107,7 +107,7 @@
     "icon": "color_lens",
     "images": ["looks_like_berries.png"],
     "videos": [],
-    "audio": ["looks_like_berries.m4a"]
+    "audio": ["looks_like_berries.mp3"]
   },
   {
     "dakelh": "dzetniz",
@@ -117,7 +117,7 @@
     "icon": "access_time",
     "images": ["noon.png"],
     "videos": [],
-    "audio": ["noon.m4a"]
+    "audio": ["noon.mp3"]
   },
   {
     "dakelh": "ulhdzis",
@@ -127,7 +127,7 @@
     "icon": "access_time",
     "images": ["night.png"],
     "videos": [],
-    "audio": ["night.m4a"]
+    "audio": ["night.mp3"]
   },
   {
     "dakelh": "bundada'",
@@ -147,7 +147,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["january.m4a"]
+    "audio": ["january.mp3"]
   },
   {
     "dakelh": "Chuzsul ooza'",
@@ -157,7 +157,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["february.m4a"]
+    "audio": ["february.mp3"]
   },
   {
     "dakelh": "Chuzcho ooza'",
@@ -167,7 +167,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["march.m4a"]
+    "audio": ["march.mp3"]
   },
   {
     "dakelh": "Shin ooza'",
@@ -177,7 +177,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["april.m4a"]
+    "audio": ["april.mp3"]
   },
   {
     "dakelh": "Dugoos ooza'",
@@ -187,7 +187,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["may.m4a"]
+    "audio": ["may.mp3"]
   },
   {
     "dakelh": "Dang ooza'",
@@ -197,7 +197,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["june.m4a"]
+    "audio": ["june.mp3"]
   },
   {
     "dakelh": "Talo ooza'",
@@ -207,7 +207,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["july.m4a"]
+    "audio": ["july.mp3"]
   },
   {
     "dakelh": "Gesul ooza'",
@@ -217,7 +217,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["august.m4a"]
+    "audio": ["august.mp3"]
   },
   {
     "dakelh": "Bit ooza'",
@@ -227,7 +227,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["september.m4a"]
+    "audio": ["september.mp3"]
   },
   {
     "dakelh": "Lhoh ooza'",
@@ -237,7 +237,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["october.m4a"]
+    "audio": ["october.mp3"]
   },
   {
     "dakelh": "Banghan nuts'ukih",
@@ -247,7 +247,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["november.m4a"]
+    "audio": ["november.mp3"]
   },
   {
     "dakelh": "Sacho din'ai",
@@ -257,7 +257,7 @@
     "icon": "date_range",
     "images": [],
     "videos": [],
-    "audio": ["december.m4a"]
+    "audio": ["december.mp3"]
   },
   {
     "dakelh": "Duni",
@@ -267,7 +267,7 @@
     "icon": "pets",
     "images": [],
     "videos": [],
-    "audio": ["moose.m4a"]
+    "audio": ["moose.mp3"]
   },
   {
     "dakelh": "Wasi",
@@ -277,7 +277,7 @@
     "icon": "pets",
     "images": [],
     "videos": [],
-    "audio": ["lynx.m4a"]
+    "audio": ["lynx.mp3"]
   },
   {
     "dakelh": "Whudzih",
@@ -287,7 +287,7 @@
     "icon": "pets",
     "images": [],
     "videos": [],
-    "audio": ["cariboo.m4a"]
+    "audio": ["cariboo.mp3"]
   },
   {
     "dakelh": "Booscho",
@@ -297,7 +297,7 @@
     "icon": "pets",
     "images": [],
     "videos": [],
-    "audio": ["cougar.m4a"]
+    "audio": ["cougar.mp3"]
   },
   {
     "dakelh": "Lhi",
@@ -307,7 +307,7 @@
     "icon": "pets",
     "images": [],
     "videos": [],
-    "audio": ["dog.m4a"]
+    "audio": ["dog.mp3"]
   },
   {
     "dakelh": "Sus",
@@ -317,6 +317,6 @@
     "icon": "pets",
     "images": [],
     "videos": [],
-    "audio": ["black_bear.m4a"]
+    "audio": ["black_bear.mp3"]
   }
 ]

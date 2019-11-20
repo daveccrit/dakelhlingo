@@ -4,7 +4,7 @@
     "route": "/lesson-categories",
     "dakelh": "Sgani hodutizeh' awk'anus zun",
     "english": "I want to learn my language",
-    "audio": ["i_want_to_learn_my_language.m4a"],
+    "audio": ["i_want_to_learn_my_language.mp3"],
     "className": "primary"
   },
   "library-menu-item": {
@@ -20,7 +20,7 @@
     "route": "/help",
     "dakelh": "Sla'in neh",
     "english": "Help me",
-    "audio": ["help_me.m4a"],
+    "audio": ["help_me.mp3"],
     "className": "secondary"
   },
   "settings-menu-item": {

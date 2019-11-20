@@ -53,8 +53,10 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.carousel.nativeElement.style.width =
-      Math.round(this.items.length * 33.3333) + '%';
+    setTimeout(() => {
+      this.carousel.nativeElement.style.width =
+        Math.round(this.items.length * 33.3333) + '%';
+    }, 100);
   }
 
   selectClick() {
@@ -67,7 +69,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     }
 
     this.currentSlide = (this.currentSlide + 1) % this.items.length;
-
     const offset = this.currentSlide * Math.round(this.size * 0.3333);
 
     this.playAnimation(offset);
@@ -80,7 +81,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
     this.currentSlide =
       (this.currentSlide - 1 + this.items.length) % this.items.length;
-
     const offset = this.currentSlide * Math.round(this.size * 0.3333);
 
     this.playAnimation(offset);

@@ -6,7 +6,8 @@ import {
   EventEmitter,
   ViewChildren,
   QueryList,
-  ElementRef
+  ElementRef,
+  ViewChild
 } from '@angular/core';
 import { Word, WordCategory } from 'src/app/shared/interfaces/app.interface';
 import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
@@ -19,6 +20,7 @@ import { CdkDragStart, CdkDragEnd, CdkDragMove } from '@angular/cdk/drag-drop';
 })
 export class DragDropExampleComponent implements OnInit {
   @ViewChildren('dropContainer') dropContainerList: QueryList<ElementRef>;
+  @ViewChild('audio', { static: false }) audioElement: ElementRef;
 
   wordCategory: WordCategory;
   wordData: Word;
@@ -120,6 +122,18 @@ export class DragDropExampleComponent implements OnInit {
     }
 
     return array;
+  }
+
+  playWordAudio() {
+    if (this.wordData.audio.length > 0) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.audioElement.nativeElement.onloadeddata = () => {
+        this.audioElement.nativeElement.play();
+      };
+      this.audioElement.nativeElement.src =
+        'assets/audio/pronunciation/' + this.wordData.audio[0];
+    }
   }
 
   completedModule() {

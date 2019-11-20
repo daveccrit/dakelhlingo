@@ -40,15 +40,9 @@ export class LessonComponent implements OnInit {
   }
 
   completedLearningModule() {
-    console.log(
-      'Completed Module: ',
-      this.currentModuleNum,
-      this.lesson.learningModules.length
-    );
     if (this.currentModuleNum < this.lesson.learningModules.length - 1) {
       this.currentModuleNum++;
     } else {
-      console.log('All Lessons Completed');
       this.lessonService.setLessonComplete(this.lessonId);
       this.goBack();
     }
