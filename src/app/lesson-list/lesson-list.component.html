@@ -1,27 +1,27 @@
-<button
-  mat-raised-button
-  class="back-button language-text"
-  (click)="goBack()"
-  color="secondary"
->
-  <mat-icon>arrow_back</mat-icon>
-  <div class="language-text-container">
-    <div class="dakelh-text">Go Back</div>
-    <div class="english-text">Go Back</div>
+<div class='top-bar'>
+
+  <div class="back-button"
+       (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <div class="language-text">
+      <div class="dakelh-text">Go Back</div>
+      <div class="english-text">Go Back</div>
+    </div>
   </div>
-</button>
-<h3>{{ lessonCategory.textDakelh }} Lessons</h3>
+
+  <div class="page-title language-text">
+    <div class="dakelh-text">{{ lessonCategory.dakelh }}</div>
+    <div class="english-text">{{ lessonCategory.english }}</div>
+  </div>
+</div>
+
 <mat-nav-list class="menu-list">
-  <a
-    mat-list-item
-    class="language-text"
-    *ngFor="let lesson of lessons"
-    [routerLink]="['/lesson', lessonCategory.id, lesson.id]"
-    routerLinkActive="active"
-  >
-    <app-menu-list-item
-      [menuItem]="lesson"
-      [completed]="lesson.completed"
-    ></app-menu-list-item>
+  <a mat-list-item
+     class="language-text"
+     *ngFor="let lesson of lessons"
+     [routerLink]="['/lesson', lessonCategory.id, lesson.id]"
+     routerLinkActive="active">
+    <app-menu-list-item [menuItem]="lesson"
+                        [completed]="lesson.completed"></app-menu-list-item>
   </a>
 </mat-nav-list>

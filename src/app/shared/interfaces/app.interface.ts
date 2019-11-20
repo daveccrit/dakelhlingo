@@ -1,12 +1,18 @@
 export interface Word {
   dakelh: string;
   english: string;
-  lessonCategory: string;
-  lessonCategoryId: number;
+  wordCategory: string;
+  wordCategoryId: number;
   icon: string;
   audio: Array<string>;
   video: Array<string>;
   images: Array<string>;
+}
+
+export interface WordCategory {
+  id: number;
+  dakelh: string;
+  english: string;
 }
 
 export interface Phrase {

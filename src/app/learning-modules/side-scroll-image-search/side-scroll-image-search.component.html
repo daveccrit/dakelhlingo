@@ -1,0 +1,36 @@
+<div class="content-container">
+
+  <div class="learning-module-title">Match the Image</div>
+
+  <div class="word-container">
+    <div class="text-container">
+
+      <div class="language-text-container">
+        <div class="dakelh-text">{{ wordData.dakelh }}</div>
+      </div>
+
+      <mat-icon class="play-button"
+                (click)="playWordAudio()"
+                *ngIf="wordData.audio.length > 0">play_circle_outline</mat-icon>
+
+    </div>
+  </div>
+  <div #carouselComponent
+       class="match-container"
+       (window:resize)="onResize()">
+
+    <app-carousel class="
+       app-carousel"
+                  [size]="itemSize"
+                  (selectedAnswer)="checkAnswer($event)">
+      <ng-container *ngFor="let item of wordsList;">
+        <ng-container *appCarouselItem>
+          <div class="item">
+            <img [src]="'assets/images/dakelh-words/' + item.images[0]" />
+          </div>
+        </ng-container>
+      </ng-container>
+    </app-carousel>
+  </div>
+</div>
+<audio #audio></audio>

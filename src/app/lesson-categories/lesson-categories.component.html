@@ -1,24 +1,27 @@
-<button
-  mat-raised-button
-  class="back-button language-text"
-  (click)="goBack()"
-  color="secondary"
->
-  <mat-icon>arrow_back</mat-icon>
-  <div class="language-text-container">
-    <div class="dakelh-text">Go Back</div>
-    <div class="english-text">Go Back</div>
+<div class='top-bar'>
+
+  <div class="back-button"
+       (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <div class="language-text">
+      <div class="dakelh-text">Go Back</div>
+      <div class="english-text">Go Back</div>
+    </div>
   </div>
-</button>
-<h3>Choose a lesson category</h3>
-<mat-nav-list class="menu-list" *ngIf="pageReady">
-  <a
-    mat-list-item
-    class="language-text"
-    *ngFor="let category of categories"
-    [routerLink]="['/lessons', category.id]"
-    routerLinkActive="active"
-  >
+
+  <div class="page-title language-text">
+    <div class="dakelh-text">Choose a lesson category</div>
+    <div class="english-text">Choose a lesson category</div>
+  </div>
+</div>
+
+<mat-nav-list class="menu-list"
+              *ngIf="pageReady">
+  <a mat-list-item
+     class="language-text"
+     *ngFor="let category of categories"
+     [routerLink]="['/lessons', category.id]"
+     routerLinkActive="active">
     <app-menu-list-item [menuItem]="category"></app-menu-list-item>
   </a>
 </mat-nav-list>

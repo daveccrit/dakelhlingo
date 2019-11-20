@@ -31,6 +31,10 @@ import { WordsDictionaryService } from './shared/services/words-dictionary.servi
 import { MenuDataService } from './shared/services/menu-data.service';
 import { SettingsService } from './shared/services/settings.service';
 import { LessonListComponent } from './lesson-list/lesson-list.component';
+import { SideScrollImageSearchComponent } from './learning-modules/side-scroll-image-search/side-scroll-image-search.component';
+import { CarouselItemDirective } from './learning-modules/side-scroll-image-search/carousel-item.directive';
+import { CarouselComponent } from './learning-modules/side-scroll-image-search/carousel/carousel.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -47,9 +51,13 @@ import { LessonListComponent } from './lesson-list/lesson-list.component';
     DragDropExampleComponent,
     LibraryComponent,
     VideoLibraryComponent,
-    WordLibraryComponent
+    WordLibraryComponent,
+    SideScrollImageSearchComponent,
+    CarouselItemDirective,
+    CarouselComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

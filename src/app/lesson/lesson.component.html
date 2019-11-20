@@ -1,43 +1,37 @@
-<button
-  mat-raised-button
-  class="back-button language-text"
-  (click)="goBack()"
-  color="secondary"
->
-  <mat-icon>arrow_back</mat-icon>
-  <div class="language-text-container">
-    <div class="dakelh-text">Go Back</div>
-    <div class="english-text">Go Back</div>
+<div class='top-bar'>
+
+  <div class="back-button"
+       (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <div class="language-text">
+      <div class="dakelh-text">Go Back</div>
+      <div class="english-text">Go Back</div>
+    </div>
   </div>
-</button>
-<div class="learning-module-container" *ngIf="pageReady">
-  <app-word-learning-example
-    *ngIf="
-      pageReady &&
-      this.lesson.learningModules[currentModuleNum].learningModule ===
-        'single-word-example'
-    "
-    [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
-    (completed)="completedLearningModule()"
-  ></app-word-learning-example>
-  <app-words-learning-example
-    *ngIf="
-      pageReady &&
-      this.lesson.learningModules[currentModuleNum].learningModule ===
-        'multiple-word-example'
-    "
-    [languageWords]="
-      this.lesson.learningModules[currentModuleNum].languageWords
-    "
-    (completed)="completedLearningModule()"
-  ></app-words-learning-example>
-  <app-drag-drop-example
-    *ngIf="
-      pageReady &&
-      this.lesson.learningModules[currentModuleNum].learningModule ===
-        'drag-drop-example'
-    "
-    [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
-    (completed)="completedLearningModule()"
-  ></app-drag-drop-example>
+
+  <div class="page-title language-text">
+    <div class="dakelh-text">{{ lesson.dakelh }}</div>
+    <div class="english-text">{{ lesson.english }}</div>
+  </div>
+</div>
+
+<div class="learning-module-container"
+     *ngIf="pageReady">
+
+  <app-word-learning-example *ngIf=" pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'single-word-example'"
+                             [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
+                             (completed)="completedLearningModule()"></app-word-learning-example>
+
+  <app-words-learning-example *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'multiple-word-example' "
+                              [languageWords]="this.lesson.learningModules[currentModuleNum].languageWords"
+                              (completed)="completedLearningModule()"></app-words-learning-example>
+
+  <app-drag-drop-example *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'drag-drop-example'"
+                         [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
+                         (completed)="completedLearningModule()"></app-drag-drop-example>
+
+  <app-side-scroll-image-search *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'side-scroll-image-search'"
+                                [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
+                                (completed)="completedLearningModule()"></app-side-scroll-image-search>
+
 </div>

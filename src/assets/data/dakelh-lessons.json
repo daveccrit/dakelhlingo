@@ -81,8 +81,233 @@
     "audio": "",
     "learningModules": [
       {
+        "learningModule": "single-word-example",
+        "languageWord": "duldzan"
+      },
+      {
         "learningModule": "drag-drop-example",
+        "languageWord": "duldzan"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "dulgi"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "dulgi"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "dulhgus"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "dulhgus"
+      },
+      {
+        "learningModule": "multiple-word-example",
+        "languageWords": ["duldzan", "dulgi", "dulhgus"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "lessonCategoryId": 1,
+    "dakelh": "Lesson 4",
+    "english": "Lesson 4",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "dultso"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "dultso"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "mai dot'en"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "mai dot'en"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "nigwus dot'en"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "nigwus dot'en"
+      },
+      {
+        "learningModule": "multiple-word-example",
+        "languageWords": ["dultso", "mai dot'en", "nigwus dot'en"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "lessonCategoryId": 1,
+    "dakelh": "Lesson 5",
+    "english": "Lesson 5",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "multiple-word-example",
+        "languageWords": ["ulhyul", "nigwus dot'en'", "dulk'un"]
+      },
+      {
+        "learningModule": "side-scroll-image-search",
         "languageWord": "ulhyul"
+      },
+      {
+        "learningModule": "side-scroll-image-search",
+        "languageWord": "nigwus dot'en"
+      },
+      {
+        "learningModule": "side-scroll-image-search",
+        "languageWord": "dulk'un"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "lessonCategoryId": 2,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "dzetniz"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "dzetniz"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "bundada'"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "bundada'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "ulhdzis"
+      },
+      {
+        "learningModule": "drag-drop-example",
+        "languageWord": "ulhdzis"
+      },
+      {
+        "learningModule": "multiple-word-example",
+        "languageWords": ["dzetniz", "bundada'", "ulhdzis"]
+      },
+      {
+        "learningModule": "side-scroll-image-search",
+        "languageWord": "dzetniz"
+      },
+      {
+        "learningModule": "side-scroll-image-search",
+        "languageWord": "bundada'"
+      },
+      {
+        "learningModule": "side-scroll-image-search",
+        "languageWord": "ulhdzis"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "lessonCategoryId": 3,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Sacho ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Chuzsul ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Chuzcho ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Shin ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Dugoos ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Dang ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Talo ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Gesul ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Bit ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Lhoh ooza'"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Banghan nuts'ukih"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Sacho din'ai"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "lessonCategoryId": 4,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Duni"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Wasi"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Whudzih"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Booscho"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Lhi"
+      },
+      {
+        "learningModule": "single-word-example",
+        "languageWord": "Sus"
       }
     ]
   }

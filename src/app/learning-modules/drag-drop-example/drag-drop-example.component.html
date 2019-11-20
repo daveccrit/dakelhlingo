@@ -1,30 +1,37 @@
 <div class="words-container">
-  <div class="image-container"
-       (drop)="onDrop($event, words[0].dakelh)"
-       (dragover)="onDragOver($event)"
-       (dragleave)="onDragLeave($event)"
-       [ngClass]="{ 'is-dragging': isDragging }">
-    <img [src]="'assets/images/dakelh-words/' + words[0].images[0]" />
+  <div #dropContainer
+       class="drop-container"
+       [ngClass]="{ 'drag-element-hovering': hoverItem === 0 }">
+    <img [src]="'assets/images/dakelh-words/' + this.words[0].images[0]" />
   </div>
   <div class="arrow-container">
     <mat-icon class="up-arrow">arrow_upward</mat-icon>
   </div>
   <div class="language-text-container">
     <div class="drag-item"
-         draggable="true"
-         (dragstart)="onDragStart($event)"
-         (dragend)="onDragEnd($event)">
+         cdkDrag
+         cdkDragLockAxis="y"
+         [cdkDragFreeDragPosition]="dragPosition"
+         (cdkDragStarted)="onDragStart($event)"
+         (cdkDragMoved)="onDragMove($event)"
+         (cdkDragEnded)="onDragEnd($event)">
       <div class="dakelh-text">{{ wordData.dakelh }}</div>
     </div>
   </div>
   <div class="arrow-container">
     <mat-icon class="down-arrow">arrow_downward</mat-icon>
   </div>
-  <div class="image-container"
-       (drop)="onDrop($event, words[1].dakelh)"
-       (dragover)="onDragOver($event)"
-       (dragleave)="onDragLeave($event)"
-       [ngClass]="{ 'is-dragging': isDragging }">
-    <img [src]="'assets/images/dakelh-words/' + words[1].images[0]" />
+  <div #dropContainer
+       class="drop-container"
+       [ngClass]="{ 'drag-element-hovering': hoverItem === 1 }">
+    <img [src]="'assets/images/dakelh-words/' + this.words[1].images[0]" />
   </div>
 </div>
+
+<!-- <div class="image-container"
+     (drop)="onDrop($event, words[1].dakelh)"
+     (dragover)="onDragOver($event)"
+     (dragleave)="onDragLeave($event)"
+     [ngClass]="{ 'is-dragging': isDragging }">
+  <img [src]="'assets/images/dakelh-words/' + words[1].images[0]" />
+</div> -->

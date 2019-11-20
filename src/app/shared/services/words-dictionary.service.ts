@@ -1,29 +1,41 @@
 import { Injectable } from '@angular/core';
-import { Word, LessonCategory } from '../interfaces/app.interface';
-import dakelhDictionary from '../../../assets/data/dakelh-words.json';
+import { Word, WordCategory } from '../interfaces/app.interface';
+import wordData from '../../../assets/data/dakelh-words.json';
+import wordCategoryData from '../../../assets/data/dakelh-word-categories.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WordsDictionaryService {
   languageWords: Array<Word>;
+  wordCategories: Array<WordCategory>;
 
   constructor() {
-    this.languageWords = dakelhDictionary;
+    this.languageWords = wordData;
+    this.wordCategories = wordCategoryData;
   }
 
-  getWordsByCategory(lessonCategory: LessonCategory): Array<Word> {
+  getWordCategories(): Array<WordCategory> {
+    return this.wordCategories;
+  }
+
+  getWordCategory(categoryId: number): WordCategory {
+    return this.wordCategories.find(
+      wordCategory => categoryId === wordCategory.id
+    );
+  }
+
+  getWordsByCategory(wordCategory: WordCategory): Array<Word> {
     return this.languageWords.filter(
       value =>
-        value.lessonCategory.toLowerCase() ===
-        lessonCategory.dakelh.toLowerCase()
+        value.wordCategory.toLowerCase() === wordCategory.dakelh.toLowerCase()
     );
   }
 
   getWordsBySearch(filterText: string): Array<Word> {
     return this.languageWords.filter(
       value =>
-        value.lessonCategory.toLowerCase().indexOf(filterText.toLowerCase()) >=
+        value.wordCategory.toLowerCase().indexOf(filterText.toLowerCase()) >=
           0 ||
         value.dakelh.toLowerCase().indexOf(filterText.toLowerCase()) >= 0 ||
         value.english.toLowerCase().indexOf(filterText.toLowerCase()) >= 0
@@ -36,13 +48,12 @@ export class WordsDictionaryService {
     );
   }
 
-  getRandomWord(lessonCategory?: LessonCategory): Word {
+  getRandomWord(wordCategory?: WordCategory): Word {
     let languageWords = [];
-    if (lessonCategory) {
+    if (wordCategory) {
       languageWords = this.languageWords.filter(
         value =>
-          value.lessonCategory.toLowerCase() ===
-          lessonCategory.dakelh.toLowerCase()
+          value.wordCategory.toLowerCase() === wordCategory.dakelh.toLowerCase()
       );
     } else {
       languageWords = this.languageWords;

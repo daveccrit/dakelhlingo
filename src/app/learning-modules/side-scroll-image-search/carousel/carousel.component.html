@@ -1,0 +1,43 @@
+<section class="carousel-section">
+
+  <div class="carousel-wrapper"
+       [ngStyle]="carouselWrapperStyle">
+    <ul class="carousel-inner"
+        #carousel>
+      <li *ngFor="let item of items;"
+          appCarouselItemElement
+          class="carousel-item">
+        <ng-container [ngTemplateOutlet]="item.templateRef"></ng-container>
+      </li>
+    </ul>
+
+    <div class="carousel-mask-container">
+      <div class="carousel-mask shaded-mask"
+           (click)="prev()">
+        <mat-icon>arrow_left</mat-icon>
+      </div>
+      <div class="carousel-mask selected-mask">
+
+      </div>
+      <div class="carousel-mask shaded-mask"
+           (click)="next()">
+        <mat-icon>arrow_right</mat-icon>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="select-button-container">
+    <button mat-raised-button
+            color="primary"
+            (click)="selectClick()">
+      <div class="text-container">
+        <div class="language-text-container">
+          <div class="dakelh-text">Select</div>
+          <div class="english-text">Select</div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+</section>

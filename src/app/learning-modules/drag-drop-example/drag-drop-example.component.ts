@@ -1,7 +1,16 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Word, LessonCategory } from 'src/app/shared/interfaces/app.interface';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChildren,
+  QueryList,
+  ElementRef
+} from '@angular/core';
+import { Word, WordCategory } from 'src/app/shared/interfaces/app.interface';
 import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
-import { LessonService } from 'src/app/shared/services/lesson.service';
+import { CdkDragStart, CdkDragEnd, CdkDragMove } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-drag-drop-example',
@@ -9,10 +18,14 @@ import { LessonService } from 'src/app/shared/services/lesson.service';
   styleUrls: ['./drag-drop-example.component.scss']
 })
 export class DragDropExampleComponent implements OnInit {
-  lessonCategory: LessonCategory;
+  @ViewChildren('dropContainer') dropContainerList: QueryList<ElementRef>;
+
+  wordCategory: WordCategory;
   wordData: Word;
   words: Array<Word> = [];
   isDragging = false;
+  dragPosition = { x: 0, y: 0 };
+  hoverItem: number;
 
   _languageWord: string;
 
@@ -27,10 +40,7 @@ export class DragDropExampleComponent implements OnInit {
 
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(
-    private wordsDictionaryService: WordsDictionaryService,
-    private lessonService: LessonService
-  ) {}
+  constructor(private wordsDictionaryService: WordsDictionaryService) {}
 
   ngOnInit() {
     this.initModule();
@@ -43,15 +53,15 @@ export class DragDropExampleComponent implements OnInit {
     );
     wordsArray.push(this.wordData);
 
-    this.lessonCategory = this.lessonService.getLessonCategory(
-      this.wordData.lessonCategoryId
+    this.wordCategory = this.wordsDictionaryService.getWordCategory(
+      this.wordData.wordCategoryId
     );
 
     let randomWordData = this.wordData;
 
     while (randomWordData === this.wordData) {
       const newRandomWord = this.wordsDictionaryService.getRandomWord(
-        this.lessonCategory
+        this.wordCategory
       );
       if (this.wordData !== newRandomWord) {
         wordsArray.push(newRandomWord);
@@ -62,35 +72,45 @@ export class DragDropExampleComponent implements OnInit {
     this.words = this.shuffleArray(wordsArray);
   }
 
-  onDragStart(event: DragEvent) {
-    event.dataTransfer.dropEffect = 'copy';
-    event.dataTransfer.setData('text', this.wordData.dakelh);
+  onDragStart(event: CdkDragStart) {
     this.isDragging = true;
   }
 
-  onDragEnd(event: DragEvent) {
+  onDragMove(event: CdkDragMove) {
+    this.hoverItem = -1;
+    this.dropContainerList.forEach((item, index) => {
+      const dropContainerRect = item.nativeElement.getBoundingClientRect();
+      const dragElementRect = event.source.element.nativeElement.getBoundingClientRect();
+
+      if (
+        dragElementRect.top < dropContainerRect.bottom &&
+        dragElementRect.bottom > dropContainerRect.top
+      ) {
+        this.hoverItem = index;
+      }
+    });
+  }
+
+  onDragEnd(event: CdkDragEnd) {
+    this.dropContainerList.forEach((item, index) => {
+      const dropContainerRect = item.nativeElement.getBoundingClientRect();
+      const dragElementRect = event.source.element.nativeElement.getBoundingClientRect();
+
+      if (
+        dragElementRect.top < dropContainerRect.bottom &&
+        dragElementRect.bottom > dropContainerRect.top
+      ) {
+        if (this.wordData === this.words[index]) {
+          this.completedModule();
+        } else {
+          console.log('Guess Again!');
+        }
+      }
+    });
+
+    this.hoverItem = -1;
+    this.dragPosition = { x: 0, y: 0 };
     this.isDragging = false;
-  }
-
-  onDragOver(event: DragEvent) {
-    event.preventDefault();
-    (event.target as HTMLElement).classList.add('drag-over');
-  }
-
-  onDragLeave(event: DragEvent) {
-    event.preventDefault();
-    (event.target as HTMLElement).classList.remove('drag-over');
-  }
-
-  onDrop(event: DragEvent, value: string) {
-    event.preventDefault();
-    this.isDragging = false;
-    const data = event.dataTransfer.getData('text');
-    if (value === data) {
-      this.completedModule();
-    } else {
-      console.log('Wrong Choice');
-    }
   }
 
   shuffleArray(array: Array<Word>) {

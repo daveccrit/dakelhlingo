@@ -48,6 +48,7 @@ export class WordsLearningExampleComponent implements OnInit {
   }
 
   completedModule() {
+    console.log('Completed Module');
     this.completed.emit(true);
   }
 
