@@ -1,13 +1,17 @@
-<button
-  mat-raised-button
-  class="back-button language-text"
-  (click)="goBack()"
-  color="secondary"
->
-  <mat-icon>arrow_back</mat-icon>
-  <div class="language-text-container">
-    <div class="dakelh-text">Go Back</div>
-    <div class="english-text">Go Back</div>
+<div class='top-bar'>
+
+  <div class="back-button"
+       (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <div class="language-text">
+      <div class="dakelh-text">Go Back</div>
+      <div class="english-text">Go Back</div>
+    </div>
   </div>
-</button>
-<h3>Dakelh Videos</h3>
+
+  <div class="page-title language-text">
+    <div class="dakelh-text">Dakelh Videos</div>
+    <div class="english-text">Dakelh Videos</div>
+  </div>
+  
+</div>

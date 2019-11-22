@@ -1,18 +1,22 @@
-<button
-  mat-raised-button
-  class="back-button language-text"
-  (click)="goBack()"
-  color="secondary"
->
-  <mat-icon>arrow_back</mat-icon>
-  <div class="language-text-container">
-    <div class="dakelh-text">Go Back</div>
-    <div class="english-text">Go Back</div>
+<div class='top-bar'>
+
+  <div class="back-button"
+       (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+    <div class="language-text">
+      <div class="dakelh-text">Go Back</div>
+      <div class="english-text">Go Back</div>
+    </div>
   </div>
-</button>
+
+  <div class="page-title language-text">
+    <div class="dakelh-text">My Settings</div>
+    <div class="english-text">My Settings</div>
+  </div>
+
+</div>
 
 <div class="settings-container">
-  <h3>Application Settings</h3>
   <mat-radio-group [(ngModel)]="userLevel">
     <label>User Level</label>
     <mat-radio-button [value]="''">Beginner</mat-radio-button>
