@@ -5,7 +5,7 @@ import {
   Output,
   EventEmitter,
   ViewChild,
-  ElementRef
+  ElementRef,
 } from '@angular/core';
 import { Word } from 'src/app/shared/interfaces/app.interface';
 import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
@@ -13,7 +13,7 @@ import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary
 @Component({
   selector: 'app-word-learning-example',
   templateUrl: './word-learning-example.component.html',
-  styleUrls: ['./word-learning-example.component.scss']
+  styleUrls: ['./word-learning-example.component.scss'],
 })
 export class WordLearningExampleComponent implements OnInit {
   @ViewChild('audio', { static: false }) audioElement: ElementRef;
@@ -41,7 +41,7 @@ export class WordLearningExampleComponent implements OnInit {
 
   getWordData() {
     this.wordData = this.wordsDictionaryService.getWordByLanguage(
-      this._languageWord
+      this._languageWord,
     );
   }
 
@@ -49,7 +49,7 @@ export class WordLearningExampleComponent implements OnInit {
     this.completed.emit(true);
   }
 
-  onClick() {
+  onClick(event: MouseEvent) {
     if (this.wordData.audio.length > 0) {
       event.preventDefault();
       event.stopPropagation();

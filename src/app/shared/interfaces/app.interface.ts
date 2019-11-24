@@ -53,8 +53,18 @@ export interface Lesson {
   lessonCategoryId: number;
   audio: Array<string>;
   title: string;
-  learningModules: Array<LearningModuleWord | LearningModuleWords>;
+  learningModules: Array<
+    | LearningModuleWord
+    | LearningModuleWords
+    | LearningModulePhrase
+    | LearningModulePhrases
+    | LearningModuleCompleted
+  >;
   completed?: boolean;
+}
+
+export interface LearningModuleCompleted {
+  learningModule: string;
 }
 
 export interface LearningModuleWord {
@@ -65,6 +75,16 @@ export interface LearningModuleWord {
 export interface LearningModuleWords {
   learningModue: string;
   languageWords: Array<string>;
+}
+
+export interface LearningModulePhrase {
+  learningModule: string;
+  languagePhrase: string;
+}
+
+export interface LearningModulePhrases {
+  learningModue: string;
+  languagePhrases: Array<string>;
 }
 
 export interface AppData {

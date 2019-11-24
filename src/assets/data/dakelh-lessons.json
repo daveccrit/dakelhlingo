@@ -310,5 +310,22 @@
         "languageWord": "Sus"
       }
     ]
+  },
+  {
+    "id": 9,
+    "lessonCategoryId": 5,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+      }
+    ]
   }
 ]

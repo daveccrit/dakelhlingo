@@ -35,6 +35,9 @@ import { SideScrollImageSearchComponent } from './learning-modules/side-scroll-i
 import { CarouselItemDirective } from './learning-modules/side-scroll-image-search/carousel-item.directive';
 import { CarouselComponent } from './learning-modules/side-scroll-image-search/carousel/carousel.component';
 import { CommonModule } from '@angular/common';
+import { PhraseBuilderComponent } from './learning-modules/phrase-builder/phrase-builder.component';
+import { PhraseLearningComponent } from './learning-modules/phrase-learning/phrase-learning.component';
+import { LessonCompletedComponent } from './learning-modules/lesson-completed/lesson-completed.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { CommonModule } from '@angular/common';
     WordLibraryComponent,
     SideScrollImageSearchComponent,
     CarouselItemDirective,
-    CarouselComponent
+    CarouselComponent,
+    PhraseBuilderComponent,
+    PhraseLearningComponent,
+    LessonCompletedComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,5 @@
-<div class='top-bar'>
-
-  <div class="back-button"
-       (click)="goBack()">
+<div class="top-bar">
+  <div class="back-button" (click)="goBack()">
     <mat-icon>arrow_back</mat-icon>
     <div class="language-text">
       <div class="dakelh-text">Go Back</div>
@@ -13,20 +11,19 @@
     <div class="dakelh-text">My Settings</div>
     <div class="english-text">My Settings</div>
   </div>
-
 </div>
 
 <div class="page-content">
   <div class="settings-container">
-    <mat-radio-group class="settings-radio-group"
-                     [(ngModel)]="userLevel">
+    <mat-radio-group class="settings-radio-group" [(ngModel)]="userLevel">
       <label>User Level</label>
-      <mat-radio-button class="settings-radio-button"
-                        [value]="''">Beginner</mat-radio-button>
-      <mat-radio-button class="settings-radio-button"
-                        [value]="'level1'">Intermediate</mat-radio-button>
-      <mat-radio-button class="settings-radio-button"
-                        [value]="'level2'">Expert</mat-radio-button>
+      <mat-radio-button class="settings-radio-button" [value]="''">Beginner</mat-radio-button>
+      <mat-radio-button class="settings-radio-button" [value]="'level1'">Intermediate</mat-radio-button>
+      <mat-radio-button class="settings-radio-button" [value]="'level2'">Expert</mat-radio-button>
     </mat-radio-group>
+  </div>
+
+  <div class="settings-container">
+    <button mat-raised-button color="warn" (click)="resetCompletedData()">Reset Completed Lessons</button>
   </div>
 </div>

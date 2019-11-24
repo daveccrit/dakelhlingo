@@ -1,14 +1,14 @@
 <div class="page-container">
   <div class="text-container">
     <div class="language-text-container">
-      <div class="dakelh-text">{{ wordData.dakelh }}</div>
-      <div class="english-text">{{ wordData.english }}</div>
+      <div class="dakelh-text">{{ phraseData.dakelh }}</div>
+      <div class="english-text">{{ phraseData.english }}</div>
     </div>
 
     <mat-icon
       class="play-button"
       (click)="onClick($event)"
-      *ngIf="wordData.audio.length > 0"
+      *ngIf="phraseData.audio.length > 0"
       >play_circle_outline</mat-icon
     >
   </div>

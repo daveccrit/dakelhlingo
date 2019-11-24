@@ -124,7 +124,7 @@ export class DragDropExampleComponent implements OnInit {
     return array;
   }
 
-  playWordAudio() {
+  playWordAudio(event: MouseEvent) {
     if (this.wordData.audio.length > 0) {
       event.preventDefault();
       event.stopPropagation();

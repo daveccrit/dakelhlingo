@@ -1,11 +1,10 @@
 [
   {
-    "id": 1,
-    "dakelhPhrase": "",
-    "englishPhrase": "",
-    "associatedWords": ["dulhgus", "Sus"],
+    "dakelh": "Sgani hodutizeh' awk'anus zun",
+    "english": "I want to learn my language",
+    "associatedWords": ["Sgani", "hodutizeh'", "awk'anus", "zun"],
     "images": [],
     "videos": [],
-    "audio": []
+    "audio": ["i_want_to_learn_my_language.mp3"]
   }
 ]

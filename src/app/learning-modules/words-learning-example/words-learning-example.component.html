@@ -9,7 +9,7 @@
       </div>
 
       <mat-icon class="play-button"
-                (click)="onClick(i)"
+                (click)="onClick($event, i)"
                 *ngIf="wordData.audio.length > 0">play_circle_outline</mat-icon>
 
     </div>
@@ -19,5 +19,5 @@
           color="primary">
     ok
   </button>
-  <audio #audio></audio>
 </div>
+<audio #audio></audio>

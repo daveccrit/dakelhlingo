@@ -6,17 +6,17 @@ import {
   Output,
   Input,
   ViewChild
-} from "@angular/core";
-import { Word } from "src/app/shared/interfaces/app.interface";
-import { WordsDictionaryService } from "src/app/shared/services/words-dictionary.service";
+} from '@angular/core';
+import { Word } from 'src/app/shared/interfaces/app.interface';
+import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary.service';
 
 @Component({
-  selector: "app-words-learning-example",
-  templateUrl: "./words-learning-example.component.html",
-  styleUrls: ["./words-learning-example.component.scss"]
+  selector: 'app-words-learning-example',
+  templateUrl: './words-learning-example.component.html',
+  styleUrls: ['./words-learning-example.component.scss']
 })
 export class WordsLearningExampleComponent implements OnInit {
-  @ViewChild("audio", { static: false }) audioElement: ElementRef;
+  @ViewChild('audio', { static: false }) audioElement: ElementRef;
 
   wordsData: Array<Word>;
 
@@ -51,7 +51,7 @@ export class WordsLearningExampleComponent implements OnInit {
     this.completed.emit(true);
   }
 
-  onClick(audioIndex: number) {
+  onClick(event: MouseEvent, audioIndex: number) {
     if (this.wordsData[audioIndex].audio.length > 0) {
       event.preventDefault();
       event.stopPropagation();
@@ -59,7 +59,7 @@ export class WordsLearningExampleComponent implements OnInit {
         this.audioElement.nativeElement.play();
       };
       this.audioElement.nativeElement.src =
-        "assets/audio/pronunciation/" + this.wordsData[audioIndex].audio[0];
+        'assets/audio/pronunciation/' + this.wordsData[audioIndex].audio[0];
     }
   }
 }
