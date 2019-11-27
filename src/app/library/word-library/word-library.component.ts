@@ -6,10 +6,11 @@ import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary
 @Component({
   selector: 'app-word-library',
   templateUrl: './word-library.component.html',
-  styleUrls: ['./word-library.component.scss']
+  styleUrls: ['./word-library.component.scss'],
 })
 export class WordLibraryComponent implements OnInit {
   words: Array<Word> = [];
+  resultCount: number;
 
   _categoryFilter = '';
   get categoryFilter(): string {
@@ -20,19 +21,22 @@ export class WordLibraryComponent implements OnInit {
     this.getWords();
   }
 
-  constructor(
-    private location: Location,
-    private wordDictionaryService: WordsDictionaryService
-  ) {}
+  constructor(private location: Location, private wordDictionaryService: WordsDictionaryService) {}
 
   ngOnInit() {
     this.getWords();
   }
 
   getWords() {
-    this.words = this.wordDictionaryService.getWordsBySearch(
-      this.categoryFilter
-    );
+    const wordsList = this.wordDictionaryService.getWordsBySearch(this.categoryFilter);
+
+    this.resultCount = wordsList.length;
+
+    if (wordsList.length > 20) {
+      wordsList.length = 20;
+    }
+
+    this.words = wordsList;
   }
 
   goBack(): void {

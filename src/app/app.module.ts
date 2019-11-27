@@ -12,7 +12,8 @@ import {
   MatListModule,
   MatIconModule,
   MatRadioModule,
-  MatInputModule
+  MatInputModule,
+  MatTreeModule,
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LessonComponent } from './lesson/lesson.component';
@@ -38,50 +39,50 @@ import { CommonModule } from '@angular/common';
 import { PhraseBuilderComponent } from './learning-modules/phrase-builder/phrase-builder.component';
 import { PhraseLearningComponent } from './learning-modules/phrase-learning/phrase-learning.component';
 import { LessonCompletedComponent } from './learning-modules/lesson-completed/lesson-completed.component';
+import { PhraseLibraryComponent } from './library/phrase-library/phrase-library.component';
+import { StoryLibraryComponent } from './library/story-library/story-library.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CarouselComponent,
+    CarouselItemDirective,
+    DragDropExampleComponent,
+    HelpComponent,
     HomeComponent,
     LessonCategoriesComponent,
-    LessonListComponent,
+    LessonCompletedComponent,
     LessonComponent,
-    MenuListItemComponent,
-    WordLearningExampleComponent,
-    SettingsComponent,
-    HelpComponent,
-    WordsLearningExampleComponent,
-    DragDropExampleComponent,
+    LessonListComponent,
     LibraryComponent,
-    VideoLibraryComponent,
-    WordLibraryComponent,
-    SideScrollImageSearchComponent,
-    CarouselItemDirective,
-    CarouselComponent,
+    MenuListItemComponent,
     PhraseBuilderComponent,
     PhraseLearningComponent,
-    LessonCompletedComponent
+    PhraseLibraryComponent,
+    SettingsComponent,
+    SideScrollImageSearchComponent,
+    StoryLibraryComponent,
+    VideoLibraryComponent,
+    WordLearningExampleComponent,
+    WordLibraryComponent,
+    WordsLearningExampleComponent,
   ],
   imports: [
-    CommonModule,
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    CommonModule,
     DragDropModule,
     FormsModule,
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
     MatRadioModule,
-    HttpClientModule
+    MatTreeModule,
   ],
-  providers: [
-    LessonService,
-    MenuDataService,
-    WordsDictionaryService,
-    SettingsService
-  ],
-  bootstrap: [AppComponent]
+  providers: [LessonService, MenuDataService, WordsDictionaryService, SettingsService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

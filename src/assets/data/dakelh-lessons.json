@@ -325,6 +325,71 @@
       {
         "learningModule": "phrase-builder",
         "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "'Un 'az naowtejus'"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "'Un 'az naowtejus'"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Ndi lhes sut'e dube bat'en"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Ndi lhes sut'e dube bat'en"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Duni ka'utest'ilh"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Duni ka'utest'ilh"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "lessonCategoryId": 5,
+    "dakelh": "Lesson 2",
+    "english": "Lesson 2",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Bundada 'uda da sooh ujun"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Bundada 'uda da sooh ujun"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Bundada t'eh naowtelhtilh"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Bundada t'eh naowtelhtilh"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "K'an dzen dube whunanzul"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "K'an dzen dube whunanzul"
       }
     ]
   }

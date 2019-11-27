@@ -5,16 +5,5 @@
   <div class="dakelh-text">{{ menuItem.dakelh }}</div>
   <div class="english-text">{{ menuItem.english }}</div>
 </div>
-<mat-icon
-  class="play-button"
-  (mouseover)="onMouseOver($event)"
-  (mouseout)="onMouseOut($event)"
-  (click)="onClick($event)"
-  *ngIf="menuItem.audio.length > 0"
-  >play_circle_outline</mat-icon
->
-<audio
-  #audio
-  *ngIf="menuItem.audio.length > 0"
-  [src]="'assets/audio/pronunciation/' + menuItem.audio[0]"
-></audio>
+<mat-icon class="play-button" (click)="onClick($event)" *ngIf="menuItem.audio.length > 0">play_circle_outline</mat-icon>
+<audio #audio *ngIf="menuItem.audio.length > 0" [src]="'assets/audio/pronunciation/' + menuItem.audio[0]"></audio>

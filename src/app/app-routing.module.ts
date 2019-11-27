@@ -9,6 +9,8 @@ import { HelpComponent } from './help/help.component';
 import { LibraryComponent } from './library/library.component';
 import { WordLibraryComponent } from './library/word-library/word-library.component';
 import { VideoLibraryComponent } from './library/video-library/video-library.component';
+import { PhraseLibraryComponent } from './library/phrase-library/phrase-library.component';
+import { StoryLibraryComponent } from './library/story-library/story-library.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,15 +18,17 @@ const routes: Routes = [
   { path: 'help', component: HelpComponent },
   { path: 'library', component: LibraryComponent },
   { path: 'library/words', component: WordLibraryComponent },
+  { path: 'library/phrases', component: PhraseLibraryComponent },
+  { path: 'library/stories', component: StoryLibraryComponent },
   { path: 'library/videos', component: VideoLibraryComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'lesson-categories', component: LessonCategoriesComponent },
   { path: 'lessons/:catid', component: LessonListComponent },
-  { path: 'lesson/:catid/:lessonid', component: LessonComponent }
+  { path: 'lesson/:catid/:lessonid', component: LessonComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -35,7 +35,23 @@
     "icon": "local_library",
     "route": "/library/words",
     "dakelh": "Sgani",
-    "english": "My language",
+    "english": "My language - Words",
+    "audio": [],
+    "className": "secondary"
+  },
+  "phrases-menu-item": {
+    "icon": "local_library",
+    "route": "/library/phrases",
+    "dakelh": "Sgani",
+    "english": "My language - Phrases",
+    "audio": [],
+    "className": "secondary"
+  },
+  "stories-menu-item": {
+    "icon": "local_library",
+    "route": "/library/stories",
+    "dakelh": "Sgani",
+    "english": "My language - Stories",
     "audio": [],
     "className": "secondary"
   },

@@ -2,9 +2,81 @@
   {
     "dakelh": "Sgani hodutizeh' awk'anus zun",
     "english": "I want to learn my language",
-    "associatedWords": ["Sgani", "hodutizeh'", "awk'anus", "zun"],
+    "associatedWords": ["sgani", "hodutizeh'", "awk'anus", "zun"],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
     "images": [],
     "videos": [],
     "audio": ["i_want_to_learn_my_language.mp3"]
+  },
+  {
+    "dakelh": "'Un 'az naowtejus'",
+    "english": "It is going to snow outside",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Ndi lhes sut'e dube bat'en",
+    "english": "This fry bread is very delicious",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Duni ka'utest'ilh",
+    "english": "I am going to hunt moose",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Bundada 'uda da sooh ujun",
+    "english": "Early this morning the robins wer singing",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Bundada t'eh 'aba bulh tadukelh",
+    "english": "We are leaving by boat tomorrow",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Bundada t'eh naowtelhtilh",
+    "english": "It is going to rain tomorrow",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "K'an dzen dube whunanzul",
+    "english": "It was very hot today",
+    "associatedWords": [],
+    "phraseCategory": "Phrase",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
   }
 ]

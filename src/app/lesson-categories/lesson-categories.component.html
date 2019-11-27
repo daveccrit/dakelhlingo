@@ -1,7 +1,5 @@
-<div class='top-bar'>
-
-  <div class="back-button"
-       (click)="goBack()">
+<div class="top-bar">
+  <div class="back-button" (click)="goBack()">
     <mat-icon>arrow_back</mat-icon>
     <div class="language-text">
       <div class="dakelh-text">Go Back</div>
@@ -15,13 +13,14 @@
   </div>
 </div>
 
-<mat-nav-list class="menu-list"
-              *ngIf="pageReady">
-  <a mat-list-item
-     class="language-text"
-     *ngFor="let category of categories"
-     [routerLink]="['/lessons', category.id]"
-     routerLinkActive="active">
+<mat-nav-list class="menu-list" *ngIf="pageReady">
+  <a
+    mat-list-item
+    class="language-text"
+    *ngFor="let category of categories"
+    [routerLink]="['/lessons', category.id]"
+    routerLinkActive="active"
+  >
     <app-menu-list-item [menuItem]="category"></app-menu-list-item>
   </a>
 </mat-nav-list>

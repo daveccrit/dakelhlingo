@@ -8,8 +8,8 @@
   </div>
 
   <div class="page-title language-text">
-    <div class="dakelh-text">Dakelh Words</div>
-    <div class="english-text">Dakelh Words</div>
+    <div class="dakelh-text">Dakelh Phrases</div>
+    <div class="english-text">Dakelh Phrases</div>
   </div>
 </div>
 
@@ -24,7 +24,7 @@
 </div>
 
 <mat-nav-list class="menu-list">
-  <a mat-list-item class="language-text" *ngFor="let word of words">
-    <app-menu-list-item [menuItem]="word"></app-menu-list-item>
+  <a mat-list-item class="language-text" *ngFor="let phrase of phrases">
+    <app-menu-list-item [menuItem]="phrase"></app-menu-list-item>
   </a>
 </mat-nav-list>

@@ -18,12 +18,19 @@ export interface WordCategory {
 export interface Phrase {
   dakelh: string;
   english: string;
-  lessonCategory: string;
-  lessonCategoryId: number;
+  associatedWords: Array<string>;
+  phraseCategory: string;
+  phraseCategoryId: number;
   icon: string;
   audio: Array<string>;
   video: Array<string>;
   images: Array<string>;
+}
+
+export interface PhraseCategory {
+  id: number;
+  dakelh: string;
+  english: string;
 }
 
 export interface LessonCategory {
@@ -54,11 +61,7 @@ export interface Lesson {
   audio: Array<string>;
   title: string;
   learningModules: Array<
-    | LearningModuleWord
-    | LearningModuleWords
-    | LearningModulePhrase
-    | LearningModulePhrases
-    | LearningModuleCompleted
+    LearningModuleWord | LearningModuleWords | LearningModulePhrase | LearningModulePhrases | LearningModuleCompleted
   >;
   completed?: boolean;
 }

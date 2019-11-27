@@ -1,17 +1,10 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  ViewChild,
-  ElementRef,
-  HostBinding
-} from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostBinding } from '@angular/core';
 import { LessonCategory, AppMenuItem, Word } from '../interfaces/app.interface';
 
 @Component({
   selector: 'app-menu-list-item',
   templateUrl: './menu-list-item.component.html',
-  styleUrls: ['./menu-list-item.component.scss']
+  styleUrls: ['./menu-list-item.component.scss'],
 })
 export class MenuListItemComponent implements OnInit {
   @ViewChild('audio', { static: false }) audioElement: ElementRef;
