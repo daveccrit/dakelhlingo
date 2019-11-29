@@ -29,8 +29,12 @@ export class LessonService {
     }
   }
 
-  getLessonCategories(): Array<LessonCategory> {
-    return this.lessonCategories;
+  getLessonCategories(type?: string): Array<LessonCategory> {
+    if (!type || type.length === 0) {
+      return this.lessonCategories;
+    }
+
+    return this.lessonCategories.filter(category => category.type === type);
   }
 
   getLessons(categoryId: number): Array<Lesson> {

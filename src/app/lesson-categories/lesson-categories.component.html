@@ -13,14 +13,58 @@
   </div>
 </div>
 
-<mat-nav-list class="menu-list" *ngIf="pageReady">
-  <a
-    mat-list-item
-    class="language-text"
-    *ngFor="let category of categories"
-    [routerLink]="['/lessons', category.id]"
-    routerLinkActive="active"
-  >
-    <app-menu-list-item [menuItem]="category"></app-menu-list-item>
-  </a>
-</mat-nav-list>
+<div class="lesson-type-accordion">
+  <div class="expansion-panel" [ngClass]="{ 'active-panel': activePanel === 'words' }">
+    <div class="panel-header" (click)="panelHeaderClick('words')">
+      <div class="language-text">
+        <div class="dakelh-text">Dakelh - Words</div>
+        <div class="english-text">Dakelh - Words</div>
+      </div>
+    </div>
+
+    <div
+      #wordNavList
+      class="expansion-panel-content"
+      [ngStyle]="{ height: activePanel === 'words' ? listItemHeight * wordCategories.length + 'px' : '0' }"
+    >
+      <mat-nav-list class="menu-list" *ngIf="pageReady">
+        <a
+          mat-list-item
+          class="language-text"
+          *ngFor="let category of wordCategories"
+          [routerLink]="['/lessons', category.id]"
+          routerLinkActive="active"
+        >
+          <app-menu-list-item [menuItem]="category"></app-menu-list-item>
+        </a>
+      </mat-nav-list>
+    </div>
+  </div>
+  <div class="expansion-panel" [ngClass]="{ 'active-panel': activePanel === 'phrases' }">
+    <div class="panel-header" (click)="panelHeaderClick('phrases')">
+      <div class="language-text">
+        <div class="dakelh-text">Dakelh - Phrases</div>
+        <div class="english-text">Dakelh - Phrases</div>
+      </div>
+    </div>
+
+    <div
+      #phraseNavList
+      class="expansion-panel-content"
+      [ngStyle]="{ height: activePanel === 'phrases' ? listItemHeight * phraseCategories.length + 'px' : '0' }"
+    >
+      <mat-nav-list class="menu-list" *ngIf="pageReady">
+        <a
+          mat-list-item
+          class="language-text"
+          *ngFor="let category of phraseCategories"
+          (click)="listItemClick($event)"
+          [routerLink]="['/lessons', category.id]"
+          routerLinkActive="active"
+        >
+          <app-menu-list-item [menuItem]="category"></app-menu-list-item>
+        </a>
+      </mat-nav-list>
+    </div>
+  </div>
+</div>

@@ -35,6 +35,7 @@ export interface PhraseCategory {
 
 export interface LessonCategory {
   id: number;
+  type: string;
   dakelh: string;
   english: string;
   icon: string;

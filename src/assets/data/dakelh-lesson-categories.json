@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "type": "word",
     "dakelh": "Ndidot'en",
     "english": "What does it look like?",
     "icon": "color_lens",
@@ -8,6 +9,7 @@
   },
   {
     "id": 2,
+    "type": "word",
     "dakelh": "Ntsoya oozulh",
     "english": "What time is it?",
     "icon": "access_time",
@@ -15,6 +17,7 @@
   },
   {
     "id": 3,
+    "type": "word",
     "dakelh": "Yusk'ut ooza'",
     "english": "Time of year",
     "icon": "date_range",
@@ -22,6 +25,7 @@
   },
   {
     "id": 4,
+    "type": "word",
     "dakelh": "Khuna-i",
     "english": "That which lives - large fur animals",
     "icon": "pets",
@@ -29,8 +33,25 @@
   },
   {
     "id": 5,
-    "dakelh": "Phrases",
-    "english": "Phrases",
+    "type": "phrase",
+    "dakelh": "General",
+    "english": "General",
+    "icon": "language",
+    "audio": []
+  },
+  {
+    "id": 6,
+    "type": "phrase",
+    "dakelh": "Weather",
+    "english": "Weather",
+    "icon": "cloud",
+    "audio": []
+  },
+  {
+    "id": 7,
+    "type": "phrase",
+    "dakelh": "Conversation",
+    "english": "Conversation",
     "icon": "textsms",
     "audio": []
   }

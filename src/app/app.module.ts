@@ -14,6 +14,7 @@ import {
   MatRadioModule,
   MatInputModule,
   MatTreeModule,
+  MatExpansionModule,
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LessonComponent } from './lesson/lesson.component';
@@ -76,6 +77,7 @@ import { StoryLibraryComponent } from './library/story-library/story-library.com
     FormsModule,
     HttpClientModule,
     MatButtonModule,
+    MatExpansionModule,
     MatIconModule,
     MatInputModule,
     MatListModule,

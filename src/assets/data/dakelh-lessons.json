@@ -32,7 +32,11 @@
       },
       {
         "learningModule": "multiple-word-example",
-        "languageWords": ["ulhyul", "nigwus dot'en", "dulk'un"]
+        "languageWords": [
+          "ulhyul",
+          "nigwus dot'en",
+          "dulk'un"
+        ]
       }
     ]
   },
@@ -69,7 +73,11 @@
       },
       {
         "learningModule": "multiple-word-example",
-        "languageWords": ["kwun dot'en", "yun dot'en", "dultl'uz"]
+        "languageWords": [
+          "kwun dot'en",
+          "yun dot'en",
+          "dultl'uz"
+        ]
       }
     ]
   },
@@ -106,7 +114,11 @@
       },
       {
         "learningModule": "multiple-word-example",
-        "languageWords": ["duldzan", "dulgi", "dulhgus"]
+        "languageWords": [
+          "duldzan",
+          "dulgi",
+          "dulhgus"
+        ]
       }
     ]
   },
@@ -143,7 +155,11 @@
       },
       {
         "learningModule": "multiple-word-example",
-        "languageWords": ["dultso", "mai dot'en", "nigwus dot'en"]
+        "languageWords": [
+          "dultso",
+          "mai dot'en",
+          "nigwus dot'en"
+        ]
       }
     ]
   },
@@ -156,7 +172,11 @@
     "learningModules": [
       {
         "learningModule": "multiple-word-example",
-        "languageWords": ["ulhyul", "nigwus dot'en", "dulk'un"]
+        "languageWords": [
+          "ulhyul",
+          "nigwus dot'en",
+          "dulk'un"
+        ]
       },
       {
         "learningModule": "side-scroll-image-search",
@@ -205,7 +225,11 @@
       },
       {
         "learningModule": "multiple-word-example",
-        "languageWords": ["dzetniz", "bundada'", "ulhdzis"]
+        "languageWords": [
+          "dzetniz",
+          "bundada'",
+          "ulhdzis"
+        ]
       },
       {
         "learningModule": "side-scroll-image-search",
@@ -320,22 +344,6 @@
     "learningModules": [
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
-      },
-      {
-        "learningModule": "phrase-builder",
-        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
-      },
-      {
-        "learningModule": "phrase-learning",
-        "languagePhrase": "'Un 'az naowtejus'"
-      },
-      {
-        "learningModule": "phrase-builder",
-        "languagePhrase": "'Un 'az naowtejus'"
-      },
-      {
-        "learningModule": "phrase-learning",
         "languagePhrase": "Ndi lhes sut'e dube bat'en"
       },
       {
@@ -349,31 +357,31 @@
       {
         "learningModule": "phrase-builder",
         "languagePhrase": "Duni ka'utest'ilh"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Bundada 'uda da sooh ujun"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Bundada 'uda da sooh ujun"
       }
     ]
   },
   {
     "id": 10,
-    "lessonCategoryId": 5,
-    "dakelh": "Lesson 2",
-    "english": "Lesson 2",
+    "lessonCategoryId": 6,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
     "audio": "",
     "learningModules": [
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Bundada 'uda da sooh ujun"
+        "languagePhrase": "'Un 'az naowtejus'"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Bundada 'uda da sooh ujun"
-      },
-      {
-        "learningModule": "phrase-learning",
-        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
-      },
-      {
-        "learningModule": "phrase-builder",
-        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
+        "languagePhrase": "'Un 'az naowtejus'"
       },
       {
         "learningModule": "phrase-learning",
@@ -390,6 +398,31 @@
       {
         "learningModule": "phrase-builder",
         "languagePhrase": "K'an dzen dube whunanzul"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "lessonCategoryId": 7,
+    "dakelh": "Lesson 1",
+    "english": "Lesson 1",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
       }
     ]
   }
