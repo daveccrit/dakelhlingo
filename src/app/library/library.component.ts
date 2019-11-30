@@ -19,6 +19,7 @@ export class LibraryComponent implements OnInit {
     this.navItems.push(this.menuDataService.menuItems['phrases-menu-item']);
     this.navItems.push(this.menuDataService.menuItems['stories-menu-item']);
     this.navItems.push(this.menuDataService.menuItems['videos-menu-item']);
+    this.navItems.push(this.menuDataService.menuItems['recipes-menu-item']);
     this.pageReady = true;
   }
 

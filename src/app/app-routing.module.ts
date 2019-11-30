@@ -11,6 +11,7 @@ import { WordLibraryComponent } from './library/word-library/word-library.compon
 import { VideoLibraryComponent } from './library/video-library/video-library.component';
 import { PhraseLibraryComponent } from './library/phrase-library/phrase-library.component';
 import { StoryLibraryComponent } from './library/story-library/story-library.component';
+import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'library/phrases', component: PhraseLibraryComponent },
   { path: 'library/stories', component: StoryLibraryComponent },
   { path: 'library/videos', component: VideoLibraryComponent },
+  { path: 'library/recipes', component: RecipeLibraryComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'lesson-categories', component: LessonCategoriesComponent },
   { path: 'lessons/:catid', component: LessonListComponent },

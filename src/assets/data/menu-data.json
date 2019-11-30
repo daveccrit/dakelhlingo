@@ -63,6 +63,14 @@
     "audio": [],
     "className": "secondary"
   },
+  "recipes-menu-item": {
+    "icon": "restaurant",
+    "route": "/library/recipes",
+    "dakelh": "Recipes",
+    "english": "Recipes",
+    "audio": [],
+    "className": "secondary"
+  },
   "back-button": {
     "icon": "arrow_back",
     "route": "",

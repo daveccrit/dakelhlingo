@@ -76,6 +76,7 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   }
 
   goBack(): void {
+    this.uiState.setState({ data: { activePanel: '', scrollPosition: 0 } });
     this.location.back();
   }
 }

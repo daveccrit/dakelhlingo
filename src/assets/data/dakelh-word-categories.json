@@ -26,5 +26,12 @@
     "english": "That which lives - large fur animals",
     "icon": "pets",
     "audio": ["that_which_lives-large_fur_animals.mp3"]
+  },
+  {
+    "id": 5,
+    "dakelh": "Greeting",
+    "english": "Greeting",
+    "icon": "textsms",
+    "audio": []
   }
 ]

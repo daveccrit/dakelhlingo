@@ -42,6 +42,7 @@ import { PhraseLearningComponent } from './learning-modules/phrase-learning/phra
 import { LessonCompletedComponent } from './learning-modules/lesson-completed/lesson-completed.component';
 import { PhraseLibraryComponent } from './library/phrase-library/phrase-library.component';
 import { StoryLibraryComponent } from './library/story-library/story-library.component';
+import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { StoryLibraryComponent } from './library/story-library/story-library.com
     WordLearningExampleComponent,
     WordLibraryComponent,
     WordsLearningExampleComponent,
+    RecipeLibraryComponent,
   ],
   imports: [
     AppRoutingModule,

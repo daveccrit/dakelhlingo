@@ -318,5 +318,15 @@
     "images": [],
     "videos": [],
     "audio": ["black_bear.mp3"]
+  },
+  {
+    "dakelh": "Dahooja",
+    "english": "What is happening?",
+    "wordCategory": "Greeting",
+    "wordCategoryId": 5,
+    "icon": "textsms",
+    "images": [],
+    "videos": [],
+    "audio": []
   }
 ]
