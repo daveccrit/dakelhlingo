@@ -55,11 +55,27 @@
     "audio": [],
     "className": "secondary"
   },
+  "music-menu-item": {
+    "icon": "library_music",
+    "route": "/library/music",
+    "dakelh": "Music",
+    "english": "Music",
+    "audio": [],
+    "className": "secondary"
+  },
   "videos-menu-item": {
     "icon": "video_library",
     "route": "/library/videos",
     "dakelh": "Videos",
     "english": "Videos",
+    "audio": [],
+    "className": "secondary"
+  },
+  "games-menu-item": {
+    "icon": "videogame_asset",
+    "route": "/library/games",
+    "dakelh": "Games",
+    "english": "Games",
     "audio": [],
     "className": "secondary"
   },

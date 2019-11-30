@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import phraseData from '../../../assets/data/dakelh-phrases.json';
-import { Phrase } from '../interfaces/app.interface.js';
+import { Phrase, PhraseCategory } from '../interfaces/app.interface.js';
 
 @Injectable({
   providedIn: 'root',
@@ -45,5 +45,19 @@ export class PhraseDictionaryService {
     });
 
     return foundValue;
+  }
+
+  getRandomPhrase(phraseCategory?: PhraseCategory): Phrase {
+    let languagePhrases = [];
+    if (phraseCategory) {
+      languagePhrases = this.languagePhrases.filter(
+        value => value.phraseCategory.toLowerCase() === phraseCategory.dakelh.toLowerCase(),
+      );
+    } else {
+      languagePhrases = this.languagePhrases;
+    }
+
+    const randomPhraseNum = Math.floor(Math.random() * languagePhrases.length);
+    return languagePhrases[randomPhraseNum];
   }
 }

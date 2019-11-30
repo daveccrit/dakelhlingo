@@ -67,4 +67,32 @@
       </mat-nav-list>
     </div>
   </div>
+
+  <div class="expansion-panel" [ngClass]="{ 'active-panel': activePanel === 'flashcards' }">
+    <div class="panel-header" (click)="panelHeaderClick('flashcards')">
+      <div class="language-text">
+        <div class="dakelh-text">Flashcards</div>
+        <div class="english-text">Flashcards</div>
+      </div>
+    </div>
+
+    <div
+      #flashcardNavList
+      class="expansion-panel-content"
+      [ngStyle]="{ height: activePanel === 'flashcards' ? listItemHeight * flashcardCategories.length + 'px' : '0' }"
+    >
+      <mat-nav-list class="menu-list" *ngIf="pageReady">
+        <a
+          mat-list-item
+          class="language-text"
+          *ngFor="let category of flashcardCategories"
+          (click)="listItemClick($event)"
+          [routerLink]="['/flashcards', category.id]"
+          routerLinkActive="active"
+        >
+          <app-menu-list-item [menuItem]="category"></app-menu-list-item>
+        </a>
+      </mat-nav-list>
+    </div>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import "~@angular/material/theming";
+@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -18,11 +18,7 @@ $dakelhlingo-accent: mat-palette($mat-pink, A200, A100, A400);
 $dakelhlingo-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$dakelhlingo-theme: mat-light-theme(
-  $dakelhlingo-primary,
-  $dakelhlingo-accent,
-  $dakelhlingo-warn
-);
+$dakelhlingo-theme: mat-light-theme($dakelhlingo-primary, $dakelhlingo-accent, $dakelhlingo-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -31,7 +27,7 @@ $dakelhlingo-theme: mat-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -41,7 +37,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .main-app {
@@ -60,8 +56,7 @@ body {
     max-height: calc(100% - 73px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 
-    background: url("assets/images/app/background-ocean.jpg") no-repeat center
-      center fixed;
+    background: url('assets/images/app/background-ocean.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -236,4 +231,30 @@ h3 {
 button.back-button {
   min-height: 68px;
   height: 68px;
+}
+
+// App page specific Material overrides
+
+app-flashcards .stepper-container {
+  .mat-horizontal-stepper-header-container {
+    display: none;
+  }
+
+  .mat-horizontal-content-container,
+  .mat-horizontal-stepper-content {
+    height: 100%;
+  }
+
+  .mat-horizontal-stepper-content {
+    display: flex;
+    flex-direction: column;
+
+    .flashcard-container {
+      flex: 1 1 auto;
+    }
+
+    .phrase-container {
+      flex: 0 0 auto;
+    }
+  }
 }

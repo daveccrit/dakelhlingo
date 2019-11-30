@@ -15,6 +15,8 @@ import {
   MatInputModule,
   MatTreeModule,
   MatExpansionModule,
+  MatTabsModule,
+  MatStepperModule,
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LessonComponent } from './lesson/lesson.component';
@@ -43,6 +45,9 @@ import { LessonCompletedComponent } from './learning-modules/lesson-completed/le
 import { PhraseLibraryComponent } from './library/phrase-library/phrase-library.component';
 import { StoryLibraryComponent } from './library/story-library/story-library.component';
 import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.component';
+import { FlashcardsComponent } from './flashcards/flashcards.component';
+import { MusicLibraryComponent } from './library/music-library/music-library.component';
+import { GamesLibraryComponent } from './library/games-library/games-library.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +74,9 @@ import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.
     WordLibraryComponent,
     WordsLearningExampleComponent,
     RecipeLibraryComponent,
+    FlashcardsComponent,
+    MusicLibraryComponent,
+    GamesLibraryComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -84,6 +92,8 @@ import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.
     MatInputModule,
     MatListModule,
     MatRadioModule,
+    MatStepperModule,
+    MatTabsModule,
     MatTreeModule,
   ],
   providers: [LessonService, MenuDataService, WordsDictionaryService, SettingsService],

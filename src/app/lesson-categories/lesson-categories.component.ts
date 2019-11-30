@@ -1,10 +1,9 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
-import { LessonCategory } from '../shared/interfaces/app.interface';
+import { LessonCategory, WordCategory } from '../shared/interfaces/app.interface';
 import { LessonService } from '../shared/services/lesson.service';
-import { FlatTreeControl } from '@angular/cdk/tree';
 import { UiStateService } from '../shared/services/ui-state.service';
-import { MatNavList } from '@angular/material';
+import { WordsDictionaryService } from '../shared/services/words-dictionary.service';
 
 @Component({
   selector: 'app-lesson-categories',
@@ -14,9 +13,11 @@ import { MatNavList } from '@angular/material';
 export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   @ViewChild('wordNavList', { static: false }) wordNavList: ElementRef<HTMLElement>;
   @ViewChild('phraseNavList', { static: false }) phraseNavList: ElementRef<HTMLElement>;
+  @ViewChild('flashcardNavList', { static: false }) flashcardNavList: ElementRef<HTMLElement>;
 
   wordCategories: Array<LessonCategory>;
   phraseCategories: Array<LessonCategory>;
+  flashcardCategories: Array<WordCategory>;
   activePanel = '';
   pageReady = false;
   listItemHeight = 80;
@@ -24,18 +25,20 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   navLists = {
     words: undefined,
     phrases: undefined,
+    flashcards: undefined,
   };
 
-  treeControl = new FlatTreeControl(
-    () => 1,
-    () => true,
-  );
-
-  constructor(private location: Location, private lessonService: LessonService, private uiState: UiStateService) {}
+  constructor(
+    private location: Location,
+    private lessonService: LessonService,
+    private wordsDictionaryService: WordsDictionaryService,
+    private uiState: UiStateService,
+  ) {}
 
   ngOnInit() {
     this.wordCategories = this.lessonService.getLessonCategories('word');
     this.phraseCategories = this.lessonService.getLessonCategories('phrase');
+    this.flashcardCategories = this.wordsDictionaryService.getWordCategories();
     this.pageReady = true;
     let uiState = this.uiState.getState().data;
 
@@ -50,6 +53,7 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
     setTimeout(() => {
       this.navLists.words = (this.wordNavList.nativeElement as HTMLElement).querySelector('mat-nav-list');
       this.navLists.phrases = (this.phraseNavList.nativeElement as HTMLElement).querySelector('mat-nav-list');
+      this.navLists.flashcards = (this.flashcardNavList.nativeElement as HTMLElement).querySelector('mat-nav-list');
       if (this.activePanel) {
         this.navLists[this.activePanel].scrollTop = uiState.scrollPosition ? uiState.scrollPosition : 0;
       }
