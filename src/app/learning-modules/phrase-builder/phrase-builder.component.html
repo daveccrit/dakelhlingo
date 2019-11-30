@@ -1,36 +1,31 @@
 <div class="page-container">
   <h3>
     Complete the phrase
-    <mat-icon
-      class="play-button"
-      (click)="onClick($event)"
-      *ngIf="phraseData.audio.length > 0"
-      >play_circle_outline</mat-icon
-    >
+    <mat-icon class="play-button"
+              (click)="onClick($event)"
+              *ngIf="phraseData.audio.length > 0">play_circle_outline</mat-icon>
   </h3>
   <div class="text-container">
-    <div #languageTextContainer class="language-text-container">
-      <div
-        class="word-block"
-        *ngFor="let item of phraseArray; let i = index"
-        [ngClass]="{ populated: getPopulatedWord(i).length > 0 }"
-      >
+    <div #languageTextContainer
+         class="language-text-container">
+      <div class="word-block"
+           *ngFor="let item of phraseArray; let i = index"
+           [ngClass]="{ populated: getPopulatedWord(i).length > 0 }">
         {{ getPopulatedWord(i) }}
       </div>
     </div>
-    <div class="delete-item-button" (click)="deleteItem()">
+    <div class="delete-item-button"
+         (click)="deleteItem()">
       <mat-icon>backspace</mat-icon>
     </div>
   </div>
 
   <div class="answer-grid">
-    <button
-      mat-raised-button
-      #phraseButton
-      *ngFor="let item of phraseArray.filter(uniqueWordList)"
-      [disabled]="isWordDisabled(item)"
-      (click)="addPopulatedWord(item)"
-    >
+    <button mat-raised-button
+            #phraseButton
+            *ngFor="let item of phraseArray.filter(uniqueWordList)"
+            [disabled]="isWordDisabled(item)"
+            (click)="addPopulatedWord(item)">
       {{ item }}
     </button>
   </div>

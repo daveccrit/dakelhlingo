@@ -5,15 +5,14 @@
       <div class="english-text">{{ phraseData.english }}</div>
     </div>
 
-    <mat-icon
-      class="play-button"
-      (click)="onClick($event)"
-      *ngIf="phraseData.audio.length > 0"
-      >play_circle_outline</mat-icon
-    >
+    <mat-icon class="play-button"
+              (click)="onClick($event)"
+              *ngIf="phraseData.audio.length > 0">play_circle_outline</mat-icon>
   </div>
 
-  <button mat-raised-button (click)="completedModule()" color="primary">
+  <button mat-raised-button
+          (click)="completedModule()"
+          color="primary">
     ok
   </button>
 </div>

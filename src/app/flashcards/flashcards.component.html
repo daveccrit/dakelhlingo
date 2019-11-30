@@ -1,5 +1,7 @@
 <div class="top-bar">
-  <div class="back-button" (click)="goBack()">
+  <div class="back-button"
+       (click)="goBack()"
+       tabindex="0">
     <mat-icon>arrow_back</mat-icon>
     <div class="language-text">
       <div class="dakelh-text">Go Back</div>
@@ -13,13 +15,19 @@
   </div>
 </div>
 
-<mat-horizontal-stepper [linear]="true" #stepper class="stepper-container">
+<mat-horizontal-stepper [linear]="true"
+                        #stepper
+                        class="stepper-container">
   <mat-step *ngFor="let word of wordList; let i = index">
     <div class="flashcard-container">
-      <button mat-raised-button color="primary" matStepperPrevious [disabled]="i === 0">Prev</button>
+      <button mat-raised-button
+              color="primary"
+              matStepperPrevious
+              [disabled]="i === 0">Prev</button>
       <div class="word-container">
         <div class="image-content">
-          <img *ngIf="word.images.length > 0" [src]="'assets/images/dakelh-words/' + word.images[0]" />
+          <img *ngIf="word.images.length > 0"
+               [src]="'assets/images/dakelh-words/' + word.images[0]" />
         </div>
 
         <div class="language-text">
@@ -27,18 +35,26 @@
           <div class="english-text">{{ word.english }}</div>
         </div>
       </div>
-      <button mat-raised-button color="primary" matStepperNext *ngIf="wordList.length - 1 > i">
+      <button mat-raised-button
+              color="primary"
+              matStepperNext
+              *ngIf="wordList.length - 1 > i">
         Next
       </button>
-      <button mat-raised-button color="primary" *ngIf="i >= wordList.length - 1" (click)="goBack()">Done</button>
+      <button mat-raised-button
+              color="primary"
+              *ngIf="i >= wordList.length - 1"
+              (click)="goBack()">Done</button>
     </div>
 
     <div class="phrase-container">
       <div class="phrase-container-header">
         <h3>Phrases</h3>
-        <button mat-button color="primary">More</button>
+        <button mat-button
+                color="primary">More</button>
       </div>
-      <div class="language-text" *ngFor="let phrase of phraseArray[word.dakelh]">
+      <div class="language-text"
+           *ngFor="let phrase of phraseArray[word.dakelh]">
         <div class="dakelh-text">{{ phrase.dakelh }}</div>
         <div class="english-text">{{ phrase.english }}</div>
       </div>

@@ -1,5 +1,7 @@
 <div class="top-bar">
-  <div class="back-button" (click)="goBack()">
+  <div class="back-button"
+       (click)="goBack()"
+       tabindex="0">
     <mat-icon>arrow_back</mat-icon>
     <div class="language-text">
       <div class="dakelh-text">Go Back</div>
@@ -14,8 +16,16 @@
 </div>
 
 <mat-form-field class="category-form-field">
-  <input matInput type="text" placeholder="Search" [(ngModel)]="categoryFilter" />
-  <button mat-button *ngIf="categoryFilter" matSuffix mat-icon-button aria-label="Clear" (click)="categoryFilter = ''">
+  <input matInput
+         type="text"
+         placeholder="Search"
+         [(ngModel)]="categoryFilter" />
+  <button mat-button
+          *ngIf="categoryFilter"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="categoryFilter = ''">
     <mat-icon>close</mat-icon>
   </button>
 </mat-form-field>
@@ -24,7 +34,9 @@
 </div>
 
 <mat-nav-list class="menu-list">
-  <a mat-list-item class="language-text" *ngFor="let phrase of phrases">
+  <a mat-list-item
+     class="language-text"
+     *ngFor="let phrase of phrases">
     <app-menu-list-item [menuItem]="phrase"></app-menu-list-item>
   </a>
 </mat-nav-list>

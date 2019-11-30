@@ -8,7 +8,7 @@ import { PhraseDictionaryService } from '../shared/services/phrase-dictionary.se
 @Component({
   selector: 'app-flashcards',
   templateUrl: './flashcards.component.html',
-  styleUrls: ['./flashcards.component.scss'],
+  styleUrls: ['./flashcards.component.scss']
 })
 export class FlashcardsComponent implements OnInit {
   wordCategoryId: number;
@@ -21,8 +21,8 @@ export class FlashcardsComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private wordsDictionaryService: WordsDictionaryService,
-    private phraseDictionaryService: PhraseDictionaryService,
-  ) {}
+    private phraseDictionaryService: PhraseDictionaryService
+  ) { }
 
   ngOnInit() {
     this.wordCategoryId = +this.route.snapshot.paramMap.get('catid');

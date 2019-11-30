@@ -1,5 +1,7 @@
 <div class="top-bar">
-  <div class="back-button" (click)="goBack()">
+  <div class="back-button"
+       (click)="goBack()"
+       tabindex="0">
     <mat-icon>arrow_back</mat-icon>
     <div class="language-text">
       <div class="dakelh-text">Go Back</div>
@@ -13,83 +15,87 @@
   </div>
 </div>
 
-<div class="lesson-type-accordion">
-  <div class="expansion-panel" [ngClass]="{ 'active-panel': activePanel === 'words' }">
-    <div class="panel-header" (click)="panelHeaderClick('words')">
+<div class="lesson-type-accordion"
+     role="list">
+  <div class="expansion-panel"
+       role="listitem"
+       tabindex="0"
+       [ngClass]="{ 'active-panel': activePanel === 'words' }">
+    <div class="panel-header"
+         (click)="panelHeaderClick('words')">
       <div class="language-text">
         <div class="dakelh-text">Dakelh - Words</div>
         <div class="english-text">Dakelh - Words</div>
       </div>
     </div>
 
-    <div
-      #wordNavList
-      class="expansion-panel-content"
-      [ngStyle]="{ height: activePanel === 'words' ? listItemHeight * wordCategories.length + 'px' : '0' }"
-    >
-      <mat-nav-list class="menu-list" *ngIf="pageReady">
-        <a
-          mat-list-item
-          class="language-text"
-          *ngFor="let category of wordCategories"
-          [routerLink]="['/lessons', category.id]"
-          routerLinkActive="active"
-        >
+    <div #wordNavList
+         class="expansion-panel-content"
+         [ngStyle]="{ height: activePanel === 'words' ? listItemHeight * wordCategories.length + 'px' : '0' }">
+      <mat-nav-list class="menu-list"
+                    *ngIf="pageReady">
+        <a mat-list-item
+           class="language-text"
+           *ngFor="let category of wordCategories"
+           [routerLink]="['/lessons', category.id]"
+           routerLinkActive="active">
           <app-menu-list-item [menuItem]="category"></app-menu-list-item>
         </a>
       </mat-nav-list>
     </div>
   </div>
-  <div class="expansion-panel" [ngClass]="{ 'active-panel': activePanel === 'phrases' }">
-    <div class="panel-header" (click)="panelHeaderClick('phrases')">
+  <div class="expansion-panel"
+       role="listitem"
+       tabindex="0"
+       [ngClass]="{ 'active-panel': activePanel === 'phrases' }">
+    <div class="panel-header"
+         (click)="panelHeaderClick('phrases')">
       <div class="language-text">
         <div class="dakelh-text">Dakelh - Phrases</div>
         <div class="english-text">Dakelh - Phrases</div>
       </div>
     </div>
 
-    <div
-      #phraseNavList
-      class="expansion-panel-content"
-      [ngStyle]="{ height: activePanel === 'phrases' ? listItemHeight * phraseCategories.length + 'px' : '0' }"
-    >
-      <mat-nav-list class="menu-list" *ngIf="pageReady">
-        <a
-          mat-list-item
-          class="language-text"
-          *ngFor="let category of phraseCategories"
-          (click)="listItemClick($event)"
-          [routerLink]="['/lessons', category.id]"
-          routerLinkActive="active"
-        >
+    <div #phraseNavList
+         class="expansion-panel-content"
+         [ngStyle]="{ height: activePanel === 'phrases' ? listItemHeight * phraseCategories.length + 'px' : '0' }">
+      <mat-nav-list class="menu-list"
+                    *ngIf="pageReady">
+        <a mat-list-item
+           class="language-text"
+           *ngFor="let category of phraseCategories"
+           (click)="listItemClick($event)"
+           [routerLink]="['/lessons', category.id]"
+           routerLinkActive="active">
           <app-menu-list-item [menuItem]="category"></app-menu-list-item>
         </a>
       </mat-nav-list>
     </div>
   </div>
 
-  <div class="expansion-panel" [ngClass]="{ 'active-panel': activePanel === 'flashcards' }">
-    <div class="panel-header" (click)="panelHeaderClick('flashcards')">
+  <div class="expansion-panel"
+       role="listitem"
+       [ngClass]="{ 'active-panel': activePanel === 'flashcards' }">
+    <div class="panel-header"
+         (click)="panelHeaderClick('flashcards')"
+         tabindex="0">
       <div class="language-text">
         <div class="dakelh-text">Flashcards</div>
         <div class="english-text">Flashcards</div>
       </div>
     </div>
 
-    <div
-      #flashcardNavList
-      class="expansion-panel-content"
-      [ngStyle]="{ height: activePanel === 'flashcards' ? listItemHeight * flashcardCategories.length + 'px' : '0' }"
-    >
-      <mat-nav-list class="menu-list" *ngIf="pageReady">
-        <a
-          mat-list-item
-          class="language-text"
-          *ngFor="let category of flashcardCategories"
-          (click)="listItemClick($event)"
-          [routerLink]="['/flashcards', category.id]"
-          routerLinkActive="active"
-        >
+    <div #flashcardNavList
+         class="expansion-panel-content"
+         [ngStyle]="{ height: activePanel === 'flashcards' ? listItemHeight * flashcardCategories.length + 'px' : '0' }">
+      <mat-nav-list class="menu-list"
+                    *ngIf="pageReady">
+        <a mat-list-item
+           class="language-text"
+           *ngFor="let category of flashcardCategories"
+           (click)="listItemClick($event)"
+           [routerLink]="['/flashcards', category.id]"
+           routerLinkActive="active">
           <app-menu-list-item [menuItem]="category"></app-menu-list-item>
         </a>
       </mat-nav-list>
