@@ -19,6 +19,7 @@
 .flashcard-container {
   display: flex;
   align-items: flex-start;
+  justify-self: stretch;
   padding: 10px 4px;
 
   & > button {
@@ -52,6 +53,7 @@
 .phrase-container {
   display: flex;
   flex-direction: column;
+  padding: 0 5px;
 
   .phrase-container-header {
     display: flex;

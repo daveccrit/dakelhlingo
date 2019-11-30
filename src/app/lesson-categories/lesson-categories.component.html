@@ -10,19 +10,22 @@
   </div>
 
   <div class="page-title language-text">
-    <div class="dakelh-text">Choose a lesson category</div>
-    <div class="english-text">Choose a lesson category</div>
+    <div class="dakelh-text">Choose a lesson</div>
+    <div class="english-text">Choose a lesson {{ height }}</div>
   </div>
 </div>
 
-<div class="lesson-type-accordion"
+<div #accordion
+     class="lesson-type-accordion"
      role="list">
   <div class="expansion-panel"
        role="listitem"
        tabindex="0"
+       (click)="panelHeaderClick('words')"
+       (keyup.enter)="panelHeaderKeyup('words')"
+       (keyup.space)="panelHeaderKeyup('words')"
        [ngClass]="{ 'active-panel': activePanel === 'words' }">
-    <div class="panel-header"
-         (click)="panelHeaderClick('words')">
+    <div class="panel-header">
       <div class="language-text">
         <div class="dakelh-text">Dakelh - Words</div>
         <div class="english-text">Dakelh - Words</div>
@@ -47,9 +50,11 @@
   <div class="expansion-panel"
        role="listitem"
        tabindex="0"
+       (click)="panelHeaderClick('phrases')"
+       (keyup.enter)="panelHeaderKeyup('phrases')"
+       (keyup.space)="panelHeaderKeyup('phrases')"
        [ngClass]="{ 'active-panel': activePanel === 'phrases' }">
-    <div class="panel-header"
-         (click)="panelHeaderClick('phrases')">
+    <div class="panel-header">
       <div class="language-text">
         <div class="dakelh-text">Dakelh - Phrases</div>
         <div class="english-text">Dakelh - Phrases</div>
@@ -75,10 +80,12 @@
 
   <div class="expansion-panel"
        role="listitem"
+       tabindex="0"
+       (click)="panelHeaderClick('flashcards')"
+       (keyup.enter)="panelHeaderKeyup('flashcards')"
+       (keyup.space)="panelHeaderKeyup('flashcards')"
        [ngClass]="{ 'active-panel': activePanel === 'flashcards' }">
-    <div class="panel-header"
-         (click)="panelHeaderClick('flashcards')"
-         tabindex="0">
+    <div class="panel-header">
       <div class="language-text">
         <div class="dakelh-text">Flashcards</div>
         <div class="english-text">Flashcards</div>

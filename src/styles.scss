@@ -49,8 +49,8 @@ body {
   background: linear-gradient(160deg, rgb(4, 147, 204), rgb(71, 101, 158));
 
   & > *:not(router-outlet) {
-    padding: 18px;
-    width: calc(100% - 40px);
+    padding: 13px;
+    width: calc(100% - 30px);
     max-width: 728px;
     height: calc(100% - 73px);
     max-height: calc(100% - 73px);
@@ -172,6 +172,11 @@ button.back-button .mat-icon {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
 
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.5);
+      outline: none;
+    }
+
     .mat-icon {
       font-size: 2rem;
       width: 2rem;
@@ -240,8 +245,12 @@ app-flashcards .stepper-container {
     display: none;
   }
 
-  .mat-horizontal-content-container,
-  .mat-horizontal-stepper-content {
+  .mat-horizontal-content-container {
+    height: 100%;
+    padding: 0;
+  }
+
+  .mat-horizontal-stepper-content[aria-expanded='true'] {
     height: 100%;
   }
 

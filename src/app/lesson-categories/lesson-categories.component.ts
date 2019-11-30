@@ -14,6 +14,7 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   @ViewChild('wordNavList', { static: false }) wordNavList: ElementRef<HTMLElement>;
   @ViewChild('phraseNavList', { static: false }) phraseNavList: ElementRef<HTMLElement>;
   @ViewChild('flashcardNavList', { static: false }) flashcardNavList: ElementRef<HTMLElement>;
+  @ViewChild('accordion', { static: false }) accordion: ElementRef<HTMLElement>;
 
   wordCategories: Array<LessonCategory>;
   phraseCategories: Array<LessonCategory>;
@@ -28,19 +29,22 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
     flashcards: undefined,
   };
 
+  height = '';
+
   constructor(
     private location: Location,
     private lessonService: LessonService,
     private wordsDictionaryService: WordsDictionaryService,
     private uiState: UiStateService,
-  ) {}
+    private _elementRef: ElementRef
+  ) { }
 
   ngOnInit() {
     this.wordCategories = this.lessonService.getLessonCategories('word');
     this.phraseCategories = this.lessonService.getLessonCategories('phrase');
     this.flashcardCategories = this.wordsDictionaryService.getWordCategories();
     this.pageReady = true;
-    let uiState = this.uiState.getState().data;
+    const uiState = this.uiState.getState().data;
 
     if (uiState.activePanel) {
       this.activePanel = uiState.activePanel ? uiState.activePanel : '';
@@ -48,7 +52,7 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    let uiState = this.uiState.getState().data;
+    const uiState = this.uiState.getState().data;
 
     setTimeout(() => {
       this.navLists.words = (this.wordNavList.nativeElement as HTMLElement).querySelector('mat-nav-list');
@@ -61,6 +65,17 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   }
 
   panelHeaderClick(selectedPanel: string) {
+    this.changeActivePanel(selectedPanel);
+  }
+
+  panelHeaderKeyup(selectedPanel: string) {
+    this.changeActivePanel(selectedPanel);
+  }
+
+  changeActivePanel(selectedPanel: string) {
+
+    console.log(this.accordion.nativeElement.offsetHeight, this._elementRef.nativeElement.offsetHeight);
+    this.height = this.accordion.nativeElement.offsetHeight + ':' + this._elementRef.nativeElement.offsetHeight;
     if (selectedPanel === this.activePanel) {
       this.activePanel = '';
       return;
