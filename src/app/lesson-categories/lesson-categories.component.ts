@@ -29,8 +29,6 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
     flashcards: undefined,
   };
 
-  height = '';
-
   constructor(
     private location: Location,
     private lessonService: LessonService,
@@ -73,9 +71,6 @@ export class LessonCategoriesComponent implements AfterViewInit, OnInit {
   }
 
   changeActivePanel(selectedPanel: string) {
-
-    console.log(this.accordion.nativeElement.offsetHeight, this._elementRef.nativeElement.offsetHeight);
-    this.height = this.accordion.nativeElement.offsetHeight + ':' + this._elementRef.nativeElement.offsetHeight;
     if (selectedPanel === this.activePanel) {
       this.activePanel = '';
       return;
