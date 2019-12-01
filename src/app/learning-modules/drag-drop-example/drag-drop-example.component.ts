@@ -28,6 +28,7 @@ export class DragDropExampleComponent implements OnInit {
   isDragging = false;
   dragPosition = { x: 0, y: 0 };
   hoverItem: number;
+  test = '';
 
   _languageWord: string;
 
@@ -42,7 +43,7 @@ export class DragDropExampleComponent implements OnInit {
 
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private wordsDictionaryService: WordsDictionaryService) {}
+  constructor(private wordsDictionaryService: WordsDictionaryService) { }
 
   ngOnInit() {
     this.initModule();
@@ -80,6 +81,7 @@ export class DragDropExampleComponent implements OnInit {
 
   onDragMove(event: CdkDragMove) {
     this.hoverItem = -1;
+
     this.dropContainerList.forEach((item, index) => {
       const dropContainerRect = item.nativeElement.getBoundingClientRect();
       const dragElementRect = event.source.element.nativeElement.getBoundingClientRect();

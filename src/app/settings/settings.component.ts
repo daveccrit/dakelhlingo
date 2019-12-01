@@ -8,20 +8,30 @@ import { SettingsService } from '../shared/services/settings.service';
   styleUrls: ['./settings.component.scss'],
 })
 export class SettingsComponent implements OnInit {
-  _userLevel = '';
+  _userLevel = 'level1';
   get userLevel(): string {
     return this._userLevel;
   }
   set userLevel(value: string) {
     this._userLevel = value;
-    this.settingsService.setUserLevel(value);
+    this.settingsService.changeSetting('userLevel', value);
+  }
+
+  _timeOfDay = 'noon';
+  get timeOfDay(): string {
+    return this._timeOfDay;
+  }
+  set timeOfDay(value: string) {
+    this._timeOfDay = value;
+    this.settingsService.changeSetting('timeOfDay', value);
   }
 
   constructor(private location: Location, private settingsService: SettingsService) {
     this._userLevel = this.settingsService.app.userLevel;
+    this._timeOfDay = this.settingsService.app.timeOfDay;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   resetCompletedData() {
     this.settingsService.resetCompletedLessons();

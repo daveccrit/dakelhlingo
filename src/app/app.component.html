@@ -1,5 +1,12 @@
 <div class="main-app"
-     [ngClass]="userLevel"
+     [ngClass]="{
+       'level1': userLevel === 'level1',
+       'level2': userLevel === 'level2',
+       'level3': userLevel === 'level3',
+       'time-morning': timeOfDay === 'morning', 
+       'time-noon': timeOfDay === 'noon', 
+       'time-night': timeOfDay === 'night'
+      }"
      *ngIf="appReady">
   <router-outlet></router-outlet>
 </div>

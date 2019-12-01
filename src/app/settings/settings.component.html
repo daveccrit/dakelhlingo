@@ -19,13 +19,41 @@
   <div class="settings-container">
     <mat-radio-group class="settings-radio-group"
                      [(ngModel)]="userLevel">
-      <label>User Level</label>
+      <label>Student Level</label>
       <mat-radio-button class="settings-radio-button"
-                        [value]="''">Beginner</mat-radio-button>
+                        [value]="'level1'">Beginner</mat-radio-button>
       <mat-radio-button class="settings-radio-button"
-                        [value]="'level1'">Intermediate</mat-radio-button>
+                        [value]="'level2'">Intermediate</mat-radio-button>
       <mat-radio-button class="settings-radio-button"
-                        [value]="'level2'">Expert</mat-radio-button>
+                        [value]="'level3'">Expert</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="settings-container">
+    <mat-radio-group class="settings-radio-group"
+                     [(ngModel)]="timeOfDay">
+      <label>Time of Day</label>
+      <mat-radio-button class="settings-radio-button"
+                        [value]="'morning'">
+        <div class="language-text">
+          <div class="dakelh-text">Bundada</div>
+          <div class="english-text">Morning</div>
+        </div>
+      </mat-radio-button>
+      <mat-radio-button class="settings-radio-button"
+                        [value]="'noon'">
+        <div class="language-text">
+          <div class="dakelh-text">Dzetniz</div>
+          <div class="english-text">Noon</div>
+        </div>
+      </mat-radio-button>
+      <mat-radio-button class="settings-radio-button"
+                        [value]="'night'">
+        <div class="language-text">
+          <div class="dakelh-text">Ulhdzis</div>
+          <div class="english-text">Night</div>
+        </div>
+      </mat-radio-button>
     </mat-radio-group>
   </div>
 

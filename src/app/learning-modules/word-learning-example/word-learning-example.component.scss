@@ -17,9 +17,10 @@
   padding: 20px;
   justify-content: space-between;
   border-radius: 6px;
-  -webkit-box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
-  -moz-box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
-  box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
+  border: 1px solid rgba(63, 81, 181, 0.6);
+  // -webkit-box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
+  // -moz-box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
+  // box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
 
   .text-container {
     display: flex;

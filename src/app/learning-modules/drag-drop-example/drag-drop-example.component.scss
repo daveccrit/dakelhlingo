@@ -28,8 +28,8 @@
       cursor: default;
       opacity: 0;
       color: rgba(63, 81, 181, 0.9);
-      text-shadow: -1px -1px 0 rgb(63, 81, 181), 1px -1px 0 rgb(63, 81, 181),
-        -1px 1px 0 rgb(63, 81, 181), 1px 1px 0 rgb(63, 81, 181);
+      text-shadow: -1px -1px 0 rgb(63, 81, 181), 1px -1px 0 rgb(63, 81, 181), -1px 1px 0 rgb(63, 81, 181),
+        1px 1px 0 rgb(63, 81, 181);
     }
 
     .up-arrow {
@@ -51,10 +51,7 @@
     position: relative;
     border-radius: 6px;
     overflow: hidden;
-    border: 1px solid #939393;
-    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    border: 2px solid #939393;
     z-index: 9000;
 
     & * {
@@ -65,8 +62,13 @@
       max-width: 100%;
     }
 
+    &.drag-element-hovering {
+      border-radius: 6px;
+      border-color: rgba(63, 81, 181, 0.6);
+    }
+
     &.drag-element-hovering::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -97,9 +99,7 @@
       cursor: pointer;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 6px;
-      -webkit-box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
-      -moz-box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
-      box-shadow: 4px 4px 4px 0px rgba(63, 81, 181, 0.5);
+      border: 1px solid rgba(63, 81, 181, 0.6);
 
       .language-text-container {
         display: flex;

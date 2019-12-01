@@ -15,7 +15,6 @@ import {
   MatInputModule,
   MatTreeModule,
   MatExpansionModule,
-  MatTabsModule,
   MatStepperModule,
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -93,10 +92,9 @@ import { GamesLibraryComponent } from './library/games-library/games-library.com
     MatListModule,
     MatRadioModule,
     MatStepperModule,
-    MatTabsModule,
     MatTreeModule,
   ],
   providers: [LessonService, MenuDataService, WordsDictionaryService, SettingsService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

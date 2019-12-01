@@ -25,50 +25,63 @@ $dakelhlingo-theme: mat-light-theme($dakelhlingo-primary, $dakelhlingo-accent, $
 // that you are using.
 @include angular-material-theme($dakelhlingo-theme);
 
-/* You can add global styles to this file, and also import other style files */
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-}
-
 html,
 body {
   height: 100%;
 }
+
+/* You can add global styles to this file, and also import other style files */
 body {
+  font-size: 16px;
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .main-app {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(160deg, rgb(4, 147, 204), rgb(71, 101, 158));
+  &.time-morning > *:not(router-outlet) {
+    background-image: url('/assets/images/app/time-morning.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  &.time-noon > *:not(router-outlet) {
+    background-image: url('/assets/images/app/time-noon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  &.time-night > *:not(router-outlet) {
+    background-image: url('/assets/images/app/time-night.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 
   & > *:not(router-outlet) {
     padding: 13px;
     width: calc(100% - 30px);
     max-width: 728px;
-    height: calc(100% - 73px);
-    max-height: calc(100% - 73px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    background: url('assets/images/app/background-ocean.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    height: 100%;
     overflow: hidden;
   }
 
   .mat-nav-list.mat-list-base {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     background-color: transparent;
     padding: 0;
     width: 100%;
+    max-height: calc(100% - 65px);
+    border-radius: 6px;
+
+    & > .mat-list-item:last-child,
+    & > .mat-list-option:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .mat-nav-list.mat-list-base .mat-list-item,
@@ -92,16 +105,6 @@ body {
       &:focus {
         background-color: rgba(6, 127, 204, 0.6);
       }
-    }
-
-    &:first-child {
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-    }
-
-    &:last-child {
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
     }
   }
 
@@ -207,6 +210,21 @@ button.back-button .mat-icon {
   }
 }
 
+.main-app.time-night {
+  .top-bar {
+    color: #ffffff;
+
+    .back-button {
+      border: 1px solid rgba(255, 255, 255, 0);
+
+      &:focus {
+        border-color: rgba(255, 255, 255, 0.5);
+        outline: none;
+      }
+    }
+  }
+}
+
 .dakelh-text {
   font-size: 1.5rem;
   line-height: 1.75rem;
@@ -220,11 +238,11 @@ button.back-button .mat-icon {
   padding-left: 5px;
 }
 
-.level1 .english-text {
+.level2 .english-text {
   opacity: 0.5;
 }
 
-.level2 .english-text {
+.level3 .english-text {
   visibility: hidden;
 }
 
@@ -233,12 +251,19 @@ h3 {
   font-weight: normal;
 }
 
-button.back-button {
-  min-height: 68px;
-  height: 68px;
+// App page specific Material overrides
+
+app-settings .page-content {
+  .mat-radio-button .dakelh-text {
+    font-size: 1rem;
+  }
 }
 
-// App page specific Material overrides
+.main-app.level3 app-settings .page-content {
+  .mat-radio-button .english-text {
+    display: none;
+  }
+}
 
 app-flashcards .stepper-container {
   .mat-horizontal-stepper-header-container {

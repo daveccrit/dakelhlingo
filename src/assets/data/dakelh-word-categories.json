@@ -41,33 +41,5 @@
     "english": "Greeting",
     "icon": "textsms",
     "audio": []
-  },
-  {
-    "id": 6,
-    "dakelh": "Greeting",
-    "english": "Greeting",
-    "icon": "textsms",
-    "audio": []
-  },
-  {
-    "id": 7,
-    "dakelh": "Greeting",
-    "english": "Greeting",
-    "icon": "textsms",
-    "audio": []
-  },
-  {
-    "id": 8,
-    "dakelh": "Greeting",
-    "english": "Greeting",
-    "icon": "textsms",
-    "audio": []
-  },
-  {
-    "id": 9,
-    "dakelh": "Greeting",
-    "english": "Greeting",
-    "icon": "textsms",
-    "audio": []
   }
 ]
