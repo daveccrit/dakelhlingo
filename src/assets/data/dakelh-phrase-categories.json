@@ -1,15 +1,13 @@
 [
   {
     "id": 1,
-    "type": "phrase",
-    "dakelh": "General",
-    "english": "General",
-    "icon": "language",
+    "dakelh": "Wildlife",
+    "english": "Wildlife",
+    "icon": "pets",
     "audio": []
   },
   {
     "id": 2,
-    "type": "phrase",
     "dakelh": "Weather",
     "english": "Weather",
     "icon": "cloud",
@@ -17,7 +15,6 @@
   },
   {
     "id": 3,
-    "type": "phrase",
     "dakelh": "Greeting",
     "english": "Greeting",
     "icon": "textsms",

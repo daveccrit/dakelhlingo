@@ -2,16 +2,23 @@
   {
     "dakelh": "Sgani hodutizeh' awk'anus zun",
     "english": "I want to learn my language",
-    "associatedWords": ["sgani", "hodutizeh'", "awk'anus", "zun"],
+    "associatedWords": [
+      "sgani",
+      "hodutizeh'",
+      "awk'anus",
+      "zun"
+    ],
     "phraseCategory": "Conversation",
     "phraseCategoryId": 3,
     "images": [],
     "videos": [],
-    "audio": ["i_want_to_learn_my_language.mp3"]
+    "audio": [
+      "i_want_to_learn_my_language.mp3"
+    ]
   },
   {
-    "dakelh": "'Un 'az naowtejus'",
-    "english": "It is going to snow outside",
+    "dakelh": "Andit yus duchút-i nájas̲",
+    "english": "Powdery snow is falling today",
     "associatedWords": [],
     "phraseCategory": "Weather",
     "phraseCategoryId": 2,
@@ -20,8 +27,28 @@
     "audio": []
   },
   {
-    "dakelh": "Ndi lhes sut'e dube bat'en",
-    "english": "This fry bread is very delicious",
+    "dakelh": "’Anditdzin ’az dahoont’oh?",
+    "english": "How is the weather outside today?",
+    "associatedWords": [],
+    "phraseCategory": "Weather",
+    "phraseCategoryId": 2,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Chan ’únt’oh",
+    "english": "It is rain",
+    "associatedWords": [],
+    "phraseCategory": "Weather",
+    "phraseCategoryId": 2,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Dzin hoonzoo",
+    "english": "Good day",
     "associatedWords": [],
     "phraseCategory": "Conversation",
     "phraseCategoryId": 3,
@@ -30,61 +57,81 @@
     "audio": []
   },
   {
-    "dakelh": "Duni ka'utest'ilh",
-    "english": "I am going to hunt moose",
+    "dakelh": "Khulhgha hoonzoo",
+    "english": "Good evening",
     "associatedWords": [],
-    "phraseCategory": "General",
-    "phraseCategoryId": 1,
-    "images": [],
-    "videos": [],
-    "audio": []
-  },
-  {
-    "dakelh": "Bundada 'uda da sooh ujun",
-    "english": "Early this morning the robins were singing",
-    "associatedWords": [],
-    "phraseCategory": "General",
-    "phraseCategoryId": 1,
-    "images": [],
-    "videos": [],
-    "audio": []
-  },
-  {
-    "dakelh": "Bundada t'eh 'aba bulh tadukelh",
-    "english": "We are leaving by boat tomorrow",
-    "associatedWords": [],
-    "phraseCategory": "General",
-    "phraseCategoryId": 1,
-    "images": [],
-    "videos": [],
-    "audio": []
-  },
-  {
-    "dakelh": "Bundada t'eh naowtelhtilh",
-    "english": "It is going to rain tomorrow",
-    "associatedWords": [],
-    "phraseCategory": "Weather",
-    "phraseCategoryId": 2,
-    "images": [],
-    "videos": [],
-    "audio": []
-  },
-  {
-    "dakelh": "K'an dzen dube whunanzul",
-    "english": "It was very hot today",
-    "associatedWords": [],
-    "phraseCategory": "Weather",
-    "phraseCategoryId": 2,
-    "images": [],
-    "videos": [],
-    "audio": []
-  },
-  {
-    "dakelh": "Dahooja, soo 'unint'oh ho?",
-    "english": "What is happening, are you doing fine?",
-    "associatedWords": [],
-    "phraseCategory": "Greeting",
+    "phraseCategory": "Conversation",
     "phraseCategoryId": 3,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "David le soozi’",
+    "english": "My name is David",
+    "associatedWords": [],
+    "phraseCategory": "Conversation",
+    "phraseCategoryId": 3,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Hoonust’i’ nets’u whusainya",
+    "english": "Welcome to our home",
+    "associatedWords": [],
+    "phraseCategory": "Conversation",
+    "phraseCategoryId": 3,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "'Ulhdzis nduwhulhyiz yus 'utni",
+    "english": "The wolves were howling all night",
+    "associatedWords": [],
+    "phraseCategory": "Wildlife",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Chuntulhi dulgi unli",
+    "english": "Coyotes are gray",
+    "associatedWords": [],
+    "phraseCategory": "Wildlife",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Dube dzulh k'ut nuyeh",
+    "english": "The goats live on the mountains",
+    "associatedWords": [],
+    "phraseCategory": "Wildlife",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Duch'ukw ooch'o hunduyun",
+    "english": "The porcupine's quills are sharp",
+    "associatedWords": [],
+    "phraseCategory": "Wildlife",
+    "phraseCategoryId": 1,
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Duni toot dlat u'alh",
+    "english": "The moose is eating water plants",
+    "associatedWords": [],
+    "phraseCategory": "Wildlife",
+    "phraseCategoryId": 1,
     "images": [],
     "videos": [],
     "audio": []

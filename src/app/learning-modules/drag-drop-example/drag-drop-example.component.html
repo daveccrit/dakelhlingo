@@ -21,7 +21,7 @@
       </div>
 
       <mat-icon class="play-button"
-                (click)="playWordAudio()"
+                (click)="playWordAudio($event)"
                 *ngIf="wordData.audio.length > 0">play_circle_outline</mat-icon>
     </div>
   </div>

@@ -26,8 +26,7 @@
               [disabled]="i === 0">Prev</button>
       <div class="word-container">
         <div class="image-content">
-          <img *ngIf="word.images.length > 0"
-               [src]="'assets/images/dakelh-words/' + word.images[0]" />
+          <img [src]="'/assets/images/dakelh-words/' + (word.images.length > 0 ? word.images[0] : 'no_image.png')" />
         </div>
 
         <div class="language-text">
@@ -49,7 +48,7 @@
 
     <div class="phrase-container">
       <div class="phrase-container-header">
-        <h3>Phrases used in</h3>
+        <h3>Used in these phrases</h3>
         <button mat-button
                 color="primary">More</button>
       </div>

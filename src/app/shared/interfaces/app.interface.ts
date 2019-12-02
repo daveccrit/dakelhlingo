@@ -13,6 +13,8 @@ export interface WordCategory {
   id: number;
   dakelh: string;
   english: string;
+  icon: string;
+  audio: Array<string>;
 }
 
 export interface Phrase {
@@ -31,6 +33,8 @@ export interface PhraseCategory {
   id: number;
   dakelh: string;
   english: string;
+  icon: string;
+  audio: Array<string>;
 }
 
 export interface LessonCategory {

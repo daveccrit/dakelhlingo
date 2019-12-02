@@ -5,9 +5,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["white.png"],
+    "images": [
+      "white.png"
+    ],
     "videos": [],
-    "audio": ["white.mp3"]
+    "audio": [
+      "white.mp3"
+    ]
   },
   {
     "dakelh": "nigwus dot'en",
@@ -15,9 +19,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["looks_like_soapberries.png"],
+    "images": [
+      "looks_like_soapberries.png"
+    ],
     "videos": [],
-    "audio": ["looks_like_soapberries.mp3"]
+    "audio": [
+      "looks_like_soapberries.mp3"
+    ]
   },
   {
     "dakelh": "dulk'un",
@@ -25,9 +33,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["red.png"],
+    "images": [
+      "red.png"
+    ],
     "videos": [],
-    "audio": ["red.mp3"]
+    "audio": [
+      "red.mp3"
+    ]
   },
   {
     "dakelh": "kwun dot'en",
@@ -35,9 +47,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["looks_like_fire.png"],
+    "images": [
+      "looks_like_fire.png"
+    ],
     "videos": [],
-    "audio": ["looks_like_fire.mp3"]
+    "audio": [
+      "looks_like_fire.mp3"
+    ]
   },
   {
     "dakelh": "yun dot'en",
@@ -45,9 +61,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["looks_like_the_earth.png"],
+    "images": [
+      "looks_like_the_earth.png"
+    ],
     "videos": [],
-    "audio": ["looks_like_the_earth.mp3"]
+    "audio": [
+      "looks_like_the_earth.mp3"
+    ]
   },
   {
     "dakelh": "dultl'uz",
@@ -55,9 +75,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["green.png"],
+    "images": [
+      "green.png"
+    ],
     "videos": [],
-    "audio": ["green.mp3"]
+    "audio": [
+      "green.mp3"
+    ]
   },
   {
     "dakelh": "duldzan",
@@ -65,9 +89,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["blue.png"],
+    "images": [
+      "blue.png"
+    ],
     "videos": [],
-    "audio": ["blue.mp3"]
+    "audio": [
+      "blue.mp3"
+    ]
   },
   {
     "dakelh": "dulgi",
@@ -75,9 +103,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["grey.png"],
+    "images": [
+      "grey.png"
+    ],
     "videos": [],
-    "audio": ["grey.mp3"]
+    "audio": [
+      "grey.mp3"
+    ]
   },
   {
     "dakelh": "dulhgus",
@@ -85,9 +117,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["black.png"],
+    "images": [
+      "black.png"
+    ],
     "videos": [],
-    "audio": ["black.mp3"]
+    "audio": [
+      "black.mp3"
+    ]
   },
   {
     "dakelh": "dultso",
@@ -95,9 +131,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["yellow.png"],
+    "images": [
+      "yellow.png"
+    ],
     "videos": [],
-    "audio": ["yellow.mp3"]
+    "audio": [
+      "yellow.mp3"
+    ]
   },
   {
     "dakelh": "mai dot'en",
@@ -105,9 +145,13 @@
     "wordCategory": "Ndidot'en",
     "wordCategoryId": 1,
     "icon": "color_lens",
-    "images": ["looks_like_berries.png"],
+    "images": [
+      "looks_like_berries.png"
+    ],
     "videos": [],
-    "audio": ["looks_like_berries.mp3"]
+    "audio": [
+      "looks_like_berries.mp3"
+    ]
   },
   {
     "dakelh": "dzetniz",
@@ -115,9 +159,13 @@
     "wordCategory": "Ntsoya oozulh",
     "wordCategoryId": 2,
     "icon": "access_time",
-    "images": ["noon.png"],
+    "images": [
+      "noon.png"
+    ],
     "videos": [],
-    "audio": ["noon.mp3"]
+    "audio": [
+      "noon.mp3"
+    ]
   },
   {
     "dakelh": "ulhdzis",
@@ -125,9 +173,13 @@
     "wordCategory": "Ntsoya oozulh",
     "wordCategoryId": 2,
     "icon": "access_time",
-    "images": ["night.png"],
+    "images": [
+      "night.png"
+    ],
     "videos": [],
-    "audio": ["night.mp3"]
+    "audio": [
+      "night.mp3"
+    ]
   },
   {
     "dakelh": "bundada'",
@@ -135,7 +187,9 @@
     "wordCategory": "Ntsoya oozulh",
     "wordCategoryId": 2,
     "icon": "access_time",
-    "images": ["morning.png"],
+    "images": [
+      "morning.png"
+    ],
     "videos": [],
     "audio": []
   },
@@ -145,9 +199,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "january-selected.png"
+    ],
     "videos": [],
-    "audio": ["january.mp3"]
+    "audio": [
+      "january.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the big moon"
+    ]
   },
   {
     "dakelh": "Chuzsul ooza'",
@@ -155,9 +216,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "february-selected.png"
+    ],
     "videos": [],
-    "audio": ["february.mp3"]
+    "audio": [
+      "february.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the small snowflakes"
+    ]
   },
   {
     "dakelh": "Chuzcho ooza'",
@@ -165,9 +233,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "march-selected.png"
+    ],
     "videos": [],
-    "audio": ["march.mp3"]
+    "audio": [
+      "march.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the big snowflakes"
+    ]
   },
   {
     "dakelh": "Shin ooza'",
@@ -175,9 +250,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "april-selected.png"
+    ],
     "videos": [],
-    "audio": ["april.mp3"]
+    "audio": [
+      "april.mp3"
+    ],
+    "additionalInfo": [
+      "spring"
+    ]
   },
   {
     "dakelh": "Dugoos ooza'",
@@ -185,9 +267,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "may-selected.png"
+    ],
     "videos": [],
-    "audio": ["may.mp3"]
+    "audio": [
+      "may.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the big sucker fish"
+    ]
   },
   {
     "dakelh": "Dang ooza'",
@@ -195,9 +284,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "june-selected.png"
+    ],
     "videos": [],
-    "audio": ["june.mp3"]
+    "audio": [
+      "june.mp3"
+    ],
+    "additionalInfo": [
+      "summer time"
+    ]
   },
   {
     "dakelh": "Talo ooza'",
@@ -205,9 +301,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "july-selected.png"
+    ],
     "videos": [],
-    "audio": ["july.mp3"]
+    "audio": [
+      "july.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the salmon"
+    ]
   },
   {
     "dakelh": "Gesul ooza'",
@@ -215,9 +318,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "august-selected.png"
+    ],
     "videos": [],
-    "audio": ["august.mp3"]
+    "audio": [
+      "august.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the kokanee fish"
+    ]
   },
   {
     "dakelh": "Bit ooza'",
@@ -225,9 +335,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "september-selected.png"
+    ],
     "videos": [],
-    "audio": ["september.mp3"]
+    "audio": [
+      "september.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the char"
+    ]
   },
   {
     "dakelh": "Lhoh ooza'",
@@ -235,9 +352,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "october-selected.png"
+    ],
     "videos": [],
-    "audio": ["october.mp3"]
+    "audio": [
+      "october.mp3"
+    ],
+    "additionalInfo": [
+      "Time of the Whitefish"
+    ]
   },
   {
     "dakelh": "Banghan nuts'ukih",
@@ -245,9 +369,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "november-selected.png"
+    ],
     "videos": [],
-    "audio": ["november.mp3"]
+    "audio": [
+      "november.mp3"
+    ],
+    "additionalInfo": [
+      "Half of this time we travel by boat"
+    ]
   },
   {
     "dakelh": "Sacho din'ai",
@@ -255,9 +386,16 @@
     "wordCategory": "Yusk'ut ooza'",
     "wordCategoryId": 3,
     "icon": "date_range",
-    "images": [],
+    "images": [
+      "december-selected.png"
+    ],
     "videos": [],
-    "audio": ["december.mp3"]
+    "audio": [
+      "december.mp3"
+    ],
+    "additionalInfo": [
+      "Eve of the big moon"
+    ]
   },
   {
     "dakelh": "Duni",
@@ -265,9 +403,13 @@
     "wordCategory": "Khuna-i",
     "wordCategoryId": 4,
     "icon": "pets",
-    "images": [],
+    "images": [
+      "moose.png"
+    ],
     "videos": [],
-    "audio": ["moose.mp3"]
+    "audio": [
+      "moose.mp3"
+    ]
   },
   {
     "dakelh": "Wasi",
@@ -275,9 +417,13 @@
     "wordCategory": "Khuna-i",
     "wordCategoryId": 4,
     "icon": "pets",
-    "images": [],
+    "images": [
+      "lynx.png"
+    ],
     "videos": [],
-    "audio": ["lynx.mp3"]
+    "audio": [
+      "lynx.mp3"
+    ]
   },
   {
     "dakelh": "Whudzih",
@@ -285,9 +431,13 @@
     "wordCategory": "Khuna-i",
     "wordCategoryId": 4,
     "icon": "pets",
-    "images": [],
+    "images": [
+      "caribou.png"
+    ],
     "videos": [],
-    "audio": ["cariboo.mp3"]
+    "audio": [
+      "cariboo.mp3"
+    ]
   },
   {
     "dakelh": "Booscho",
@@ -295,9 +445,13 @@
     "wordCategory": "Khuna-i",
     "wordCategoryId": 4,
     "icon": "pets",
-    "images": [],
+    "images": [
+      "cougar.png"
+    ],
     "videos": [],
-    "audio": ["cougar.mp3"]
+    "audio": [
+      "cougar.mp3"
+    ]
   },
   {
     "dakelh": "Lhi",
@@ -305,9 +459,13 @@
     "wordCategory": "Khuna-i",
     "wordCategoryId": 4,
     "icon": "pets",
-    "images": [],
+    "images": [
+      "dog.png"
+    ],
     "videos": [],
-    "audio": ["dog.mp3"]
+    "audio": [
+      "dog.mp3"
+    ]
   },
   {
     "dakelh": "Sus",
@@ -315,13 +473,37 @@
     "wordCategory": "Khuna-i",
     "wordCategoryId": 4,
     "icon": "pets",
-    "images": [],
+    "images": [
+      "black_bear.png"
+    ],
     "videos": [],
-    "audio": ["black_bear.mp3"]
+    "audio": [
+      "black_bear.mp3"
+    ]
   },
   {
-    "dakelh": "Dahooja",
-    "english": "What is happening?",
+    "dakelh": "Hadih",
+    "english": "Hello",
+    "wordCategory": "Greeting",
+    "wordCategoryId": 5,
+    "icon": "textsms",
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Nk’esi’",
+    "english": "I love you",
+    "wordCategory": "Greeting",
+    "wordCategoryId": 5,
+    "icon": "textsms",
+    "images": [],
+    "videos": [],
+    "audio": []
+  },
+  {
+    "dakelh": "Nyoonust’i’",
+    "english": "I like you",
     "wordCategory": "Greeting",
     "wordCategoryId": 5,
     "icon": "textsms",

@@ -314,7 +314,15 @@
         "languageWord": "Duni"
       },
       {
+        "learningModule": "drag-drop-example",
+        "languageWord": "Duni"
+      },
+      {
         "learningModule": "single-word-example",
+        "languageWord": "Wasi"
+      },
+      {
+        "learningModule": "drag-drop-example",
         "languageWord": "Wasi"
       },
       {
@@ -322,7 +330,15 @@
         "languageWord": "Whudzih"
       },
       {
+        "learningModule": "drag-drop-example",
+        "languageWord": "Whudzih"
+      },
+      {
         "learningModule": "single-word-example",
+        "languageWord": "Booscho"
+      },
+      {
+        "learningModule": "drag-drop-example",
         "languageWord": "Booscho"
       },
       {
@@ -330,7 +346,15 @@
         "languageWord": "Lhi"
       },
       {
+        "learningModule": "drag-drop-example",
+        "languageWord": "Lhi"
+      },
+      {
         "learningModule": "single-word-example",
+        "languageWord": "Sus"
+      },
+      {
+        "learningModule": "drag-drop-example",
         "languageWord": "Sus"
       }
     ]
@@ -344,27 +368,43 @@
     "learningModules": [
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Ndi lhes sut'e dube bat'en"
+        "languagePhrase": "'Ulhdzis nduwhulhyiz yus 'utni"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Ndi lhes sut'e dube bat'en"
+        "languagePhrase": "'Ulhdzis nduwhulhyiz yus 'utni"
       },
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Duni ka'utest'ilh"
+        "languagePhrase": "Chuntulhi dulgi unli"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Duni ka'utest'ilh"
+        "languagePhrase": "Chuntulhi dulgi unli"
       },
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Bundada 'uda da sooh ujun"
+        "languagePhrase": "Dube dzulh k'ut nuyeh"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Bundada 'uda da sooh ujun"
+        "languagePhrase": "Dube dzulh k'ut nuyeh"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Duch'ukw ooch'o hunduyun"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Duch'ukw ooch'o hunduyun"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Duni toot dlat u'alh"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Duni toot dlat u'alh"
       }
     ]
   },
@@ -377,27 +417,27 @@
     "learningModules": [
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "'Un 'az naowtejus'"
+        "languagePhrase": "Andit yus duchút-i nájas̲"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "'Un 'az naowtejus'"
+        "languagePhrase": "Andit yus duchút-i nájas̲"
       },
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Bundada t'eh naowtelhtilh"
+        "languagePhrase": "’Anditdzin ’az dahoont’oh?"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Bundada t'eh naowtelhtilh"
+        "languagePhrase": "’Anditdzin ’az dahoont’oh?"
       },
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "K'an dzen dube whunanzul"
+        "languagePhrase": "Chan ’únt’oh"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "K'an dzen dube whunanzul"
+        "languagePhrase": "Chan ’únt’oh"
       }
     ]
   },
@@ -410,27 +450,35 @@
     "learningModules": [
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+        "languagePhrase": "Dzin hoonzoo"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Sgani hodutizeh' awk'anus zun"
+        "languagePhrase": "Dzin hoonzoo"
       },
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
+        "languagePhrase": "Khulhgha hoonzoo"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Bundada t'eh 'aba bulh tadukelh"
+        "languagePhrase": "Khulhgha hoonzoo"
       },
       {
         "learningModule": "phrase-learning",
-        "languagePhrase": "Dahooja, soo 'unint'oh ho?"
+        "languagePhrase": "David le soozi’"
       },
       {
         "learningModule": "phrase-builder",
-        "languagePhrase": "Dahooja, soo 'unint'oh ho?"
+        "languagePhrase": "David le soozi’"
+      },
+      {
+        "learningModule": "phrase-learning",
+        "languagePhrase": "Hoonust’i’ nets’u whusainya"
+      },
+      {
+        "learningModule": "phrase-builder",
+        "languagePhrase": "Hoonust’i’ nets’u whusainya"
       }
     ]
   }

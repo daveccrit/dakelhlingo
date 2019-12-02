@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
     this.setTimeOfDay();
 
     this.userLevel = this.settingsService.app.userLevel;
-    console.log(this.userLevel);
     this.settingsService.settingChangedEvent.subscribe(setting => {
       switch (setting) {
         case 'userLevel':
