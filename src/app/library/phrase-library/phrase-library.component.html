@@ -15,22 +15,24 @@
   </div>
 </div>
 
-<mat-form-field class="category-form-field">
-  <input matInput
-         type="text"
-         placeholder="Search"
-         [(ngModel)]="categoryFilter" />
-  <button mat-button
-          *ngIf="categoryFilter"
-          matSuffix
-          mat-icon-button
-          aria-label="Clear"
-          (click)="categoryFilter = ''">
-    <mat-icon>close</mat-icon>
-  </button>
-</mat-form-field>
-<div class="result-count">
-  Results: {{ resultCount > 0 ? resultCount : 'No Results' }} {{ resultCount > 20 ? '(only 20 shown)' : '' }}
+<div class="library-form">
+  <mat-form-field class="category-form-field">
+    <input matInput
+           type="text"
+           placeholder="Search"
+           [(ngModel)]="categoryFilter" />
+    <button mat-button
+            *ngIf="categoryFilter"
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="categoryFilter = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <div class="result-count">
+    Results: {{ resultCount > 0 ? resultCount : 'No Results' }} {{ resultCount > 20 ? '(only 20 shown)' : '' }}
+  </div>
 </div>
 
 <mat-nav-list class="menu-list">

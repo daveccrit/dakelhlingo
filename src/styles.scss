@@ -141,12 +141,6 @@ button .mat-icon,
   height: 2.5rem;
 }
 
-button.back-button .mat-icon {
-  font-size: 2rem;
-  width: 2rem;
-  height: 2rem;
-}
-
 .top-bar {
   display: flex;
   flex-wrap: nowrap;
@@ -210,7 +204,16 @@ button.back-button .mat-icon {
   }
 }
 
+// Night Mode overrides
 .main-app.time-night {
+  .coming-soon {
+    color: #ffffff;
+  }
+
+  .library-form {
+    color: #ffffff;
+  }
+
   .top-bar {
     color: #ffffff;
 
@@ -220,6 +223,30 @@ button.back-button .mat-icon {
       &:focus {
         border-color: rgba(255, 255, 255, 0.5);
         outline: none;
+      }
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  // Material Component overrides
+  .mat-form-field {
+    .mat-form-field-label {
+      color: #ffffff;
+    }
+    .mat-form-field-underline {
+      background-color: #ffffff;
+      .mat-form-field-ripple {
+      }
+    }
+
+    &.mat-focused {
+      .mat-form-field-underline {
+        .mat-form-field-ripple {
+          background-color: #ffffff;
+        }
       }
     }
   }
