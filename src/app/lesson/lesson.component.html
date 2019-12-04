@@ -22,6 +22,10 @@
                              [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
                              (completed)="completedLearningModule()"></app-word-learning-example>
 
+  <app-word-spelling *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'word-spelling'"
+                     [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
+                     (completed)="completedLearningModule()"></app-word-spelling>
+
   <app-words-learning-example *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'multiple-word-example'"
                               [languageWords]="this.lesson.learningModules[currentModuleNum].languageWords"
                               (completed)="completedLearningModule()"></app-words-learning-example>

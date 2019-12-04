@@ -47,6 +47,7 @@ import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { MusicLibraryComponent } from './library/music-library/music-library.component';
 import { GamesLibraryComponent } from './library/games-library/games-library.component';
+import { WordSpellingComponent } from './learning-modules/word-spelling/word-spelling.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { GamesLibraryComponent } from './library/games-library/games-library.com
     FlashcardsComponent,
     MusicLibraryComponent,
     GamesLibraryComponent,
+    WordSpellingComponent,
   ],
   imports: [
     AppRoutingModule,

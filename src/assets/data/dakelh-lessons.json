@@ -481,5 +481,22 @@
         "languagePhrase": "Hoonust’i’ nets’u whusainya"
       }
     ]
+  },
+  {
+    "id": 12,
+    "lessonCategoryId": 1,
+    "dakelh": "Spelling",
+    "english": "Spelling",
+    "audio": "",
+    "learningModules": [
+      {
+        "learningModule": "word-spelling",
+        "languageWord": "ulhyul"
+      },
+      {
+        "learningModule": "word-spelling",
+        "languageWord": "dulk'un"
+      }
+    ]
   }
 ]

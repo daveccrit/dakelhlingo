@@ -41,7 +41,7 @@ export class PhraseBuilderComponent implements OnInit, AfterViewInit {
 
   @Output() completed: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private phraseDictionaryService: PhraseDictionaryService) {}
+  constructor(private phraseDictionaryService: PhraseDictionaryService) { }
 
   ngOnInit() {
     this.getPhraseData();
@@ -59,7 +59,13 @@ export class PhraseBuilderComponent implements OnInit, AfterViewInit {
     this.languageTextContainer.nativeElement.style.width = totalWidth + 'px';
   }
 
+  resetPage() {
+    this.phraseArray = [];
+    this.populatedPhraseArray = [];
+  }
+
   getPhraseData() {
+    this.resetPage();
     this.phraseData = this.phraseDictionaryService.getPhraseByLanguage(this._languagePhrase);
 
     const newPhraseArray = this.phraseData.dakelh.split(' ');
@@ -85,7 +91,7 @@ export class PhraseBuilderComponent implements OnInit, AfterViewInit {
   }
 
   countWords(wordArray: Array<string>): Object {
-    let wordCount = {};
+    const wordCount = {};
 
     wordArray.forEach(item => {
       if (!(item in wordCount)) {
