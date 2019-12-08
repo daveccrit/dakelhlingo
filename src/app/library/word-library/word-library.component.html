@@ -15,22 +15,30 @@
   </div>
 </div>
 <div class="library-form">
-  <mat-form-field class="category-form-field">
-    <input matInput
-           type="text"
-           placeholder="Search"
-           [(ngModel)]="categoryFilter" />
-    <button mat-button
-            *ngIf="categoryFilter"
-            matSuffix
-            mat-icon-button
-            aria-label="Clear"
-            (click)="categoryFilter = ''">
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-form-field>
+  <div class="controls-container">
+    <mat-form-field class="search-form-field">
+      <input matInput
+             type="text"
+             placeholder="Search"
+             [(ngModel)]="searchFilter" />
+      <button mat-button
+              *ngIf="searchFilter"
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="searchFilter = ''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="character-button-list">
+      <a class="character-button"
+         *ngFor="let character of characterArray"
+         (click)="getWordsByCharacter(character)">{{ character }}</a>
+    </div>
+  </div>
   <div class="result-count">
-    Results: {{ resultCount > 0 ? resultCount : 'No Results' }} {{ resultCount > 20 ? '(only 20 shown)' : '' }}
+    Results: {{ resultCount > 0 ? resultCount : 'No Results' }}
+    {{ resultCount > _maxShown ? '(only first ' + _maxShown + ' shown)' : '' }}
   </div>
 </div>
 <mat-nav-list class="menu-list">

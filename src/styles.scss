@@ -132,6 +132,16 @@ body {
   .mat-raised-button {
     white-space: normal;
   }
+
+  .character-button-list {
+    .character-button {
+      color: rgba(0, 0, 0, 1);
+
+      &:hover {
+        color: rgba(6, 127, 204, 0.8);
+      }
+    }
+  }
 }
 
 button .mat-icon,
@@ -250,11 +260,20 @@ button .mat-icon,
       }
     }
   }
+
+  .character-button-list {
+    .character-button {
+      color: rgba(255, 255, 255, 1);
+
+      &:hover {
+        color: rgba(6, 127, 204, 0.8);
+      }
+    }
+  }
 }
 
 .dakelh-text {
   font-size: 1.5rem;
-  line-height: 1.75rem;
   font-weight: normal;
 }
 
@@ -279,16 +298,13 @@ h3 {
 }
 
 // App page specific Material overrides
+.mat-radio-button .mat-radio-label {
+  align-items: flex-start;
+}
 
 app-settings .page-content {
   .mat-radio-button .dakelh-text {
     font-size: 1rem;
-  }
-}
-
-.main-app.level3 app-settings .page-content {
-  .mat-radio-button .english-text {
-    display: none;
   }
 }
 

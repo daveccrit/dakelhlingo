@@ -19,7 +19,14 @@
   <div class="settings-container">
     <mat-radio-group class="settings-radio-group"
                      [(ngModel)]="userLevel">
-      <label>Student Level</label>
+      <label>
+        <div class="language-text">
+          <div class="dakelh-text">Student Level</div>
+          <div class="english-text">Student Level</div>
+        </div>
+
+
+      </label>
       <mat-radio-button class="settings-radio-button"
                         [value]="'level1'">Beginner</mat-radio-button>
       <mat-radio-button class="settings-radio-button"
@@ -32,7 +39,13 @@
   <div class="settings-container">
     <mat-radio-group class="settings-radio-group"
                      [(ngModel)]="timeOfDay">
-      <label>Time of Day</label>
+      <label>
+        <div class="language-text">
+          <div class="dakelh-text">Ntsoya oozulh?</div>
+          <div class="english-text">What time is it?</div>
+        </div>
+      </label>
+
       <mat-radio-button class="settings-radio-button"
                         [value]="'morning'">
         <div class="language-text">
@@ -60,6 +73,11 @@
   <div class="settings-container">
     <button mat-raised-button
             color="warn"
-            (click)="resetCompletedData()">Reset Completed Lessons</button>
+            (click)="resetCompletedData()">
+      <div class="language-text">
+        <div class="dakelh-text">Start Lessons Over</div>
+        <div class="english-text">Start Lessons Over</div>
+      </div>
+    </button>
   </div>
 </div>

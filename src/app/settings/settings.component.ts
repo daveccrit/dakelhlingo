@@ -34,7 +34,10 @@ export class SettingsComponent implements OnInit {
   ngOnInit() { }
 
   resetCompletedData() {
-    this.settingsService.resetCompletedLessons();
+    const resetLessons = window.confirm('Do you want to reset your Lesson completion history?');
+    if (resetLessons) {
+      this.settingsService.resetCompletedLessons();
+    }
   }
   goBack(): void {
     this.location.back();

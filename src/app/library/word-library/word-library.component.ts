@@ -11,29 +11,42 @@ import { WordsDictionaryService } from 'src/app/shared/services/words-dictionary
 export class WordLibraryComponent implements OnInit {
   words: Array<Word> = [];
   resultCount: number;
+  characterArray: Array<string> = `'abcdefghijklmnopqrstuvwxyz`.split('');
+  _maxShown = 100;
 
-  _categoryFilter = '';
-  get categoryFilter(): string {
-    return this._categoryFilter;
+  _searchFilter = '';
+  get searchFilter(): string {
+    return this._searchFilter;
   }
-  set categoryFilter(value: string) {
-    this._categoryFilter = value;
+  set searchFilter(value: string) {
+    this._searchFilter = value;
     this.getWords();
   }
 
-  constructor(private location: Location, private wordDictionaryService: WordsDictionaryService) {}
+  constructor(private location: Location, private wordDictionaryService: WordsDictionaryService) { }
 
-  ngOnInit() {
-    this.getWords();
-  }
+  ngOnInit() { }
 
   getWords() {
-    const wordsList = this.wordDictionaryService.getWordsBySearch(this.categoryFilter);
+    const wordsList = this.wordDictionaryService.getWordsBySearch(this.searchFilter);
 
     this.resultCount = wordsList.length;
 
-    if (wordsList.length > 20) {
-      wordsList.length = 20;
+    if (wordsList.length > this._maxShown) {
+      wordsList.length = this._maxShown;
+    }
+
+    this.words = wordsList;
+  }
+
+  getWordsByCharacter(character: string) {
+    this._searchFilter = '';
+    const wordsList = this.wordDictionaryService.getWordsByCharacter(character);
+
+    this.resultCount = wordsList.length;
+
+    if (wordsList.length > this._maxShown) {
+      wordsList.length = this._maxShown;
     }
 
     this.words = wordsList;

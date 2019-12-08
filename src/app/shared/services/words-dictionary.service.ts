@@ -40,6 +40,17 @@ export class WordsDictionaryService {
     );
   }
 
+  getWordsByCharacter(character: string): Array<Word> {
+    if (character.length <= 0) {
+      return [];
+    }
+
+    return this.languageWords.filter(
+      value =>
+        value.dakelh.toLowerCase().indexOf(character.toLowerCase()) === 0
+    );
+  }
+
   getWordByLanguage(languageWord: string): Word {
     return this.languageWords.find(value => value.dakelh.toLowerCase() === languageWord.toLowerCase());
   }

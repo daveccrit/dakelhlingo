@@ -7,3 +7,28 @@
   overflow-y: auto;
   padding-right: 4px;
 }
+
+.library-form {
+  .controls-container {
+    display: flex;
+
+    .search-form-field {
+      flex: 0 0 auto;
+      padding-right: 15px;
+      min-width: 220px;
+    }
+
+    .character-button-list {
+      flex: 1 1 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+
+      .character-button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
