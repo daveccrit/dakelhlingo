@@ -103,3 +103,29 @@ export interface Setting {
   name: string;
   value: string;
 }
+
+export interface RecipeIngredient {
+  quantity: string;
+  measure: {
+    dakelh: string;
+    english: string;
+  };
+  ingredient: {
+    dakelh: string;
+    english: string;
+  };
+}
+
+export interface Recipe {
+  id: number;
+  dakelh: string;
+  english: string;
+  recipeCategory: string;
+  images: Array<string>;
+  videos: Array<string>;
+  ingredients: Array<RecipeIngredient>;
+  directions: Array<{
+    dakelh: string;
+    english: string;
+  }>;
+}

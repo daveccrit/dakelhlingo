@@ -15,6 +15,7 @@ import { RecipeLibraryComponent } from './library/recipe-library/recipe-library.
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { MusicLibraryComponent } from './library/music-library/music-library.component';
 import { GamesLibraryComponent } from './library/games-library/games-library.component';
+import { RecipeCardComponent } from './library/recipe-library/recipe-card/recipe-card.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'library/music', component: MusicLibraryComponent },
   { path: 'library/videos', component: VideoLibraryComponent },
   { path: 'library/recipes', component: RecipeLibraryComponent },
+  { path: 'library/recipe-card/:recipeid', component: RecipeCardComponent },
   { path: 'library/games', component: GamesLibraryComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'lesson-categories', component: LessonCategoriesComponent },
@@ -39,4 +41,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

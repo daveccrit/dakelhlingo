@@ -10,9 +10,51 @@
   </div>
 
   <div class="page-title language-text">
-    <div class="dakelh-text">Dakelh Recipes</div>
-    <div class="english-text">Dakelh Recipes</div>
+    <div class="dakelh-text">Recipes</div>
+    <div class="english-text">Recipes</div>
   </div>
 </div>
 
-<h3 class="coming-soon">Coming Soon</h3>
+<div class="library-form">
+  <div class="controls-container">
+    <mat-form-field class="search-form-field">
+      <input matInput
+             type="text"
+             placeholder="Search"
+             [(ngModel)]="searchFilter" />
+      <button mat-button
+              *ngIf="searchFilter"
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="searchFilter = ''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="character-button-list">
+      <a class="character-button"
+         *ngFor="let character of characterArray"
+         (click)="getWordsByCharacter(character)">{{ character }}</a>
+    </div>
+  </div>
+</div>
+
+<div class="recipe-list">
+  <div class="recipe"
+       *ngFor="let recipe of recipeArray"
+       [routerLink]="['/library/recipe-card', recipe.id]"
+       routerLinkActive="active">
+    <div class="recipe-image"
+         *ngIf="recipe.images.length > 0"
+         [ngStyle]="{'background-image': 'url(/assets/images/recipes/' + recipe.images[0] + ')',
+        'background-repeat': 'no-repeat',
+        'background-size': 'contain',
+        'background-position': 'center center'}">
+    </div>
+    <div class="language-text">
+      <div class="dakelh-text">{{ recipe.dakelh }}</div>
+      <div class="english-text">{{ recipe.english }}</div>
+    </div>
+  </div>
+
+</div>

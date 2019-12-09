@@ -1,30 +1,101 @@
 [
   {
-    "dakelh": "ulhyul",
-    "english": "white",
-    "recipeCategory": "Ndidot'en",
-    "images": [],
+    "id": 1,
+    "dakelh": "Bannock",
+    "english": "Bannock",
+    "recipeCategory": "Breads",
+    "images": [
+      "recipe_bannock.png"
+    ],
     "videos": [],
-    "audio": [],
     "ingredients": [
       {
-        "quantity": "",
+        "quantity": "5",
         "measure": {
-          "dakelh": "",
-          "english": ""
+          "dakelh": "Cups",
+          "english": "Cups"
         },
         "ingredient": {
-          "dakelh": "",
-          "english": ""
+          "dakelh": "Flour",
+          "english": "Flour"
+        }
+      },
+      {
+        "quantity": "2",
+        "measure": {
+          "dakelh": "TB",
+          "english": "TB"
+        },
+        "ingredient": {
+          "dakelh": "Baking Powder",
+          "english": "Baking Powder"
+        }
+      },
+      {
+        "quantity": "1",
+        "measure": {
+          "dakelh": "tsp",
+          "english": "tsp"
+        },
+        "ingredient": {
+          "dakelh": "Sugar",
+          "english": "Sugar"
+        }
+      },
+      {
+        "quantity": "1",
+        "measure": {
+          "dakelh": "tsp",
+          "english": "tsp"
+        },
+        "ingredient": {
+          "dakelh": "Salt",
+          "english": "Salt"
+        }
+      },
+      {
+        "quantity": "2 1/2",
+        "measure": {
+          "dakelh": "Cups",
+          "english": "Cups"
+        },
+        "ingredient": {
+          "dakelh": "Water",
+          "english": "Water"
+        }
+      },
+      {
+        "quantity": "2",
+        "measure": {
+          "dakelh": "Cups",
+          "english": "Cups"
+        },
+        "ingredient": {
+          "dakelh": "Vegetable or Canola Oil",
+          "english": "Vegetable or Canola Oil"
         }
       }
     ],
     "directions": [
       {
-        "direction": {
-          "dakelh": "",
-          "english": ""
-        }
+        "dakelh": "Mix dry ingredients together. Create a well in the dry mix and pour water into well. Mix together.",
+        "english": "Mix dry ingredients together. Create a well in the dry mix and pour water into well. Mix together."
+      },
+      {
+        "dakelh": "Sprinkle some flour on a clean surface to knead the dough.  Knead the dough until it is evenly textured.",
+        "english": "Sprinkle some flour on a clean surface to knead the dough.  Knead the dough until it is evenly textured."
+      },
+      {
+        "dakelh": "Using a spoon, take some dough, smaller than the size of the buns you want because it will rise, and roll into a ball.",
+        "english": "Using a spoon, take some dough, smaller than the size of the buns you want because it will rise, and roll into a ball."
+      },
+      {
+        "dakelh": "In a large frying pan, heat the 2 cups of oil until it is hot. Once it is hot, place the balls into the pan. Flip the buns when they start browning.",
+        "english": "In a large frying pan, heat the 2 cups of oil until it is hot. Once it is hot, place the balls into the pan. Flip the buns when they start browning."
+      },
+      {
+        "dakelh": "When both sides are brown, buns are done.",
+        "english": "When both sides are brown, buns are done."
       }
     ]
   }

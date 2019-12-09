@@ -32,6 +32,7 @@ import { WordLibraryComponent } from './library/word-library/word-library.compon
 import { LessonService } from './shared/services/lesson.service';
 import { WordsDictionaryService } from './shared/services/words-dictionary.service';
 import { MenuDataService } from './shared/services/menu-data.service';
+import { RecipesService } from './shared/services/recipes.service';
 import { SettingsService } from './shared/services/settings.service';
 import { LessonListComponent } from './lesson-list/lesson-list.component';
 import { SideScrollImageSearchComponent } from './learning-modules/side-scroll-image-search/side-scroll-image-search.component';
@@ -48,6 +49,7 @@ import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { MusicLibraryComponent } from './library/music-library/music-library.component';
 import { GamesLibraryComponent } from './library/games-library/games-library.component';
 import { WordSpellingComponent } from './learning-modules/word-spelling/word-spelling.component';
+import { RecipeCardComponent } from './library/recipe-library/recipe-card/recipe-card.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,7 @@ import { WordSpellingComponent } from './learning-modules/word-spelling/word-spe
     MusicLibraryComponent,
     GamesLibraryComponent,
     WordSpellingComponent,
+    RecipeCardComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -96,7 +99,7 @@ import { WordSpellingComponent } from './learning-modules/word-spelling/word-spe
     MatStepperModule,
     MatTreeModule,
   ],
-  providers: [LessonService, MenuDataService, WordsDictionaryService, SettingsService],
+  providers: [LessonService, MenuDataService, WordsDictionaryService, RecipesService, SettingsService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

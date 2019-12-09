@@ -1,0 +1,49 @@
+<div class="top-bar">
+  <div class="back-button"
+       (click)="goBack()"
+       tabindex="0">
+    <mat-icon>arrow_back</mat-icon>
+    <div class="language-text">
+      <div class="dakelh-text">Go Back</div>
+      <div class="english-text">Go Back</div>
+    </div>
+  </div>
+
+  <div class="page-title language-text">
+    <div class="dakelh-text">Recipe Card {{ recipeId }}</div>
+    <div class="english-text">Recipe Card {{ recipeId }}</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="content-header">
+    <div class="recipe-image"
+         *ngIf="recipe.images.length > 0"
+         [ngStyle]="{'background-image': 'url(/assets/images/recipes/' + recipe.images[0] + ')',
+          'background-repeat': 'no-repeat',
+          'background-size': 'contain',
+          'background-position': 'center center'}">
+    </div>
+    <div class="language-text">
+      <div class="dakelh-text">{{ recipe.dakelh }}</div>
+      <div class="english-text">{{ recipe.english }}</div>
+    </div>
+  </div>
+
+  <div class="recipe-ingredients-container">
+    <div class="recipe-ingredient"
+         *ngFor="let ingredient of recipe.ingredients">
+      <div class="quantity">{{ ingredient.quantity }}</div>
+      <div class="measure">{{ ingredient.measure.dakelh }}</div>
+      <div class="ingredient">{{ ingredient.ingredient.dakelh }}</div>
+    </div>
+  </div>
+
+  <div class="recipe-directions-container">
+    <div class="recipe-direction"
+         *ngFor="let recipeDirection of recipe.directions"
+         class="language-text">
+      <div class="dakelh-text">{{ recipeDirection.dakelh }}</div>
+    </div>
+  </div>
+</div>
