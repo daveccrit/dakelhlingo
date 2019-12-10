@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from './shared/services/settings.service';
 import { LessonService } from './shared/services/lesson.service';
+import { fadeAnimation } from './animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation]
 })
 export class AppComponent implements OnInit {
   userLevel = 'level1';

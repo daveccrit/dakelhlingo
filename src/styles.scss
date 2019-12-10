@@ -38,7 +38,11 @@ body {
 }
 
 .main-app {
-  &.time-morning > *:not(router-outlet) {
+  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+
+  &.time-morning {
     background-image: url('/assets/images/app/time-morning.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,7 +50,7 @@ body {
     background-attachment: fixed;
   }
 
-  &.time-noon > *:not(router-outlet) {
+  &.time-noon {
     background-image: url('/assets/images/app/time-noon.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,7 +58,7 @@ body {
     background-attachment: fixed;
   }
 
-  &.time-night > *:not(router-outlet) {
+  &.time-night {
     background-image: url('/assets/images/app/time-night.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,8 +70,9 @@ body {
     padding: 13px;
     width: calc(100% - 30px);
     max-width: 728px;
-    height: 100%;
+    height: calc(100% - 26px);
     overflow: hidden;
+    position: absolute;
   }
 
   .mat-nav-list.mat-list-base {

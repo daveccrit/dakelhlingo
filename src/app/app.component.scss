@@ -1,9 +1,15 @@
-.main-app {
+.main-app-container {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: linear-gradient(160deg, rgb(4, 147, 204), rgb(71, 101, 158));
-  background-color: white;
+}
+
+.main-app {
+  width: 100%;
+  max-width: 754px;
+  height: 100%;
+  overflow: hidden;
 }

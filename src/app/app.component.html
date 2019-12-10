@@ -1,5 +1,6 @@
-<div class="main-app"
-     [ngClass]="{
+<div class="main-app-container">
+  <div class="main-app"
+       [ngClass]="{
        'level1': userLevel === 'level1',
        'level2': userLevel === 'level2',
        'level3': userLevel === 'level3',
@@ -7,6 +8,8 @@
        'time-noon': timeOfDay === 'noon', 
        'time-night': timeOfDay === 'night'
       }"
-     *ngIf="appReady">
-  <router-outlet></router-outlet>
+       [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''"
+       *ngIf="appReady">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
 </div>
