@@ -2,7 +2,8 @@
   <div #dropContainer
        class="drop-container"
        [ngClass]="{ 'drag-element-hovering': hoverItem === 0 }">
-    <img [src]="'assets/images/dakelh-words/' + this.words[0].images[0]" />
+    <img [src]="'assets/images/dakelh-words/' + this.words[0].images[0]"
+         border="1" />
   </div>
   <div class="arrow-container">
     <mat-icon class="up-arrow">arrow_upward</mat-icon>
@@ -31,7 +32,8 @@
   <div #dropContainer
        class="drop-container"
        [ngClass]="{ 'drag-element-hovering': hoverItem === 1 }">
-    <img [src]="'assets/images/dakelh-words/' + this.words[1].images[0]" />
+    <img [src]="'assets/images/dakelh-words/' + this.words[1].images[0]"
+         border="1" />
   </div>
 </div>
 <audio #audio></audio>

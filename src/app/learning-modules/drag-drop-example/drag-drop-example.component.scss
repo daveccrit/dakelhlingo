@@ -15,6 +15,9 @@
   padding: 5px;
   justify-content: space-between;
   min-width: 100px;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
 
   .arrow-container {
     height: 44px;
@@ -47,38 +50,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 90%;
     position: relative;
-    border-radius: 6px;
     overflow: hidden;
-    border: 2px solid #939393;
     z-index: 9000;
+    flex: 1 1 auto;
+    justify-content: center;
+    max-width: 90%;
 
     & * {
       pointer-events: none;
     }
 
     & > img {
+      border-style: inset;
+      border: 4px solid #939393;
+      border-radius: 6px;
       max-width: 100%;
+      max-height: 100%;
+      position: relative;
     }
 
-    &.drag-element-hovering {
-      border-radius: 6px;
+    &.drag-element-hovering > img {
       border-color: rgba(63, 81, 181, 0.6);
     }
 
-    &.drag-element-hovering::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 6px;
-      top-webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-      animation: dragOverAnimation 250ms ease forwards;
+    &.drag-element-hovering > img {
+      opacity: 0.6;
     }
   }
 

@@ -16,38 +16,39 @@
 </div>
 
 <div class="learning-module-container"
-     *ngIf="pageReady">
+     *ngIf="pageReady"
+     [ngSwitch]="this.lesson.learningModules[currentModuleNum].learningModule">
   <!-- WORDS -->
-  <app-word-learning-example *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'single-word-example'"
+  <app-word-learning-example *ngSwitchCase="'single-word-example'"
                              [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
                              (completed)="completedLearningModule()"></app-word-learning-example>
 
-  <app-word-spelling *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'word-spelling'"
+  <app-word-spelling *ngSwitchCase="'word-spelling'"
                      [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
                      (completed)="completedLearningModule()"></app-word-spelling>
 
-  <app-words-learning-example *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'multiple-word-example'"
+  <app-words-learning-example *ngSwitchCase="'multiple-word-example'"
                               [languageWords]="this.lesson.learningModules[currentModuleNum].languageWords"
                               (completed)="completedLearningModule()"></app-words-learning-example>
 
-  <app-drag-drop-example *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'drag-drop-example'"
+  <app-drag-drop-example *ngSwitchCase="'drag-drop-example'"
                          [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
                          (completed)="completedLearningModule()"></app-drag-drop-example>
 
-  <app-side-scroll-image-search *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'side-scroll-image-search'"
+  <app-side-scroll-image-search *ngSwitchCase="'side-scroll-image-search'"
                                 [languageWord]="this.lesson.learningModules[currentModuleNum].languageWord"
                                 (completed)="completedLearningModule()"></app-side-scroll-image-search>
 
   <!-- PHRASES-->
-  <app-phrase-learning *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'phrase-learning'"
+  <app-phrase-learning *ngSwitchCase="'phrase-learning'"
                        [languagePhrase]="this.lesson.learningModules[currentModuleNum].languagePhrase"
                        (completed)="completedLearningModule()"></app-phrase-learning>
 
-  <app-phrase-builder *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'phrase-builder'"
+  <app-phrase-builder *ngSwitchCase="'phrase-builder'"
                       [languagePhrase]="this.lesson.learningModules[currentModuleNum].languagePhrase"
                       (completed)="completedLearningModule()"></app-phrase-builder>
 
   <!-- COMPLETED LESSONS -->
-  <app-lesson-completed *ngIf="pageReady && this.lesson.learningModules[currentModuleNum].learningModule === 'lesson-completed'"
+  <app-lesson-completed *ngSwitchCase="'lesson-completed'"
                         (completed)="completedLearningModule()"></app-lesson-completed>
 </div>
